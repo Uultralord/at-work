@@ -6,14 +6,37 @@
     margin: 0 0 100px;
     list-style-type: none;
 
+    @include vp-1023 {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 80px 0 0 0;
+      margin: 0 0 80px;
+    }
+
+    @include vp-767{
+      grid-template-columns:1fr;
+      padding: 60px 0 0 0;
+      margin: 0 0 60px;
+    }
+
     &--grid {
       grid-template-columns: repeat(2, 1fr);
+      padding: 80px 0 0 0;
+      margin: 0 0 80px;
+
+      @include vp-767{
+      grid-template-columns:1fr;
+      padding: 60px 0 0 0;
+      margin: 0 0 60px;
+    }
     }
   }
 
   &__main-item {
     &--flat {
       grid-column: span 2;
+      @include vp-767{
+        grid-column: span 1;
+      }
     }
   }
 
@@ -24,6 +47,16 @@
     margin: 0;
     padding: 0 80px;
     list-style: none;
+
+    @include vp-1023 {
+      gap: 24px;
+      padding: 0;
+    }
+
+    @include vp-767{
+       grid-template-columns: 1fr;
+       gap: 30px;
+    }
   }
 
   &__list-item {
@@ -41,12 +74,30 @@
     margin: 0 0 20px 0;
     border-radius: 12px;
     background-color: $color-royal-blue-1;
+
+    @include vp-1023 {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__list-icon {
+    @include vp-1023 {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &__list-heading {
     margin: 0 0 12px 0;
     font-size: 24px;
     line-height: 28px;
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 22px;
+      margin: 0 0 10px 0;
+    }
   }
 
   &__list-description {
@@ -55,5 +106,9 @@
     line-height: 20px;
     text-align: center;
     color: $color-storm-grey-1;
+
+    @include vp-1023 {
+      font-size: 14px;
+    }
   }
 }

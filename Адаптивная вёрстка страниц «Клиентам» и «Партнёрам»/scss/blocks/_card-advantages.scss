@@ -5,9 +5,21 @@
   height: 100%;
   border-radius: 16px;
 
+  @include vp-1023 {
+    flex-direction: column;
+  }
+
   &--reverse {
     .card-advantages__content {
       padding: 100px 0 100px 140px;
+
+      @include vp-1023 {
+        padding: 30px 15px 0 15px;
+      }
+
+      @include vp-767 {
+        padding: 30px 30px 0;
+      }
     }
   }
 
@@ -22,6 +34,20 @@
   &--blue {
     color: $color-white;
     background-color: $color-cornflower-blue;
+
+    .card-advantages__picture {
+      flex-shrink: unset;
+    }
+
+    @include vp-1023 {
+      flex-direction: row;
+      gap: 28px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: 0;
+    }
   }
 
   &--dark-gray {
@@ -38,8 +64,20 @@
     grid-column: span 1;
     min-height: 640px;
 
+    @include vp-1023 {
+      min-height: 408px;
+    }
+
     .card-advantages__content {
       padding: 60px;
+
+      @include vp-1023 {
+        padding: 30px 15px 0 15px;
+      }
+
+      @include vp-767 {
+        padding: 30px 30px 0;
+      }
     }
 
     .card-advantages__picture {
@@ -57,11 +95,20 @@
     row-gap: 16px;
     margin: 0;
     padding: 0 0 0 22px;
+
+    @include vp-1023 {
+      gap: 10px;
+    }
   }
 
   &__subitem {
     font-size: 18px;
     line-height: 24px;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__content {
@@ -69,22 +116,45 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include vp-1023 {
+      padding: 0 15px 30px 15px;
+    }
+
+    @include vp-767 {
+      padding: 30px;
+    }
   }
 
   &__heading {
     margin: 0 0 20px 0;
     font-size: 32px;
     line-height: 36px;
+
+    @include vp-1023 {
+      font-size: 22px;
+      line-height: 28px;
+      margin: 0 0 10px 0;
+    }
   }
 
   &__description {
     margin: 0;
     font-size: 18px;
     line-height: 24px;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__btn {
     width: 224px;
     margin: 32px 0 0 0;
+
+    @include vp-1023 {
+      margin: 30px auto 0;
+    }
   }
 }
