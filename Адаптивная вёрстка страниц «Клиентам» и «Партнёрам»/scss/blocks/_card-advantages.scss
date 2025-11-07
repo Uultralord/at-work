@@ -1,0 +1,90 @@
+.card-advantages {
+  display: flex;
+  align-items: center;
+  column-gap: 100px;
+  height: 100%;
+  border-radius: 16px;
+
+  &--reverse {
+    .card-advantages__content {
+      padding: 100px 0 100px 140px;
+    }
+  }
+
+  &--heavenly {
+    background-color: $color-columbia-blue;
+  }
+
+  &--purple {
+    background-color: $color-portage;
+  }
+
+  &--blue {
+    color: $color-white;
+    background-color: $color-cornflower-blue;
+  }
+
+  &--dark-gray {
+    color: $color-white;
+    background-color: $color-manatee-1;
+  }
+
+  &--light-gray {
+    background-color: $color-solitude-2;
+  }
+
+  &--small {
+    flex-direction: column;
+    grid-column: span 1;
+    min-height: 640px;
+
+    .card-advantages__content {
+      padding: 60px;
+    }
+
+    .card-advantages__picture {
+      margin: auto 0 0 0;
+    }
+  }
+
+  &__picture {
+    flex-shrink: 0;
+  }
+
+  &__sublist {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin: 0;
+    padding: 0 0 0 22px;
+  }
+
+  &__subitem {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__content {
+    padding: 100px 140px 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__heading {
+    margin: 0 0 20px 0;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  &__description {
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__btn {
+    width: 224px;
+    margin: 32px 0 0 0;
+  }
+}

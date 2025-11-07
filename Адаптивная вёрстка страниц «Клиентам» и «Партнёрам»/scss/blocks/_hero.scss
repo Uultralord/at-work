@@ -1,0 +1,116 @@
+.hero {
+  background-color: $color-solitude-2;
+
+  &--partners {
+    .hero__heading {
+      margin: 0 0 48px 0;
+      @include vp-1023{
+        margin: 0 0 40px 0;
+      }
+    }
+
+    .hero__wrapper {
+      @include vp-767{
+        max-height: 518px;
+      }
+    }
+
+    .hero__btn {
+      width: 258px;
+      @include vp-1023{
+      width: 233px;
+    }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 180px;
+
+    @include vp-1023 {
+      gap: 0;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      height: fit-content;
+      position: relative;
+      max-height: 586px;
+    }
+  }
+
+  &__content {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include vp-1023{
+      padding: 58px 0;
+    }
+
+    @include vp-767{
+      padding: 40px 0 0;
+      align-items: center;
+      text-align: center;
+      z-index: 2;
+    }
+  }
+
+  &__btn {
+    width: 272px;
+    @include vp-1023{
+      width: 244px;
+    }
+
+    @include vp-767{
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__heading {
+    margin: 0 0 24px;
+    font-size: 40px;
+    line-height: 48px;
+
+    @include vp-1023 {
+      font-size: 32px;
+      line-height: 38px;
+      margin: 0 0 20px;
+    }
+  }
+
+  &__heading-highlight {
+    color: $color-royal-blue-1;
+  }
+
+  &__description {
+    margin: 0 0 48px;
+    font-size: 18px;
+    line-height: 24px;
+
+    @include vp-1023 {
+      font-size: 16px;
+      margin: 0 0 40px;
+    }
+
+    @include vp-767{
+      position: relative;
+    }
+  }
+
+  picture{
+     @include vp-767{
+      position: relative;
+      bottom: 90px;
+      z-index: 1;
+    }
+  }
+
+  &__image {
+    width: auto;
+    max-width: none;
+  }
+}
