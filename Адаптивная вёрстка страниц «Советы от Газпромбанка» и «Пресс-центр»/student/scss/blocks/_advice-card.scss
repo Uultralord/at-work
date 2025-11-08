@@ -9,38 +9,41 @@
   border-radius: 12px;
   padding: 20px 20px 32px;
 
+  @include vp-1023 {
+    min-height: 380px;
+    padding: 20px 20px 28px;
+  }
+
+  @include vp-767 {
+    min-height: 320px;
+    padding: 15px 15px 20px;
+  }
+
   // Удалить модификаторы у элементов и фоновые картинки. Заменить изображениями в разметке!
+  picture {
+    z-index: 0;
+    position: absolute;
+    margin: -20px;
 
-  &--privileges {
-    background-image: url("../images/advice-image-1-desktop.jpg");
+    @include vp-767 {
+      margin: -15px;
+    }
   }
 
-  &--rating {
-    background-image: url("../images/advice-image-2-desktop.jpg");
-  }
+  &__image {
+    border-radius: 12px;
+    width: 286px;
+    height: 480px;
 
-  &--gold {
-    background-image: url("../images/advice-image-3-desktop.jpg");
-  }
+    @include vp-1023 {
+      width: 226px;
+      height: 380px;
+    }
 
-  &--tax-deduction {
-    background-image: url("../images/advice-image-4-desktop.jpg");
-  }
-
-  &--sbp {
-    background-image: url("../images/advice-image-5-desktop.jpg");
-  }
-
-  &--dismissal {
-    background-image: url("../images/advice-image-6-desktop.jpg");
-  }
-
-  &--hide-balance {
-    background-image: url("../images/advice-image-7-desktop.jpg");
-  }
-
-  &--credit {
-    background-image: url("../images/advice-image-8-desktop.jpg");
+    @include vp-767 {
+      width: 165px;
+      height: 320px;
+    }
   }
 
   &__top {
@@ -48,6 +51,23 @@
     align-items: center;
     gap: 8px;
     margin: 0 0 20px 0;
+    z-index: 1;
+    position: relative;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+
+    @include vp-1023 {
+      width: 32px;
+      height: 32px;
+    }
+
+    @include vp-767 {
+      width: 28px;
+      height: 28px;
+    }
   }
 
   &__label {
@@ -55,6 +75,17 @@
     line-height: 16px;
     font-weight: 700;
     color: $color-white;
+    z-index: 1;
+    position: relative;
+
+    @include vp-1023 {
+      font-size: 12px;
+    }
+
+    @include vp-767 {
+      font-size: 10px;
+      line-height: 14px;
+    }
   }
 
   &__title {
@@ -63,9 +94,28 @@
     line-height: 24px;
     font-weight: 700;
     color: $color-white;
+    z-index: 1;
+    position: relative;
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 18px;
+      margin: auto 0 15px;
+    }
   }
 
   &__btn {
     padding: 14px;
+    z-index: 1;
+    position: relative;
+
+    @include vp-1023 {
+      padding: 10px;
+    }
   }
 }

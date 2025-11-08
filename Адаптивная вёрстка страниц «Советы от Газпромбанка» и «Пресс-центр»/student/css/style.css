@@ -455,6 +455,12 @@ a {
   transform: translateY(-50%);
   right: -11px;
 }
+@media (max-width: 767px) {
+  .breadcrumbs__link {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
 
 .btn {
   outline: none;
@@ -480,6 +486,20 @@ a {
   line-height: 46px;
   text-align: center;
 }
+@media (max-width: 1023px) {
+  .advices__title {
+    font-size: 32px;
+    line-height: 36px;
+    margin: 0 0 40px;
+  }
+}
+@media (max-width: 767px) {
+  .advices__title {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 30px;
+  }
+}
 
 .advice-list {
   display: grid;
@@ -488,6 +508,17 @@ a {
   margin: 0;
   list-style: none;
   gap: 40px 32px;
+}
+@media (max-width: 1023px) {
+  .advice-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .advice-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .advice-card {
@@ -501,41 +532,87 @@ a {
   border-radius: 12px;
   padding: 20px 20px 32px;
 }
-.advice-card--privileges {
-  background-image: url("../images/advice-image-1-desktop.jpg");
+@media (max-width: 1023px) {
+  .advice-card {
+    min-height: 380px;
+    padding: 20px 20px 28px;
+  }
 }
-.advice-card--rating {
-  background-image: url("../images/advice-image-2-desktop.jpg");
+@media (max-width: 767px) {
+  .advice-card {
+    min-height: 320px;
+    padding: 15px 15px 20px;
+  }
 }
-.advice-card--gold {
-  background-image: url("../images/advice-image-3-desktop.jpg");
+.advice-card picture {
+  z-index: 0;
+  position: absolute;
+  margin: -20px;
 }
-.advice-card--tax-deduction {
-  background-image: url("../images/advice-image-4-desktop.jpg");
+@media (max-width: 767px) {
+  .advice-card picture {
+    margin: -15px;
+  }
 }
-.advice-card--sbp {
-  background-image: url("../images/advice-image-5-desktop.jpg");
+.advice-card__image {
+  border-radius: 12px;
+  width: 286px;
+  height: 480px;
 }
-.advice-card--dismissal {
-  background-image: url("../images/advice-image-6-desktop.jpg");
+@media (max-width: 1023px) {
+  .advice-card__image {
+    width: 226px;
+    height: 380px;
+  }
 }
-.advice-card--hide-balance {
-  background-image: url("../images/advice-image-7-desktop.jpg");
-}
-.advice-card--credit {
-  background-image: url("../images/advice-image-8-desktop.jpg");
+@media (max-width: 767px) {
+  .advice-card__image {
+    width: 165px;
+    height: 320px;
+  }
 }
 .advice-card__top {
   display: flex;
   align-items: center;
   gap: 8px;
   margin: 0 0 20px 0;
+  z-index: 1;
+  position: relative;
+}
+.advice-card__icon {
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: 1023px) {
+  .advice-card__icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .advice-card__icon {
+    width: 28px;
+    height: 28px;
+  }
 }
 .advice-card__label {
   font-size: 13px;
   line-height: 16px;
   font-weight: 700;
   color: #FFFFFF;
+  z-index: 1;
+  position: relative;
+}
+@media (max-width: 1023px) {
+  .advice-card__label {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .advice-card__label {
+    font-size: 10px;
+    line-height: 14px;
+  }
 }
 .advice-card__title {
   margin: auto 0 20px;
@@ -543,9 +620,31 @@ a {
   line-height: 24px;
   font-weight: 700;
   color: #FFFFFF;
+  z-index: 1;
+  position: relative;
+}
+@media (max-width: 1023px) {
+  .advice-card__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .advice-card__title {
+    font-size: 14px;
+    line-height: 18px;
+    margin: auto 0 15px;
+  }
 }
 .advice-card__btn {
   padding: 14px;
+  z-index: 1;
+  position: relative;
+}
+@media (max-width: 1023px) {
+  .advice-card__btn {
+    padding: 10px;
+  }
 }
 
 .press-room__title {
