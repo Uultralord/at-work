@@ -93,6 +93,10 @@
     }
   }
 
+  &__phone-link:hover, &__phone-link:focus-visible{
+    color: $color-royal-blue-1;
+  }
+
   &__phone-text,
   &__feedback-text,
   &__location-text,
@@ -141,6 +145,10 @@
     color: $color-royal-blue-1;
   }
 
+  &__location-link:hover, &__location-link:focus-visible{
+    color: $color-royal-blue-2;
+  }
+
   &__nav-list {
     display: grid;
     grid-template-columns: repeat(2, 140px);
@@ -163,6 +171,10 @@
     line-height: 18px;
   }
 
+  &__nav-link:hover, &__nav-link:focus-visible{
+    color: $color-royal-blue-1;
+  }
+
   &__right {
     padding: 20px 40px 0 51px;
 
@@ -183,6 +195,10 @@
     @include vp-767 {
       display: none;
     }
+  }
+
+  &__policy-link:hover,  &__policy-link:focus-visible{
+    color: $color-royal-blue-1;
   }
 
   &__socials {
@@ -212,5 +228,9 @@
     display: flex;
     align-items: center;
     column-gap: 8px;
+  }
+
+  &__language-link:hover, &__language-link:focus-visible{
+    color: $color-black-russian;
   }
 }

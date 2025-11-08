@@ -75,4 +75,14 @@
       display: none;
     }
   }
+
+  &__language-link:hover,
+  &__language-link:focus-visible{
+    background-color: $color-solitude-4;
+  }
+
+  &__language-link:disabled{
+    background-color: $color-hawkes-blue;
+    color: $color-manatee-2;
+  }
 }

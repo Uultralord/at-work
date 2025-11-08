@@ -480,6 +480,13 @@ a {
     display: none;
   }
 }
+.header__language-link:hover, .header__language-link:focus-visible {
+  background-color: #EAECF4;
+}
+.header__language-link:disabled {
+  background-color: #DBDFEC;
+  color: #9A9BA0;
+}
 
 .btn {
   outline: none;
@@ -508,6 +515,13 @@ a {
     padding: 16px;
   }
 }
+.btn--second:hover, .btn--second:focus-visible {
+  background-color: #3356D7;
+}
+.btn--second:disabled {
+  background-color: #F0F0F0;
+  color: #9A9BA0;
+}
 .btn--third {
   color: #1E222E;
   padding: 14px;
@@ -522,6 +536,12 @@ a {
     padding: 12px;
   }
 }
+.btn--third:hover, .btn--third:focus-visible {
+  background-color: #EAECF4;
+}
+.btn--third:disabled {
+  color: #9A9BA0;
+}
 .btn--fourth {
   color: #1E222E;
   background-color: #EDEEEF;
@@ -535,6 +555,9 @@ a {
     font-size: 14px;
   }
 }
+.btn--fifth:hover, .btn--fifth:focus-visible {
+  background-color: #EAECF4;
+}
 .btn--sixth {
   padding: 12px;
   font-size: 13px;
@@ -544,6 +567,13 @@ a {
   .btn--sixth {
     font-size: 12px;
   }
+}
+.btn--sixth:hover, .btn--sixth:focus-visible {
+  background-color: #383F52;
+}
+.btn--sixth:disabled {
+  background-color: #F0F0F0;
+  color: #9A9BA0;
 }
 
 .hero {
@@ -1224,6 +1254,9 @@ a {
     line-height: 22px;
   }
 }
+.footer__phone-link:hover, .footer__phone-link:focus-visible {
+  color: #476BF0;
+}
 .footer__phone-text, .footer__feedback-text, .footer__location-text, .footer__policy-link, .footer__copyright-text, .footer__language-link {
   font-size: 13px;
   line-height: 16px;
@@ -1266,6 +1299,9 @@ a {
   line-height: 16px;
   color: #476BF0;
 }
+.footer__location-link:hover, .footer__location-link:focus-visible {
+  color: #2F54DF;
+}
 .footer__nav-list {
   display: grid;
   grid-template-columns: repeat(2, 140px);
@@ -1287,6 +1323,9 @@ a {
 .footer__nav-link {
   font-size: 14px;
   line-height: 18px;
+}
+.footer__nav-link:hover, .footer__nav-link:focus-visible {
+  color: #476BF0;
 }
 .footer__right {
   padding: 20px 40px 0 51px;
@@ -1310,6 +1349,9 @@ a {
   .footer__policy {
     display: none;
   }
+}
+.footer__policy-link:hover, .footer__policy-link:focus-visible {
+  color: #476BF0;
 }
 .footer__socials {
   margin: 0 0 32px;
@@ -1337,6 +1379,9 @@ a {
   -moz-column-gap: 8px;
        column-gap: 8px;
 }
+.footer__language-link:hover, .footer__language-link:focus-visible {
+  color: #1E222E;
+}
 
 .socials {
   display: flex;
@@ -1357,4 +1402,7 @@ a {
   height: 40px;
   border-radius: 50%;
   background-color: #E3E5EB;
+}
+.socials__link:hover, .socials__link:focus-visible {
+  background-color: #D2D4DA;
 }/*# sourceMappingURL=style.css.map */

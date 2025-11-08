@@ -17,4 +17,8 @@
     border-radius: 50%;
     background-color: $color-solitude-3;
   }
+
+  &__link:hover, &__link:focus-visible{
+    background-color: $color-link-water;
+  }
 }

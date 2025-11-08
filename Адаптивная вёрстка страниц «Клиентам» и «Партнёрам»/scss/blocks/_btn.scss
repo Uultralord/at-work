@@ -25,6 +25,16 @@
     }
   }
 
+  &--second:hover,
+  &--second:focus-visible{
+    background-color: $color-free-speech-blue;
+  }
+
+  &--second:disabled{
+    background-color: $color-white-smoke-2;
+    color: $color-manatee-2;
+  }
+
   &--third {
     color: $color-black-russian;
     padding: 14px;
@@ -37,6 +47,15 @@
       line-height: 16px;
       padding: 12px;
     }
+  }
+
+  &--third:hover, 
+  &--third:focus-visible{
+    background-color: $color-solitude-4;
+  }
+
+  &--third:disabled{
+    color: $color-manatee-2;
   }
 
   &--fourth {
@@ -53,6 +72,11 @@
     }
   }
 
+  &--fifth:hover,
+  &--fifth:focus-visible{
+    background-color: $color-solitude-4;
+  }
+
   &--sixth {
     padding: 12px;
     font-size: 13px;
@@ -63,4 +87,14 @@
 
     }
   }
+
+  &--sixth:hover,
+  &--sixth:focus-visible{
+    background-color: $color-blue-zodiac;
+  }
+  &--sixth:disabled{
+    background-color: $color-white-smoke-2;
+    color: $color-manatee-2;
+  }
+
 }
