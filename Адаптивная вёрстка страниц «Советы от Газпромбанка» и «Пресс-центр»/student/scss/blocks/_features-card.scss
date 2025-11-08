@@ -1,0 +1,123 @@
+.features-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $color-solitude-1;
+  border-radius: 12px;
+  padding: 32px;
+
+  &--vertical {
+    height: 100%;
+    padding: 32px 20px 20px;
+
+    .features-card__wrapper {
+      flex-direction: column;
+      height: 100%;
+      margin: 0 0 25px 0;
+    }
+
+    .features-card__inner {
+      align-items: center;
+    }
+
+    .features-card__label {
+      margin: 0 0 8px 0;
+    }
+
+    .features-card__title {
+      font-size: 20px;
+      line-height: 24px;
+      margin: 0 0 8px 0;
+      text-align: center;
+    }
+
+    .features-card__note {
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .features-card__picture {
+      margin: auto auto 0;
+      padding: 0 18px;
+    }
+
+    .features-card__btn {
+      margin: 0 auto;
+    }
+  }
+
+  &--reverse {
+    .features-card__label {
+      border: 1px solid $color-white-alpha;
+      color: $color-white-alpha;
+    }
+
+    .features-card__title {
+      color: $color-white;
+    }
+
+    .features-card__note {
+      color: $color-white;
+    }
+  }
+
+  &--bg-blue {
+    background-color: $color-royal-blue;
+  }
+
+  &--bg-green {
+    background-color: $color-humming-bird;
+  }
+
+  &--bg-lightblue {
+    background-color: $color-pattens-blue;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+    margin: 0 0 16px 0;
+  }
+
+  &__inner {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__picture {
+    flex-shrink: 0;
+  }
+
+  &__label {
+    border: 1px solid $color-black-russian-alpha;
+    border-radius: 4px;
+    color: $color-black-russian-alpha;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+    margin: 0 0 12px 0;
+    padding: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 66px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0 0 12px 0;
+  }
+
+  &__note {
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0;
+  }
+
+  &__btn {
+    width: 140px;
+  }
+}

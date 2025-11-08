@@ -1,0 +1,91 @@
+.footer {
+  background-color: $color-solitude-2;
+  padding: 36px 0;
+
+  &__content {
+    align-items: center;
+    display: flex;
+    position: relative;
+  }
+
+  &__logo-link {
+    display: flex;
+    margin: 0 80px 0 0;
+  }
+
+  &__contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 52px;
+    list-style: none;
+    margin: 0;
+    max-width: 500px;
+    padding: 0;
+  }
+
+  &__contacts-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts-text {
+    color: $color-storm-grey-1;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0 0 4px 0;
+  }
+
+  &__contacts-phone {
+    outline: none;
+    color: $color-black-russian;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-decoration: none;
+  }
+
+  &__info {
+    align-items: center;
+    display: flex;
+    margin: 0 0 0 auto;
+  }
+
+  &__info-text {
+    color: $color-storm-grey-1;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0 20px 0 0;
+    max-width: 180px;
+    text-align: right;
+  }
+
+  &__app-list {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__app-link {
+    outline: none;
+    align-items: center;
+    background-color: $color-white;
+    border-radius: 8px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    text-decoration: none;
+    width: 40px;
+  }
+
+  &__note {
+    color: $color-storm-grey-alpha;
+    font-size: 10px;
+    line-height: 12px;
+    position: absolute;
+    right: 0;
+    bottom: -28px;
+  }
+}

@@ -1,0 +1,24 @@
+/* Global */
+/* ------------------------------------ */
+@import "./global/_normalize";
+@import "./global/_variables";
+@import "./global/_mixins";
+@import "./global/_fonts";
+@import "./global/_reboot";
+@import "./global/_container";
+
+/* Blocks */
+/* ------------------------------------ */
+@import "./blocks/_header";
+@import "./blocks/_breadcrumbs";
+@import "./blocks/_btn";
+@import "./blocks/_advices";
+@import "./blocks/_advice-list";
+@import "./blocks/_advice-card";
+@import "./blocks/_press-room";
+@import "./blocks/_socials";
+@import "./blocks/_news";
+@import "./blocks/_features";
+@import "./blocks/_features-list";
+@import "./blocks/_features-card";
+@import "./blocks/_footer";

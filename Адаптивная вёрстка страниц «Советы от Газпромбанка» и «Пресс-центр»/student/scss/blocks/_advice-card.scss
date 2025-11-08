@@ -1,0 +1,71 @@
+.advice-card {
+  min-height: 480px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-cornflower-blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  padding: 20px 20px 32px;
+
+  // Удалить модификаторы у элементов и фоновые картинки. Заменить изображениями в разметке!
+
+  &--privileges {
+    background-image: url("../images/advice-image-1-desktop.jpg");
+  }
+
+  &--rating {
+    background-image: url("../images/advice-image-2-desktop.jpg");
+  }
+
+  &--gold {
+    background-image: url("../images/advice-image-3-desktop.jpg");
+  }
+
+  &--tax-deduction {
+    background-image: url("../images/advice-image-4-desktop.jpg");
+  }
+
+  &--sbp {
+    background-image: url("../images/advice-image-5-desktop.jpg");
+  }
+
+  &--dismissal {
+    background-image: url("../images/advice-image-6-desktop.jpg");
+  }
+
+  &--hide-balance {
+    background-image: url("../images/advice-image-7-desktop.jpg");
+  }
+
+  &--credit {
+    background-image: url("../images/advice-image-8-desktop.jpg");
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 20px 0;
+  }
+
+  &__label {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 700;
+    color: $color-white;
+  }
+
+  &__title {
+    margin: auto 0 20px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $color-white;
+  }
+
+  &__btn {
+    padding: 14px;
+  }
+}

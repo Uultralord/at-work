@@ -1,0 +1,24 @@
+.header {
+  background: linear-gradient(90deg, #415BD2 0%, #8DA1F7 100%);
+
+  &__content {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 22px 0;
+  }
+
+  &__logo {
+    height: 36px;
+    width: 170px;
+  }
+
+  &__burger {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    padding: 0;
+    cursor: pointer;
+  }
+}

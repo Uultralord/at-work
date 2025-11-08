@@ -1,0 +1,8 @@
+.advice-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 40px 32px;
+}

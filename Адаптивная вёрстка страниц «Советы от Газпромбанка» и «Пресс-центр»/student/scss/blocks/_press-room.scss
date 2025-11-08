@@ -1,0 +1,43 @@
+.press-room {
+  &__title {
+    margin: 0 0 60px;
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 420px 740px;
+    column-gap: 80px;
+  }
+
+  &__newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 40px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: $color-ghost-white;
+    background-image: url("../images/subscribe-image-desktop.png");
+    background-size: 100%;
+  }
+
+  &__newsletter-title {
+    max-width: 220px;
+    margin: 0 0 10px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__newsletter-text {
+    max-width: 220px;
+    margin: 0 0 60px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  &__newsletter-btn {
+    width: 115px;
+  }
+}
