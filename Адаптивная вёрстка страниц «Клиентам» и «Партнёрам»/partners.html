@@ -49,11 +49,11 @@
           </div>
           <picture>
             <source media="(max-width: 767px)"
-              srcset="images/image-switch-gpay-mobile.png 1x, images/image-switch-gpay-mobile@2x.png 2x">
+              srcset="./images/hero/image-switch-gpay-mobile.png 1x, ./images/hero/image-switch-gpay-mobile@2x.png 2x">
             <source media="(max-width: 1023px)"
-              srcset="images/image-switch-gpay-tablet.png 1x, images/image-switch-gpay-tablet@2x.png 2x">
-            <img class="hero__image" src="images/image-switch-gpay-desktop.png"
-              srcset="images/image-switch-gpay-desktop@2x.png 2x" width="660" height="640"
+              srcset="./images/hero/image-switch-gpay-tablet.png 1x, ./images/hero/image-switch-gpay-tablet@2x.png 2x">
+            <img class="hero__image" src="./images/hero/image-switch-gpay-desktop.png"
+              srcset="./images/hero/image-switch-gpay-desktop@2x.png 2x" width="660" height="640"
               alt="Курсор указывает на переключатель Газпром пей">
           </picture>
         </div>
@@ -70,11 +70,11 @@
               <div class="card-advantages__picture">
                 <picture>
                   <source media="(max-width: 767px)"
-                    srcset="images/image-cards-gpay-mobile.png 1x, images/image-cards-gpay-mobile@2x.png 2x">
+                    srcset="./images/card-advantages/image-cards-gpay-mobile.png 1x, ./images/card-advantages/image-cards-gpay-mobile@2x.png 2x">
                   <source media="(max-width: 1023px)"
-                    srcset="images/image-cards-gpay-tablet.png 1x, images/image-cards-gpay-tablet@2x.png 2x">
-                  <img class="card-advantages__image" src="images/image-cards-gpay-desktop.png"
-                    srcset="images/image-cards-gpay-desktop@2x.png 2x" width="588" height="520"
+                    srcset="./images/card-advantages/image-cards-gpay-tablet.png 1x, ./images/card-advantages/image-cards-gpay-tablet@2x.png 2x">
+                  <img class="card-advantages__image" src="./images/card-advantages/image-cards-gpay-desktop.png"
+                    srcset="./images/card-advantages/image-cards-gpay-desktop@2x.png 2x" width="588" height="520"
                     alt="Банковские карты с блоком сверху от Газпром пэй">
                 </picture>
               </div>
@@ -110,11 +110,11 @@
               <div class="card-advantages__picture">
                 <picture>
                   <source media="(max-width: 767px)"
-                    srcset="images/image-plus-mobile.png 1x, images/image-plus-mobile@2x.png 2x">
+                    srcset="./images/card-advantages/image-plus-mobile.png 1x, ./images/card-advantages/image-plus-mobile@2x.png 2x">
                   <source media="(max-width: 1023px)"
-                    srcset="images/image-plus-tablet.png 1x, images/image-plus-tablet@2x.png 2x">
-                  <img class="card-advantages__image" src="images/image-plus-desktop.png"
-                    srcset="images/image-plus-desktop@2x.png 2x" width="600" height="324"
+                    srcset="./images/card-advantages/image-plus-tablet.png 1x, ./images/card-advantages/image-plus-tablet@2x.png 2x">
+                  <img class="card-advantages__image" src="./images/card-advantages/image-plus-desktop.png"
+                    srcset="./images/card-advantages/image-plus-desktop@2x.png 2x" width="600" height="324"
                     alt="Абстрактные фигуры плюс, воронка и монеты">
                 </picture>
               </div>
@@ -133,11 +133,11 @@
               <div class="card-advantages__picture">
                 <picture>
                   <source media="(max-width: 767px)"
-                    srcset="images/image-security-mobile.png 1x, images/image-security-mobile@2x.png 2x">
+                    srcset="./images/card-advantages/image-security-mobile.png 1x, ./images/card-advantages/image-security-mobile@2x.png 2x">
                   <source media="(max-width: 1023px)"
-                    srcset="images/image-security-tablet.png 1x, images/image-security-tablet@2x.png 2x">
-                  <img class="card-advantages__image" src="images/image-security-desktop.png"
-                    srcset="images/image-security-desktop@2x.png 2x" width="600" height="324"
+                    srcset="./images/card-advantages/image-security-tablet.png 1x, ./images/card-advantages/image-security-tablet@2x.png 2x">
+                  <img class="card-advantages__image" src="./images/card-advantages/image-security-desktop.png"
+                    srcset="./images/card-advantages/image-security-desktop@2x.png 2x" width="600" height="324"
                     alt="Синий щит с белой галкой возле трёх монет">
                 </picture>
               </div>
@@ -154,7 +154,14 @@
         <ul class="payment__list">
           <li class="payment__item">
             <div class="payment__picture">
-              <img class="payment__image" src="images/logo-fns-desktop.png" height="326" alt="Логотип ФНС">
+              <picture>
+                <source media="(max-width: 767px)"
+                  srcset="./images/payment/logo-fns-mobile.png 1x, ./images/payment/logo-fns-mobile@2x.png 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="./images/payment/logo-fns-tablet.png 1x, ./images/payment/logo-fns-tablet@2x.png 2x">
+                <img class="payment__image" src="./images/payment/logo-fns-desktop.png"
+                  srcset="./images/payment/logo-fns-desktop@2x.png 2x" width="286" height="326" alt="Логотип ФНС">
+              </picture>
             </div>
             <h3 class="payment__heading">
               ФНС
@@ -165,8 +172,14 @@
           </li>
           <li class="payment__item">
             <div class="payment__picture">
-              <img class="payment__image" src="images/logo-sogaz-desktop.png" width="286" height="326"
-                alt="Логотип СОГАЗ">
+              <picture>
+                <source media="(max-width: 767px)"
+                  srcset="./images/payment/logo-sogaz-mobile.png 1x, ./images/payment/logo-sogaz-mobile@2x.png 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="./images/payment/logo-sogaz-tablet.png 1x, ./images/payment/logo-sogaz-tablet@2x.png 2x">
+                <img class="payment__image" src="./images/payment/logo-sogaz-desktop.png"
+                  srcset="./images/payment/logo-sogaz-desktop@2x.png 2x" width="286" height="326" alt="Логотип СОГАЗ">
+              </picture>
             </div>
             <h3 class="payment__heading">
               СОГАЗ
@@ -177,8 +190,15 @@
           </li>
           <li class="payment__item">
             <div class="payment__picture">
-              <img class="payment__image" src="images/logo-ntv-plus-desktop.png" width="286" height="326"
-                alt="Логотип НТВ-ПЛЮС">
+              <picture>
+                <source media="(max-width: 767px)"
+                  srcset="./images/payment/logo-ntv-plus-mobile.png 1x, ./images/payment/logo-ntv-plus-mobile@2x.png 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="./images/payment/logo-ntv-plus-tablet.png 1x, ./images/payment/logo-ntv-plus-tablet@2x.png 2x">
+                <img class="payment__image" src="./images/payment/logo-ntv-plus-desktop.png"
+                  srcset="./images/payment/logo-ntv-plus-desktop@2x.png 2x" width="286" height="326"
+                  alt="Логотип НТВ-ПЛЮС">
+              </picture>
             </div>
             <h3 class="payment__heading">
               НТВ-ПЛЮС
@@ -189,8 +209,15 @@
           </li>
           <li class="payment__item">
             <div class="payment__picture">
-              <img class="payment__image" src="images/logo-state-services-desktop.png" width="286" height="326"
-                alt="Логотип Госуслуг">
+              <picture>
+                <source media="(max-width: 767px)"
+                  srcset="./images/payment/logo-state-services-mobile.png 1x, ./images/payment/logo-state-services-mobile@2x.png 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="./images/payment/logo-state-services-tablet.png 1x, ./images/payment/logo-state-services-tablet@2x.png 2x">
+                <img class="payment__image" src="./images/payment/logo-state-services-desktop.png"
+                  srcset="./images/payment/logo-state-services-desktop@2x.png 2x" width="286" height="326"
+                  alt="Логотип Госуслуг">
+              </picture>
             </div>
             <h3 class="payment__heading">
               Госуслуги

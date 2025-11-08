@@ -441,13 +441,6 @@ a {
     padding: 0;
     margin: 0;
   }
-  .header__box .header__btn--active {
-    display: none;
-  }
-  .header__box .btn {
-    padding: 0;
-    text-align: right;
-  }
 }
 .header__btn {
   width: 128px;
@@ -458,6 +451,11 @@ a {
 @media (max-width: 1023px) {
   .header__btn {
     font-size: 14px;
+  }
+}
+@media (max-width: 1023px) {
+  .header__btn--active {
+    display: none;
   }
 }
 .header__language-link {
@@ -550,9 +548,11 @@ a {
   color: #1E222E;
   background-color: transparent;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .btn--fifth {
     font-size: 14px;
+    padding: 0;
+    text-align: right;
   }
 }
 .btn--fifth:hover, .btn--fifth:focus-visible {
@@ -708,6 +708,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     padding: 80px 0 0 0;
     margin: 0 0 80px;
+    gap: 18px;
   }
 }
 @media (max-width: 767px) {
@@ -727,6 +728,7 @@ a {
     grid-template-columns: 1fr;
     padding: 60px 0 0 0;
     margin: 0 0 60px;
+    gap: 15px;
   }
 }
 .advantages__main-item--flat {
@@ -754,7 +756,7 @@ a {
 @media (max-width: 767px) {
   .advantages__list {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
 }
 .advantages__list-item {
@@ -827,37 +829,65 @@ a {
 }
 @media (max-width: 1023px) {
   .card-advantages--reverse .card-advantages__content {
-    padding: 30px 15px 0 15px;
-  }
-}
-@media (max-width: 767px) {
-  .card-advantages--reverse .card-advantages__content {
-    padding: 30px 30px 0;
+    padding: 30px 15px 15px;
   }
 }
 .card-advantages--heavenly {
   background-color: #A8DCFF;
 }
+@media (max-width: 1023px) {
+  .card-advantages--heavenly .card-advantages__picture {
+    width: 250px;
+    height: 220px;
+  }
+}
+@media (max-width: 767px) {
+  .card-advantages--heavenly .card-advantages__picture {
+    width: 250px;
+    height: 220px;
+  }
+}
 .card-advantages--purple {
   background-color: #8CA3FF;
+}
+@media (max-width: 1023px) {
+  .card-advantages--purple .card-advantages__picture {
+    width: 250px;
+    height: 220px;
+  }
+}
+@media (max-width: 767px) {
+  .card-advantages--purple .card-advantages__picture {
+    width: 250px;
+    height: 220px;
+  }
 }
 .card-advantages--blue {
   color: #FFFFFF;
   background-color: #5E81FF;
-}
-.card-advantages--blue .card-advantages__picture {
-  flex-shrink: unset;
 }
 @media (max-width: 1023px) {
   .card-advantages--blue {
     flex-direction: row;
     gap: 28px;
   }
+  .card-advantages--blue .card-advantages__content {
+    padding: 0 40px 0 0;
+  }
+  .card-advantages--blue .card-advantages__picture {
+    width: 340px;
+  }
 }
 @media (max-width: 767px) {
   .card-advantages--blue {
     flex-direction: column;
     gap: 0;
+  }
+  .card-advantages--blue .card-advantages__content {
+    padding: 34px 30px;
+  }
+  .card-advantages--blue .card-advantages__picture {
+    height: 190px;
   }
 }
 .card-advantages--dark-gray {
@@ -882,7 +912,7 @@ a {
 }
 @media (max-width: 1023px) {
   .card-advantages--small .card-advantages__content {
-    padding: 30px 15px 0 15px;
+    padding: 30px 30px 0;
   }
 }
 @media (max-width: 767px) {
@@ -926,12 +956,7 @@ a {
 }
 @media (max-width: 1023px) {
   .card-advantages__content {
-    padding: 0 15px 30px 15px;
-  }
-}
-@media (max-width: 767px) {
-  .card-advantages__content {
-    padding: 30px;
+    padding: 10px 15px 30px;
   }
 }
 .card-advantages__heading {
@@ -964,6 +989,7 @@ a {
 @media (max-width: 1023px) {
   .card-advantages__btn {
     margin: 30px auto 0;
+    width: 187px;
   }
 }
 
@@ -1010,7 +1036,7 @@ a {
 @media (max-width: 767px) {
   .how-pay__list {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 25px;
   }
 }
 .how-pay__item, .how-pay__content {
@@ -1022,6 +1048,7 @@ a {
   .how-pay__item {
     flex-direction: row;
     gap: 15px;
+    align-items: flex-start;
   }
 }
 .how-pay__icon {
@@ -1083,13 +1110,12 @@ a {
 }
 @media (max-width: 1023px) {
   .payment--partners {
-    padding: 80px 0 0 0;
+    padding: 0;
     margin: 0 0 80px;
   }
 }
 @media (max-width: 767px) {
   .payment--partners {
-    padding: 60px 0 0;
     margin: 0 0 60px;
   }
 }
@@ -1103,6 +1129,7 @@ a {
 @media (max-width: 1023px) {
   .payment__title {
     font-size: 22px;
+    max-width: 625px;
     line-height: 28px;
     margin: 0 auto 30px;
   }
