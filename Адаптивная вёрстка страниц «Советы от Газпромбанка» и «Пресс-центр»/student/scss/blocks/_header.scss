@@ -9,9 +9,21 @@
     padding: 22px 0;
   }
 
-  &__logo {
+  &__logo-link--large {
     height: 36px;
     width: 170px;
+    @include vp-1023{
+      display: none;
+    }
+  }
+
+  &__logo-link--small{
+    width: 36px;
+    height: 36px;
+    display: none;
+    @include vp-1023{
+      display: block;
+    }
   }
 
   &__burger {
