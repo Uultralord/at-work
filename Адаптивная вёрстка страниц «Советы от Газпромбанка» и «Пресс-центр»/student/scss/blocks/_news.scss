@@ -6,6 +6,10 @@
   margin: 0;
   padding: 0;
 
+  @include vp-1023 {
+    row-gap: 15px;
+  }
+
   &__link {
     display: block;
     background-color: $color-solitude-2;
@@ -19,6 +23,14 @@
     display: flex;
     flex-direction: column;
     padding: 20px 30px;
+
+    @include vp-1023 {
+      padding: 20px;
+    }
+
+    @include vp-767 {
+      padding: 15px 30px 15px 15px;
+    }
   }
 
   &__date {
@@ -26,12 +38,32 @@
     font-size: 14px;
     line-height: 20px;
     color: $color-storm-grey-2;
+
+    @include vp-1023 {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 5px;
+    }
   }
 
   &__title {
     margin: 0 0 20px;
     font-size: 20px;
     line-height: 24px;
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 18px;
+      margin: 0 0 15px;
+    }
   }
 
   &__text {
@@ -40,5 +72,10 @@
     line-height: 22px;
     color: $color-royal-blue;
     text-decoration: underline;
+
+    @include vp-1023 {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 }

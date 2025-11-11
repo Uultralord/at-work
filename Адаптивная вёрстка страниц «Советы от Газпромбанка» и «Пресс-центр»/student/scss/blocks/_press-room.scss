@@ -3,12 +3,37 @@
     margin: 0 0 60px;
     font-size: 40px;
     line-height: 46px;
+
+    @include vp-1023 {
+      font-size: 32px;
+      line-height: 36px;
+      text-align: center;
+      margin: 0 0 40px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 24px;
+      margin: 0 0 30px;
+    }
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: 420px 740px;
     column-gap: 80px;
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  &__box {
+    @include vp-1023{
+      grid-row: 2;
+    }
+    
   }
 
   &__newsletter {
@@ -19,8 +44,20 @@
     padding: 20px;
     border-radius: 12px;
     background-color: $color-ghost-white;
-    background-image: url("../images/subscribe-image-desktop.png");
+    background-image: url("../images/press-room/subscribe-image-desktop.png");
     background-size: 100%;
+    background-repeat: no-repeat;
+
+    @include vp-1023 {
+      align-items: center;
+      margin: 0 0 20px;
+      background-image: url("../images/press-room/subscribe-image-tablet.png");
+    }
+
+    @include vp-767 {
+      margin: 0 0 15px;
+      background-image: none;
+    }
   }
 
   &__newsletter-title {
@@ -28,6 +65,19 @@
     margin: 0 0 10px;
     font-size: 20px;
     line-height: 24px;
+
+    @include vp-1023 {
+      max-width: 280px;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 18px;
+      margin: 0 0 5px;
+    }
   }
 
   &__newsletter-text {
@@ -35,9 +85,36 @@
     margin: 0 0 60px;
     font-size: 15px;
     line-height: 22px;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0 0 20px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 16px;
+      margin: 0 0 15px;
+    }
   }
 
   &__newsletter-btn {
     width: 115px;
+    @include vp-1023{
+      width: 138px;
+    }
+  }
+}
+
+@media (min-resolution:2dppx) {
+  .press-room__newsletter {
+    background-image: url("../images/press-room/subscribe-image-desktop@2x.png");
+  }
+}
+
+@media (max-width: 1023px) and (min-resolution: 2dppx) {
+  .press-room__newsletter {
+    background-image: url("../images/press-room/subscribe-image-tablet@2x.png");
   }
 }

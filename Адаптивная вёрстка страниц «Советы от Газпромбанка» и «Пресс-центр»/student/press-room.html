@@ -25,7 +25,7 @@
       </button>
     </div>
   </div>
-</header><!--
+</header>
 <main>
   <div class="breadcrumbs breadcrumbs--alternate">
     <div class="container">
@@ -84,7 +84,15 @@
         <ul class="news">
           <li class="news__item">
             <a class="news__link" href="#">
-              <img class="news__image" src="images/news-image-1-desktop.jpg" width="740" height="100" alt="Экология">
+              <picture>
+                <source media="(max-width: 767px)"
+                  srcset="./images/news/news-image-1-mobile.png 1x, ./images/news/news-image-1-mobile@2x.png 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="./images/news/news-image-1-tablet.png 1x, ./images/news/news-image-1-tablet@2x.png 2x">
+                <img class="news__image" src="./images/news/news-image-1-desktop.jpg"
+                  srcset="./images/news/news-image-1-desktop@2x.png 2x" width="740" height="100"
+                  alt="Экология">
+              </picture>
               <div class="news__content">
                 <span class="news__date">
                   17&nbsp;ноября, 2023
@@ -100,7 +108,15 @@
           </li>
           <li class="news__item">
             <a class="news__link" href="#">
-              <img class="news__image" src="images/news-image-2-desktop.jpg" width="740" height="100" alt="Экология">
+              <picture>
+                <source media="(max-width: 767px)"
+                  srcset="./images/news/news-image-2-mobile.png 1x, ./images/news/news-image-2-mobile@2x.png 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="./images/news/news-image-2-tablet.png 1x, ./images/news/news-image-2-tablet@2x.png 2x">
+                <img class="news__image" src="./images/news/news-image-2-desktop.jpg"
+                  srcset="./images/news/news-image-2-desktop@2x.png 2x" width="740" height="100"
+                  alt="Экология">
+              </picture>
               <div class="news__content">
                 <span class="news__date">
                   15&nbsp;ноября, 2023
@@ -116,7 +132,15 @@
           </li>
           <li class="news__item">
             <a class="news__link" href="#">
-              <img class="news__image" src="images/news-image-3-desktop.jpg" width="740" height="100" alt="Экология">
+              <picture>
+                <source media="(max-width: 767px)"
+                  srcset="./images/news/news-image-3-mobile.png 1x, ./images/news/news-image-3-mobile@2x.png 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="./images/news/news-image-3-tablet.png 1x, ./images/news/news-image-3-tablet@2x.png 2x">
+                <img class="news__image" src="./images/news/news-image-3-desktop.jpg"
+                  srcset="./images/news/news-image-3-desktop@2x.png 2x" width="740" height="100"
+                  alt="Экология">
+              </picture>
               <div class="news__content">
                 <span class="news__date">
                   9&nbsp;ноября, 2023
@@ -147,8 +171,15 @@
                 <p class="features-card__note">По низкой ставке</p>
               </div>
               <div class="features-card__picture">
-                <img class="features-card__img" src="images/features-image-1-desktop.png" height="180" width="280"
-                     alt="Иллюстрация быстрого кредита наличными">
+                     <picture>
+                    <source media="(max-width: 767px)"
+                      srcset="./images/features/features-image-1-mobile.png 1x, ./images/features/features-image-1-mobile@2x.png 2x">
+                    <source media="(max-width: 1023px)"
+                      srcset="./images/features/features-image-1-tablet.png 1x, ./images/features/features-image-1-tablet@2x.png 2x">
+                    <img class="features-card__img" src="./images/features/features-image-1-desktop.png"
+                      srcset="./images/features/features-image-1-desktop@2x.png 2x" width="180" height="280"
+                      alt="Иллюстрация быстрого кредита наличными">
+                  </picture>
               </div>
             </div>
             <a class="btn features-card__btn" href="#">Подробнее</a>
@@ -163,8 +194,15 @@
                 <p class="features-card__note">Для покупок за рубежом и в России</p>
               </div>
               <div class="features-card__picture">
-                <img class="features-card__img" src="images/features-image-2-desktop.png" height="180" width="280"
-                     alt="Иллюстрация карточки с возможностями">
+                <picture>
+                    <source media="(max-width: 767px)"
+                      srcset="./images/features/features-image-2-mobile.png 1x, ./images/features/features-image-2-mobile@2x.png 2x">
+                    <source media="(max-width: 1023px)"
+                      srcset="./images/features/features-image-2-tablet.png 1x, ./images/features/features-image-2-tablet@2x.png 2x">
+                    <img class="features-card__img" src="./images/features/features-image-2-desktop.png"
+                      srcset="./images/features/features-image-2-desktop@2x.png 2x" width="180" height="280"
+                      alt="Иллюстрация карточки с возможностями">
+                  </picture>
               </div>
             </div>
             <a class="btn features-card__btn btn--invert" href="#">Подробнее</a>
@@ -179,8 +217,15 @@
                 <p class="features-card__note">В&nbsp;том числе по&nbsp;программам с&nbsp;господдержкой</p>
               </div>
               <div class="features-card__picture">
-                <img class="features-card__img" src="images/features-image-3-desktop.png" height="180" width="280"
-                     alt="Иллюстрация карточки с возможностями">
+                <picture>
+                    <source media="(max-width: 767px)"
+                      srcset="./images/features/features-image-3-mobile.png 1x, ./images/features/features-image-3-mobile@2x.png 2x">
+                    <source media="(max-width: 1023px)"
+                      srcset="./images/features/features-image-3-tablet.png 1x, ./images/features/features-image-3-tablet@2x.png 2x">
+                    <img class="features-card__img" src="./images/features/features-image-3-desktop.png"
+                      srcset="./images/features/features-image-3-desktop@2x.png 2x" width="180" height="280"
+                      alt="Иллюстрация карточки с возможностями">
+                  </picture>
               </div>
             </div>
             <a class="btn features-card__btn" href="#">Подробнее</a>
@@ -195,8 +240,15 @@
                 <p class="features-card__note">Больше, чем выгодно</p>
               </div>
               <div class="features-card__picture">
-                <img class="features-card__img" src="images/features-image-4-desktop.png" height="180" width="280"
-                     alt="Иллюстрация карточки с возможностями">
+                <picture>
+                    <source media="(max-width: 767px)"
+                      srcset="./images/features/features-image-4-mobile.png 1x, ./images/features/features-image-4-mobile@2x.png 2x">
+                    <source media="(max-width: 1023px)"
+                      srcset="./images/features/features-image-4-tablet.png 1x, ./images/features/features-image-4-tablet@2x.png 2x">
+                    <img class="features-card__img" src="./images/features/features-image-4-desktop.png"
+                      srcset="./images/features/features-image-4-desktop@2x.png 2x" width="180" height="280"
+                      alt="Иллюстрация карточки с возможностями">
+                  </picture>
               </div>
             </div>
             <a class="btn features-card__btn" href="#">Подробнее</a>
@@ -206,7 +258,7 @@
     </div>
   </section>
 </main>
---><footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="footer__content">
       <a class="footer__logo-link" href="#">
