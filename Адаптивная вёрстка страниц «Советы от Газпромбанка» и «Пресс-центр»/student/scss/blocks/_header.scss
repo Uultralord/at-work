@@ -1,12 +1,20 @@
 .header {
   background: linear-gradient(90deg, #415BD2 0%, #8DA1F7 100%);
 
+  @include vp-1023{
+    max-height:  66px;
+  }
+
   &__content {
     align-items: center;
     display: flex;
     gap: 20px;
     justify-content: space-between;
     padding: 22px 0;
+
+    @include vp-1023{
+      padding: 15px 0;
+    }
   }
 
   &__logo-link--large {

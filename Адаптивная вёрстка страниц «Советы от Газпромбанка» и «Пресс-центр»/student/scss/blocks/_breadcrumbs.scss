@@ -2,6 +2,15 @@
   padding: 20px 0 0;
   margin: 0 0 32px 0;
 
+  @include vp-1023{
+    margin: 0 0 30px;
+  }
+
+  @include vp-767{
+    margin: 0 0 15px;
+    padding: 15px 0 0;
+  }
+
   &--alternate {
     .breadcrumbs__list {
       justify-content: flex-start;
