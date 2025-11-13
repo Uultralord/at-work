@@ -80,6 +80,11 @@
       font-size: 18px;
       line-height: 22px;
     }
+
+    &:hover,
+    &:focus-visible{
+      color: $color-royal-blue;
+    }
   }
 
   &__info {
@@ -120,6 +125,11 @@
     justify-content: center;
     text-decoration: none;
     width: 40px;
+
+    &:hover,
+    &:focus-visible{
+      background-color: $color-quartz;
+    }
   }
 
   &__note {

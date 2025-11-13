@@ -501,9 +501,23 @@ a {
   text-decoration: none;
   background-color: #476BF0;
 }
+.btn:hover, .btn:focus-visible {
+  background-color: #3356D7;
+}
+.btn:disabled {
+  background-color: #F0F0F0;
+  color: #9A9BA0;
+}
 .btn--invert {
   color: #476BF0;
   background-color: #FFFFFF;
+}
+.btn--invert:hover, .btn--invert:focus-visible {
+  background-color: #EAECF4;
+}
+.btn--invert:disabled {
+  background-color: #F0F0F0;
+  color: #9A9BA0;
 }
 @media (max-width: 1023px) {
   .btn {
@@ -563,6 +577,9 @@ a {
   background-size: cover;
   border-radius: 12px;
   padding: 20px 20px 32px;
+}
+.advice-card:hover .btn, .advice-card:focus-visible .btn {
+  background-color: #3356D7;
 }
 @media (max-width: 1023px) {
   .advice-card {
@@ -823,6 +840,9 @@ a {
   border-radius: 50%;
   background-color: #EDEEEF;
 }
+.socials__link:hover, .socials__link:focus-visible {
+  background-color: #DBDBDD;
+}
 @media (max-width: 1023px) {
   .socials__link {
     width: 40px;
@@ -850,6 +870,15 @@ a {
 .news__link {
   display: block;
   background-color: #F4F6FA;
+}
+.news__link:hover, .news__link:focus-visible {
+  background-color: #EBF0FA;
+}
+.news__link:hover .news__title, .news__link:focus-visible .news__title {
+  color: #476BF0;
+}
+.news__link:hover .news__text, .news__link:focus-visible .news__text {
+  text-decoration: none;
 }
 .news__image {
   width: 100%;
@@ -1185,8 +1214,6 @@ a {
 }
 @media (max-width: 767px) {
   .features-card__picture {
-    position: absolute;
-    z-index: 0;
     right: -20px;
     bottom: -10px;
     top: unset;
@@ -1347,6 +1374,9 @@ a {
     line-height: 22px;
   }
 }
+.footer__contacts-phone:hover, .footer__contacts-phone:focus-visible {
+  color: #476BF0;
+}
 .footer__info {
   align-items: center;
   display: flex;
@@ -1383,6 +1413,9 @@ a {
   justify-content: center;
   text-decoration: none;
   width: 40px;
+}
+.footer__app-link:hover, .footer__app-link:focus-visible {
+  background-color: #DBDBDD;
 }
 .footer__note {
   color: rgba(106, 110, 128, 0.4);

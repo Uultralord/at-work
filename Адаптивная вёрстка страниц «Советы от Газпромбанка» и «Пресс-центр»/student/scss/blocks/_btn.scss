@@ -11,9 +11,29 @@
   text-decoration: none;
   background-color: $color-royal-blue;
 
+  &:hover,
+  &:focus-visible {
+    background-color: $color-free-speech-blue;
+  }
+
+  &:disabled {
+    background-color: $color-white-smoke;
+    color: $color-manatee-2;
+  }
+
   &--invert {
     color: $color-royal-blue;
     background-color: $color-white;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-solitude-3;
+    }
+
+    &:disabled {
+      background-color: $color-white-smoke;
+      color: $color-manatee-2;
+    }
   }
 
   @include vp-1023 {

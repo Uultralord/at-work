@@ -9,6 +9,14 @@
   border-radius: 12px;
   padding: 20px 20px 32px;
 
+  &:hover,
+  &:focus-visible {
+    .btn {
+      background-color: $color-free-speech-blue;
+
+    }
+  }
+
   @include vp-1023 {
     min-height: 380px;
     padding: 20px 20px 28px;

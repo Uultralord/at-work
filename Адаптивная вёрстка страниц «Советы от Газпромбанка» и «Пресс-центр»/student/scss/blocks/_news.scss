@@ -13,6 +13,19 @@
   &__link {
     display: block;
     background-color: $color-solitude-2;
+
+    &:hover,
+    &:focus-visible{
+      background-color: $color-solitude-5;
+
+      .news__title{
+        color: $color-royal-blue;
+      }
+
+      .news__text{
+        text-decoration: none;
+      }
+    }
   }
 
   &__image {
