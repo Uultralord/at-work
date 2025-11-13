@@ -861,7 +861,7 @@ a {
 }
 @media (max-width: 1023px) {
   .news__content {
-    padding: 20px;
+    padding: 20px 30px;
   }
 }
 @media (max-width: 767px) {
@@ -1012,6 +1012,7 @@ a {
 @media (max-width: 767px) {
   .features-card--vertical {
     padding: 15px 15px 20px;
+    min-height: 302px;
   }
 }
 .features-card--vertical .features-card__wrapper {
@@ -1022,7 +1023,7 @@ a {
 @media (max-width: 1023px) {
   .features-card--vertical .features-card__wrapper {
     flex-direction: row;
-    margin: 0 0 10px;
+    margin: 0 0 15px;
   }
 }
 @media (max-width: 767px) {
@@ -1037,7 +1038,7 @@ a {
 @media (max-width: 1023px) {
   .features-card--vertical .features-card__inner {
     align-items: flex-start;
-    max-width: 200px;
+    max-width: 190px;
     z-index: 1;
   }
 }
@@ -1045,10 +1046,16 @@ a {
   .features-card--vertical .features-card__inner {
     min-width: 0;
     margin: 0 0 10px;
+    min-height: 0;
   }
 }
 .features-card--vertical .features-card__label {
   margin: 0 0 8px 0;
+}
+@media (max-width: 1023px) {
+  .features-card--vertical .features-card__label {
+    margin: 0 0 10px;
+  }
 }
 .features-card--vertical .features-card__title {
   font-size: 20px;
@@ -1059,12 +1066,14 @@ a {
 @media (max-width: 1023px) {
   .features-card--vertical .features-card__title {
     text-align: left;
+    margin: 0 0 10px;
   }
 }
 @media (max-width: 767px) {
   .features-card--vertical .features-card__title {
     font-size: 14px;
     line-height: 18px;
+    margin: 0 0 5px;
   }
 }
 .features-card--vertical .features-card__note {
@@ -1142,19 +1151,16 @@ a {
   .features-card__wrapper {
     justify-content: space-between;
     position: relative;
-    margin: 0 0 25px 0;
+    margin: 0 0 30px 0;
   }
 }
 @media (max-width: 767px) {
   .features-card__wrapper {
-    align-items: flex-start;
     gap: 0;
-    position: relative;
-    min-height: 135px;
+    margin: 0 0 23px 0;
   }
 }
 .features-card__inner {
-  align-items: flex-start;
   display: flex;
   flex-direction: column;
 }
@@ -1163,6 +1169,7 @@ a {
     z-index: 1;
     min-width: 200px;
     max-width: 220px;
+    min-height: 130px;
   }
 }
 .features-card__picture {
@@ -1182,6 +1189,7 @@ a {
     z-index: 0;
     right: -20px;
     bottom: -10px;
+    top: unset;
   }
 }
 @media (max-width: 1023px) {
@@ -1216,6 +1224,7 @@ a {
     margin: 0 0 15px;
     padding: 5px;
     width: 58px;
+    height: 22px;
   }
 }
 .features-card__title {
@@ -1254,6 +1263,11 @@ a {
 .footer {
   background-color: #F4F6FA;
   padding: 36px 0;
+}
+@media (max-width: 767px) {
+  .footer {
+    padding: 30px 0;
+  }
 }
 .footer__content {
   align-items: center;
