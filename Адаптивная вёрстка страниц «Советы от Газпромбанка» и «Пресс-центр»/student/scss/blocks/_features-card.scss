@@ -114,6 +114,9 @@
     }
 
     .features-card__img {
+      width: 210px;
+      height: 135px;
+
       @include vp-1023 {
         width: 130px;
         height: 80px;
@@ -207,6 +210,9 @@
   }
 
   &__img {
+    width: 280px;
+    height: 180px;
+
     @include vp-1023 {
       width: 220px;
       height: 140px;

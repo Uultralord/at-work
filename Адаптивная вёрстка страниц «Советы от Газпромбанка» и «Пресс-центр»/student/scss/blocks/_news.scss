@@ -15,21 +15,32 @@
     background-color: $color-solitude-2;
 
     &:hover,
-    &:focus-visible{
+    &:focus-visible {
       background-color: $color-solitude-5;
 
-      .news__title{
+      .news__title {
         color: $color-royal-blue;
       }
 
-      .news__text{
+      .news__text {
         text-decoration: none;
       }
     }
   }
 
   &__image {
-    width: 100%;
+    width: 740px;
+    height: 100px;
+
+    @include vp-1023 {
+      width: 708px;
+      height: 100px;
+    }
+
+    @include vp-767 {
+      width: 345px;
+      height: 100px;
+    }
   }
 
   &__content {

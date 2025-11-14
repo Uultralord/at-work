@@ -8,12 +8,13 @@
   background-size: cover;
   border-radius: 12px;
   padding: 20px 20px 32px;
+  position: relative;
+  overflow: hidden;
 
   &:hover,
   &:focus-visible {
     .btn {
       background-color: $color-free-speech-blue;
-
     }
   }
 
@@ -27,31 +28,12 @@
     padding: 15px 15px 20px;
   }
 
-  // Удалить модификаторы у элементов и фоновые картинки. Заменить изображениями в разметке!
-  picture {
+  &__image {
     z-index: 0;
     position: absolute;
-    margin: -20px;
-
-    @include vp-767 {
-      margin: -15px;
-    }
-  }
-
-  &__image {
-    border-radius: 12px;
-    width: 286px;
-    height: 480px;
-
-    @include vp-1023 {
-      width: 226px;
-      height: 380px;
-    }
-
-    @include vp-767 {
-      width: 165px;
-      height: 320px;
-    }
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
 
   &__top {
