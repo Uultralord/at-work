@@ -1,0 +1,31 @@
+.btn {
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 20px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: $color-black-russian;
+  background-color: $color-solitude-3;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &[disabled] {
+    cursor: default;
+  }
+
+  &--tertiary {
+    color: $color-white;
+    padding: 15px 24px;
+    background-color: $color-black-russian;
+  }
+
+  &--large {
+    padding: 19px 32px;
+  }
+}
