@@ -8,17 +8,30 @@
   background-color: $color-solitude-2;
   border-radius: 16px;
 
+  @include vp-1024{
+    padding: 32px 48px;
+  }
+
   &__prediction {
     margin: 0 0 20px 0;
     display: flex;
     align-items: center;
     gap: 0 8px;
+
+    @include vp-1024 {
+      margin: 0 0 16px;
+    }
   }
 
   &__prediction-text {
     margin: 0;
     font-size: 14px;
     line-height: 18px;
+
+    @include vp-1024 {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
   &__icon {
@@ -37,6 +50,11 @@
     background-color: transparent;
     cursor: pointer;
 
+    @include vp-1024 {
+      font-size: 56px;
+      line-height: 60px;
+    }
+
     &:not(button) {
       color: $color-black-russian;
       border: none;
@@ -51,6 +69,12 @@
     margin: 19px 0 0 0;
     font-size: 14px;
     line-height: 18px;
+
+    @include vp-1024 {
+      font-size: 16px;
+      line-height: 22px;
+      margin: 72px 0 0 0;
+    }
   }
 
   &__link {

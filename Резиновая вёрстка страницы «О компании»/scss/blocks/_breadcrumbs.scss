@@ -6,6 +6,10 @@
     display: flex;
     align-items: center;
     gap: 0 19px;
+
+    @include vp-1024{
+      margin-top: 20px;
+    }
   }
 
   &__item {
@@ -21,6 +25,11 @@
     font-size: 13px;
     line-height: 16px;
     color: inherit;
+
+    @include vp-1024{
+      font-size: 14px;
+      line-height: 18px;
+    }
 
     &:not(span) {
       &::after {

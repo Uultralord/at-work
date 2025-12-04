@@ -1,6 +1,18 @@
 .achievements {
   margin: 0 0 60px 0;
 
+  @include vp-768 {
+    margin: 0 0 80px;
+  }
+
+  @include vp-1024 {
+    margin: 0 0 100px;
+  }
+
+  @include vp-1304 {
+    margin: 0 0 120px;
+  }
+
   &__title {
     margin: 0 0 28px 0;
     font-weight: 600;
@@ -16,5 +28,18 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 16px;
+
+    @include vp-768{
+      flex-direction: row;
+    }
+
+    @include vp-1024{
+      gap: 20px;
+    }
+
+    @include vp-1304{
+      gap: 24px;
+      flex-wrap: nowrap;
+    }
   }
 }
