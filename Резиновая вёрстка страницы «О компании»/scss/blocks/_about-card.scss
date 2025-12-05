@@ -19,8 +19,12 @@
     min-height: 240px;
   }
 
-  @include vp-1304{
+  @include vp-1304 {
     min-height: 300px;
+  }
+
+  &:hover,:focus-visible{
+    background-color: $color-solitude-1;
   }
 
   &--large {
@@ -61,6 +65,12 @@
         font-size: 30px;
         line-height: 36px;
         max-width: 380px;
+      }
+    }
+
+    &:hover,:focus-visible {
+      .about-card__icon-arrow {
+        background-color: $color-link-water;
       }
     }
   }

@@ -859,6 +859,9 @@ a {
   padding: 15px 24px;
   background-color: #1E222E;
 }
+.btn--tertiary:hover, .btn--tertiary :focus-visible {
+  background-color: #383F52;
+}
 .btn--large {
   padding: 19px 32px;
 }
@@ -974,6 +977,9 @@ a {
     min-height: 300px;
   }
 }
+.about-card:hover, .about-card :focus-visible {
+  background-color: #EAECF4;
+}
 .about-card--large {
   padding: 20px;
   min-height: 200px;
@@ -1018,6 +1024,9 @@ a {
     line-height: 36px;
     max-width: 380px;
   }
+}
+.about-card--large:hover .about-card__icon-arrow, .about-card--large :focus-visible .about-card__icon-arrow {
+  background-color: #D2D4DA;
 }
 .about-card__icon {
   flex-shrink: 0;
@@ -1189,6 +1198,9 @@ a {
   cursor: initial;
   pointer-events: none;
 }
+.rating-card__value:hover, .rating-card__value :focus-visible {
+  color: #2F54DF;
+}
 .rating-card__agency {
   display: flex;
   gap: 0 4px;
@@ -1207,6 +1219,9 @@ a {
   display: flex;
   align-items: center;
   color: #476BF0;
+}
+.rating-card__link:hover, .rating-card__link :focus-visible {
+  color: #2F54DF;
 }
 .rating-card__arrow {
   width: 16px;
@@ -1339,6 +1354,9 @@ a {
   font-size: 14px;
   line-height: 18px;
   color: #1E222E;
+}
+.news-card__link:hover, .news-card__link :focus-visible {
+  color: #476BF0;
 }
 .news-card__icon {
   flex-shrink: 0;
