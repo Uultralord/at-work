@@ -58,4 +58,35 @@
       line-height: 16px;
     }
   }
+
+  &--fivefold {
+    background-color: $color-white-smoke;
+    padding: 12px;
+    color: $color-black-russian;
+
+    &:disabled {
+      background-color: $color-solitude-2;
+      color: $color-dark-gray;
+    }
+
+    &:hover, :focus-visible{
+      background-color: $color-link-water;
+    }
+  }
+
+  &--sixfold {
+    width: 40px;
+    padding: 11px 16px;
+    background-color: transparent;
+    color: $color-black-russian;
+
+    &:hover, :focus-visible{
+      background-color: $color-link-water;
+    }
+
+    &:active{
+      background-color: $color-black-russian;
+      color: $color-white;
+    }
+  }
 }
