@@ -69,11 +69,12 @@
         </ol>
       </div>
     </div>
-    <section class="news">
+    <section class="search">
       <div class="container">
-        <h1 class="news__title">Результаты поиска</h1>
+        <h1 class="search__title">Результаты поиска</h1>
         <div class="custom-input">
-          <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка" placeholder="ИИС">
+          <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка"
+            placeholder="ИИС">
           <div class="custom-input__buttons-wrap">
             <button class="custom-input__btn" type="button" aria-label="Отменить поиск">
               <svg class="custom-input__icon btn-icon btn-icon--grey" width="24" height="24" aria-hidden="true">
@@ -87,6 +88,26 @@
             </button>
           </div>
         </div>
+        <div class="search__pop-up">
+          <ul class="search__list">
+            <li class="search__item">
+              <button class="btn btn--quaternary search__btn" type="button">Что входит в Привилегии?</button>
+            </li>
+            <li class="search__item">
+              <button class="btn btn--quaternary search__btn" type="button">Курсы валют</button>
+            </li>
+            <li class="search__item">
+              <button class="btn btn--quaternary search__btn" type="button">Где скачать приложение?</button>
+            </li>
+            <li class="search__item">
+              <button class="btn btn--quaternary search__btn" type="button">Рефинансирование</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="news">
+      <div class="container">
         <ul class="news__list">
           <h2 class="visually-hidden">Новости</h2>
           <li class="news__item">
@@ -125,49 +146,49 @@
         </ul>
         <div class="pages">
           <button class="btn btn--fivefold pages__btn" type="button" disabled>
-              <svg class="pages__arrow-icon" width="16" height="16" aria-hidden="true">
-                <use xlink:href="images/sprite.svg#icon-arrow-left"></use>
-              </svg>
-            </button>
-        <ul class="pages__list">
-          <li class="pages__item">
-            <button class="btn btn--sixfold pages__btn" type="button">1</button>
-          </li>
-          <li class="pages__item">
-            <button class="btn btn--sixfold pages__btn" type="button">2</button>
-          </li>
-          <li class="pages__item">
-            <button class="btn btn--sixfold pages__btn" type="button">3</button>
-          </li>
-          <li class="pages__item">
-            <button class="btn btn--sixfold pages__btn" type="button">4</button>
-          </li>
-          <li class="pages__item">
-            <button class="btn btn--sixfold pages__btn" type="button">5</button>
-          </li>
-          <li class="pages__item">
-            <button class="btn btn--sixfold pages__btn" type="button">6</button>
-          </li>
-          <li class="pages__item">
-            <button class="btn btn--sixfold pages__btn" type="button">7</button>
-          </li>
-          <li class="pages__item">
-            <button class="btn btn--sixfold pages__btn" type="button">8</button>
-          </li>
-          <li class="pages__item">
-            <button class="btn btn--sixfold pages__btn" type="button">9</button>
-          </li>
-          <li class="pages__item">
-            <button class="btn btn--sixfold pages__btn" type="button">10</button>
-          </li>
-          <li class="pages__arrow">
-            <button class="btn btn--fivefold pages__btn" type="button">
-              <svg class="pages__arrow-icon" width="16" height="16" aria-hidden="true">
-                <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
-              </svg>
-            </button>
-          </li>
-        </ul>
+            <svg class="pages__arrow-icon" width="16" height="16" aria-hidden="true">
+              <use xlink:href="images/sprite.svg#icon-arrow-left"></use>
+            </svg>
+          </button>
+          <ul class="pages__list">
+            <li class="pages__item">
+              <button class="btn btn--sixfold pages__btn" type="button">1</button>
+            </li>
+            <li class="pages__item">
+              <button class="btn btn--sixfold pages__btn" type="button">2</button>
+            </li>
+            <li class="pages__item">
+              <button class="btn btn--sixfold pages__btn" type="button">3</button>
+            </li>
+            <li class="pages__item">
+              <button class="btn btn--sixfold pages__btn" type="button">4</button>
+            </li>
+            <li class="pages__item">
+              <button class="btn btn--sixfold pages__btn" type="button">5</button>
+            </li>
+            <li class="pages__item">
+              <button class="btn btn--sixfold pages__btn" type="button">6</button>
+            </li>
+            <li class="pages__item">
+              <button class="btn btn--sixfold pages__btn" type="button">7</button>
+            </li>
+            <li class="pages__item">
+              <button class="btn btn--sixfold pages__btn" type="button">8</button>
+            </li>
+            <li class="pages__item">
+              <button class="btn btn--sixfold pages__btn" type="button">9</button>
+            </li>
+            <li class="pages__item">
+              <button class="btn btn--sixfold pages__btn" type="button">10</button>
+            </li>
+            <li class="pages__arrow">
+              <button class="btn btn--fivefold pages__btn" type="button">
+                <svg class="pages__arrow-icon" width="16" height="16" aria-hidden="true">
+                  <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
         </div>
         <div class="news__search-technology">
           <p class="news__search-text">Поисковая технология</p>

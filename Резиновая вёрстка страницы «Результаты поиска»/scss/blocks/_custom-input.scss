@@ -6,9 +6,17 @@
         border-radius: 8px;
         padding: 17px 86px 17px 16px;
         width: 100%;
+
+        &:focus {
+            background-color: aquamarine;
+
+            +.search__pop-up {
+                display: block;
+            }
+        }
     }
 
-    &__buttons-wrap{
+    &__buttons-wrap {
         position: absolute;
         right: 5%;
         bottom: 30%;

@@ -1,0 +1,21 @@
+.pop-up {
+
+    &__list {
+        list-style: none;
+        padding: 20px 0 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &__item {
+        background-color: $color-lavander;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
