@@ -398,9 +398,24 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1536px;
+  max-width: 1254px;
   margin: 0 auto;
   padding: 0 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+@media (min-width: 1304px) {
+  .container {
+    padding: 0 15px;
+  }
 }
 
 .visually-hidden {
@@ -591,6 +606,7 @@ a {
 }
 
 .search {
+  position: relative;
   overflow: hidden;
   padding: 40px 0 60px 0;
 }
@@ -609,8 +625,10 @@ a {
     padding: 40px 0 120px;
   }
 }
-.search__pop-up {
-  display: none;
+@media (min-width: 1024px) {
+  .search__content {
+    padding: 0 70px;
+  }
 }
 .search__title {
   position: relative;
@@ -652,14 +670,45 @@ a {
   transform: translate3d(-50%, 0, 0);
   background-color: #DBDFEC;
 }
-.search__list {
-  list-style: none;
-  padding: 20px 0 0;
-  margin: 0;
+.search-input {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 16px;
+}
+.search-input__field {
+  border: #CCCFDE 1px solid;
+  border-radius: 8px;
+  padding: 17px 86px 17px 16px;
+  width: 100%;
+}
+.search-input__buttons-wrap {
+  position: absolute;
+  right: 10%;
+  bottom: 30%;
+  display: flex;
+  gap: 12px;
+}
+@media (min-width: 1024px) {
+  .search-input__buttons-wrap {
+    right: 18%;
+  }
+}
+.search-input__field:focus + .search-input__buttons-wrap {
+  bottom: 52%;
+}
+.search-input__btn {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+.search__btn {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .search__btn {
+    display: flex;
+  }
 }
 
 .news {
@@ -668,17 +717,12 @@ a {
 }
 @media (min-width: 768px) {
   .news {
-    padding: 40px 0 80px;
+    padding: 0 0 80px;
   }
 }
 @media (min-width: 1024px) {
   .news {
-    padding: 40px 0 100px;
-  }
-}
-@media (min-width: 1304px) {
-  .news {
-    padding: 40px 0 120px;
+    padding: 0 0 100px;
   }
 }
 .news__list {
@@ -687,7 +731,18 @@ a {
   flex-direction: column;
   gap: 40px;
   margin: 0;
-  padding: 0;
+  padding: 60px 0 60px;
+}
+@media (min-width: 768px) {
+  .news__list {
+    padding: 60px 0 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .news__list {
+    padding: 80px 0 60px;
+    gap: 60px;
+  }
 }
 .news__item {
   display: flex;
@@ -700,57 +755,34 @@ a {
   line-height: 22px;
   margin: 0;
 }
+@media (min-width: 1024px) {
+  .news__heading {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
 .news__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   margin: 0;
 }
+@media (min-width: 1024px) {
+  .news__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 .news__text-bold {
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
 }
-.news__search-technology {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-.news__search-text {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  margin: 0;
-}
-
-.custom-input {
-  position: relative;
-}
-.custom-input__field {
-  border: #CCCFDE 1px solid;
-  border-radius: 8px;
-  padding: 17px 86px 17px 16px;
-  width: 100%;
-}
-.custom-input__field:focus {
-  background-color: aquamarine;
-}
-.custom-input__field:focus + .search__pop-up {
-  display: block;
-}
-.custom-input__buttons-wrap {
-  position: absolute;
-  right: 5%;
-  bottom: 30%;
-  display: flex;
-  gap: 12px;
-}
-.custom-input__btn {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  cursor: pointer;
+@media (min-width: 1024px) {
+  .news__text-bold {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 .pages {
@@ -760,6 +792,16 @@ a {
   margin: 0 0 40px;
   align-items: flex-start;
 }
+@media (min-width: 768px) {
+  .pages {
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .pages {
+    margin: 0 0 60px;
+  }
+}
 .pages__list {
   list-style: none;
   display: flex;
@@ -768,6 +810,25 @@ a {
   padding: 0;
   margin: 0;
 }
+.search-technology {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.search-technology__text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .search-technology__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
 .footer {
   padding: 40px 0;
   background-color: #F4F6FA;

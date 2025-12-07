@@ -1,0 +1,18 @@
+.search-technology {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+  &__text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+
+    @include vp-768 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}

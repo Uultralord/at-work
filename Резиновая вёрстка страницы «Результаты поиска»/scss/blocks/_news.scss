@@ -3,15 +3,11 @@
   padding: 0 0 60px 0;
 
   @include vp-768 {
-    padding: 40px 0 80px;
+    padding: 0 0 80px;
   }
 
   @include vp-1024 {
-    padding: 40px 0 100px;
-  }
-
-  @include vp-1304 {
-    padding: 40px 0 120px;
+    padding: 0 0 100px;
   }
 
   &__list {
@@ -20,7 +16,16 @@
     flex-direction: column;
     gap: 40px;
     margin: 0;
-    padding: 0;
+    padding: 60px 0 60px;
+
+    @include vp-768 {
+      padding: 60px 0 40px;
+    }
+
+    @include vp-1024 {
+      padding: 80px 0 60px;
+      gap: 60px;
+    }
   }
 
   &__item {
@@ -34,6 +39,11 @@
     font-size: 18px;
     line-height: 22px;
     margin: 0;
+
+    @include vp-1024 {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__text {
@@ -41,25 +51,20 @@
     font-size: 14px;
     line-height: 18px;
     margin: 0;
+
+    @include vp-1024 {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
   &__text-bold {
     font-weight: 700;
     font-size: 14px;
     line-height: 18px;
-  }
-
-  &__search-technology {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-
-  &__search-text {
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 16px;
-    margin: 0;
+    @include vp-1024 {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }

@@ -1,8 +1,7 @@
 .search {
+    position: relative;
     overflow: hidden;
     padding: 40px 0 60px 0;
-
-
 
     @include vp-768 {
         padding: 40px 0 80px;
@@ -16,8 +15,10 @@
         padding: 40px 0 120px;
     }
 
-    &__pop-up {
-        display: none;
+    &__content {
+        @include vp-1024 {
+            padding: 0 70px;
+        }
     }
 
     &__title {
@@ -27,6 +28,7 @@
         font-weight: 700;
         font-size: 28px;
         line-height: 32px;
+
 
         @include vp-768 {
             font-size: 32px;
@@ -59,14 +61,47 @@
         }
     }
 
-    &__list {
-        list-style: none;
-        padding: 20px 0 0;
-        margin: 0;
+    &-input {
+        position: relative;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 8px;
+        gap: 16px;
     }
 
+    &-input__field {
+        border: $color-periwinkle 1px solid;
+        border-radius: 8px;
+        padding: 17px 86px 17px 16px;
+        width: 100%;
+    }
+
+    &-input__buttons-wrap {
+        position: absolute;
+        right: 10%;
+        bottom: 30%;
+        display: flex;
+        gap: 12px;
+
+        @include vp-1024 {
+            right: 18%;
+        }
+    }
+
+    &-input__field:focus+&-input__buttons-wrap {
+        bottom: 52%;
+    }
+
+    &-input__btn {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    &__btn{
+        display: none;
+
+        @include vp-1024{
+            display: flex;
+        }
+    }
 }
