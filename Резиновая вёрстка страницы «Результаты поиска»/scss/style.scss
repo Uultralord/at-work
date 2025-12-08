@@ -11,9 +11,12 @@
 /* Blocks */
 /* ------------------------------------ */
 @import "blocks/_header";
+@import "blocks/_search-popup";
+@import "blocks/_overlay.scss";
 @import "blocks/_breadcrumbs";
 @import "blocks/_search.scss";
-@import "blocks/_news";
+@import "blocks/_cookie.scss";
+@import "blocks/_custom-input.scss";
 @import "blocks/_pages.scss";
 @import "blocks/_search-technology.scss";
 @import "blocks/_footer";

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header--active">
     <div class="container">
       <div class="header__wrapper">
         <svg class="header__icon-decor" width="24" height="24" aria-hidden="true">
@@ -56,6 +56,7 @@
       </div>
     </div>
   </header>
+  <div class="overlay"></div>
   <main>
     <div class="breadcrumbs">
       <div class="container">
@@ -72,72 +73,95 @@
     <section class="search">
       <div class="container">
         <h1 class="search__title">Результаты поиска</h1>
+        <div class="search-popup">
+          <div class="search-popup__wrap">
+            <div class="custom-input">
+              <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка" value="ИИС">
+              <div class="custom-input__buttons-wrap">
+                <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Отменить поиск">
+                  <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-cancel"></use>
+                  </svg>
+                </button>
+                <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Поиск">
+                  <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="custom-input__btn btn btn--secondary" type="button">Найти</button>
+            </div>
+            <ul class="search-popup__list">
+              <li class="search-popup__item">
+                <button class="search-popup__btn btn btn--quaternary">Что входит в Привилегии?</button>
+              </li>
+              <li class="search-popup__item">
+                <button class="search-popup__btn btn btn--quaternary">Курсы валют</button>
+              </li>
+              <li class="search-popup__item">
+                <button class="search-popup__btn btn btn--quaternary">Где скачать приложение?</button>
+              </li>
+              <li class="search-popup__item">
+                <button class="search-popup__btn btn btn--quaternary">Рефинансирование</button>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="search__content">
-          <div class="search-input">
-            <input class="search-input__field" type="search" name="search" aria-label="Поисковая строка" value="ИИС">
-            <div class="search-input__buttons-wrap">
-              <button class="search-input__btn" type="button" aria-label="Отменить поиск">
-                <svg class="search-input__icon btn-icon btn-icon--grey" width="24" height="24" aria-hidden="true">
+          <div class="custom-input">
+            <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка" value="ИИС">
+            <div class="custom-input__buttons-wrap">
+              <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Отменить поиск">
+                <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#icon-cancel"></use>
                 </svg>
               </button>
-              <button class="search-input__btn" type="button" aria-label="Поиск">
-                <svg class="search-input__icon btn-icon btn-icon--grey" width="24" height="24" aria-hidden="true">
+              <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Поиск">
+                <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#icon-search"></use>
                 </svg>
               </button>
             </div>
-            <button class="search__btn btn btn--secondary" type="button">Найти</button>
+            <button class="custom-input__btn btn btn--secondary" type="button">Найти</button>
           </div>
-            <ul class="search__list">
-              <li class="search__item">
-                <button class="btn btn--quaternary search__btn" type="button">Что входит в Привилегии?</button>
-              </li>
-              <li class="search__item">
-                <button class="btn btn--quaternary search__btn" type="button">Курсы валют</button>
-              </li>
-              <li class="search__item">
-                <button class="btn btn--quaternary search__btn" type="button">Где скачать приложение?</button>
-              </li>
-              <li class="search__item">
-                <button class="btn btn--quaternary search__btn" type="button">Рефинансирование</button>
-              </li>
-            </ul>
-          
+
           <h2 class="visually-hidden">Статьи по запросу</h2>
-          <ul class="news__list">
-            <li class="news__item">
-              <p class="news__heading">ИИС в&nbsp;2024&nbsp;&mdash; как открыть индивидуальный инвестиционный счет</p>
-              <p class="news__text"><span class="news__text-bold">ИИС</span>&nbsp;&mdash; это вид брокерского <span
-                  class="news__text-bold">счета</span> с&nbsp;дополнительной функцией.
+          <ul class="search__list">
+            <li class="search__item">
+              <p class="search__heading">ИИС в&nbsp;2024&nbsp;&mdash; как открыть индивидуальный инвестиционный счет</p>
+              <p class="search__text"><span class="search__text-bold">ИИС</span>&nbsp;&mdash; это вид брокерского <span
+                  class="search__text-bold">счета</span> с&nbsp;дополнительной функцией.
                 С&nbsp;его помощью можно не&nbsp;только торговать валютой и&nbsp;ценными бумаги, но&nbsp;и&nbsp;получать
                 до&nbsp;52&nbsp;000&nbsp;руб.&nbsp;за&nbsp;счет налогового вычета.</p>
             </li>
-            <li class="news__item">
-              <p class="news__heading">Индивидуальный инвестиционный счет&nbsp;&mdash; открыть в&nbsp;Газпромбанке</p>
-              <p class="news__text"><span class="news__text-bold">Индивидуальный инвестиционный счет</span>
+            <li class="search__item">
+              <p class="search__heading">Индивидуальный инвестиционный счет&nbsp;&mdash; открыть в&nbsp;Газпромбанке</p>
+              <p class="search__text"><span class="search__text-bold">Индивидуальный инвестиционный счет</span>
                 в&nbsp;Газпромбанке для частных лиц.
                 Воспользуйтесь калькулятором и&nbsp;рассчитайте доходность с&nbsp;новым инструментом для накоплений.</p>
             </li>
-            <li class="news__item">
-              <p class="news__heading">ИИС&nbsp;&mdash; открытие индивидуального счета| Газпромбанк</p>
-              <p class="news__text">Откройте <span class="news__text-bold">индивидуальный инвестиционный счет</span>
+            <li class="search__item">
+              <p class="search__heading">ИИС&nbsp;&mdash; открытие индивидуального счета&nbsp;|&nbsp;Газпромбанк</p>
+              <p class="search__text">Откройте <span class="search__text-bold">индивидуальный инвестиционный счет</span>
                 онлайн от&nbsp;Газпромбанка: доступный
                 способ размещения средств, четыре стратегии на&nbsp;выбор, налоговый вычет
                 до&nbsp;52&nbsp;000&nbsp;руб.&nbsp;в&nbsp;год.</p>
             </li>
-            <li class="news__item">
-              <p class="news__heading">Налоговые вычеты типов&nbsp;А и&nbsp;Б для держателей ИИС&nbsp;| Газпромбанк</p>
-              <p class="news__text"><span class="news__text-bold">Индивидуальный инвестиционный счет (ИИС)</span> дает
+            <li class="search__item">
+              <p class="search__heading">Налоговые вычеты типов&nbsp;А и&nbsp;Б для держателей
+                ИИС&nbsp;|&nbsp;Газпромбанк
+              </p>
+              <p class="search__text"><span class="search__text-bold">Индивидуальный инвестиционный счет (ИИС)</span>
+                дает
                 инвестору право получить налоговый
                 вычет типа&nbsp;А или Б.&nbsp;При этом воспользоваться можно только одним способом.</p>
             </li>
-            <li class="news__item">
-              <p class="news__heading">&laquo;О&nbsp;запрете на&nbsp;покупку иностранных бумаг на&nbsp;ИИС&raquo;
+            <li class="search__item">
+              <p class="search__heading">&laquo;О&nbsp;запрете на&nbsp;покупку иностранных бумаг на&nbsp;ИИС&raquo;
                 от&nbsp;29&nbsp;января</p>
-              <p class="news__text">Являются иностранные государства (далее&nbsp;&mdash; иностранные ценные бумаги),
+              <p class="search__text">Являются иностранные государства (далее&nbsp;&mdash; иностранные ценные бумаги),
                 Банком ГПБ (АО) с&nbsp;29.01.2024 заблокирована возможность покупки клиентами иностранных ценных бумаг
-                на&nbsp;<span class="news__text-bold">ИИС</span>.</p>
+                на&nbsp;<span class="search__text-bold">ИИС</span>.</p>
             </li>
           </ul>
           <div class="pages">

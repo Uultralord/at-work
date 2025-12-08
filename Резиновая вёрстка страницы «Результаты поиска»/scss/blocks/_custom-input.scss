@@ -1,0 +1,49 @@
+.custom-input {
+    position: relative;
+    display: flex;
+    gap: 16px;
+
+    &__field {
+        border: $color-periwinkle 1px solid;
+        border-radius: 8px;
+        padding: 17px 86px 17px 16px;
+        width: 100%;
+    }
+
+    &__buttons-wrap {
+        position: absolute;
+        right: 5%;
+        bottom: 30%;
+        display: flex;
+        gap: 12px;
+
+        @include vp-768 {
+            right: 3%;
+            gap: 16px;
+        }
+
+        @include vp-1024 {
+            right: 18%;
+        }
+
+        @media (min-width:1150px) {
+            right: 15%;
+        }
+
+        @include vp-1304 {
+            right: 18%;
+        }
+    }
+
+    &__field:focus+&__buttons-wrap {
+        bottom: 52%;
+    }
+
+    &__btn {
+        display: none !important;
+
+        @include vp-1024 {
+            display: flex !important;
+        }
+    }
+}
