@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="header header--active">
+  <header class="header">
     <div class="container">
       <div class="header__wrapper">
         <svg class="header__icon-decor" width="24" height="24" aria-hidden="true">
@@ -72,77 +72,84 @@
     <section class="search search--empty">
       <div class="container">
         <h1 class="search__title">Результаты поиска</h1>
-      
-      <div class="search-popup">
-        <div class="search-popup__wrap">
-          <div class="custom-input">
-            <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка" value="ИИС">
-            <div class="custom-input__buttons-wrap">
-              <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Отменить поиск">
-                <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
-                  <use xlink:href="images/sprite.svg#icon-cancel"></use>
-                </svg>
-              </button>
-              <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Поиск">
-                <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
-                  <use xlink:href="images/sprite.svg#icon-search"></use>
-                </svg>
-              </button>
+        <div class="search-popup">
+          <div class="search-popup__wrap">
+            <div class="custom-input">
+              <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка" value="вжуч">
+              <div class="custom-input__buttons-wrap">
+                <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Отменить поиск">
+                  <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-cancel"></use>
+                  </svg>
+                </button>
+                <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Поиск">
+                  <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="custom-input__btn btn btn--secondary" type="button">Найти</button>
             </div>
-            <button class="custom-input__btn btn btn--secondary" type="button">Найти</button>
-          </div>
-          <ul class="search-popup__list">
-            <li class="search-popup__item">
-              <button class="search-popup__btn btn btn--quaternary">Что входит в Привилегии?</button>
-            </li>
-            <li class="search-popup__item">
-              <button class="search-popup__btn btn btn--quaternary">Курсы валют</button>
-            </li>
-            <li class="search-popup__item">
-              <button class="search-popup__btn btn btn--quaternary">Где скачать приложение?</button>
-            </li>
-            <li class="search-popup__item">
-              <button class="search-popup__btn btn btn--quaternary">Рефинансирование</button>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="search__content">
-        <div class="search__error">
-          <picture>
-            <source media="(min-width: 1023px)"
-              srcset="images/search-results-empty/site-search-desktop.png 1x, images/search-results-empty/site-search-desktop@2x.png 2x">
-            <source media="(min-width: 767px)"
-              srcset="images/search-results-empty/site-search-tablet.png 1x, images/search-results-empty/site-search-tablet@2x.png 2x">
-            <img class="search__error-img" src="images/search-results-empty/site-search-mobile.png"
-              srcset="images/search-results-empty/site-search-mobile@2x.png 2x" width="140" height="140" alt="Папка">
-          </picture>
-          <div class="search__error-wrap">
-            <h2 class="search__error-title">Ничего не нашлось</h2>
-            <span class="search__error-text">Попробуйте изменить запрос</span>
+            <ul class="search-popup__list">
+              <li class="search-popup__item">
+                <button class="search-popup__btn btn btn--quaternary">Что входит в Привилегии?</button>
+              </li>
+              <li class="search-popup__item">
+                <button class="search-popup__btn btn btn--quaternary">Курсы валют</button>
+              </li>
+              <li class="search-popup__item">
+                <button class="search-popup__btn btn btn--quaternary">Где скачать приложение?</button>
+              </li>
+              <li class="search-popup__item">
+                <button class="search-popup__btn btn btn--quaternary">Рефинансирование</button>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="cookie">
-          <button class="cookie__btn" type="button">
-            <svg class="cookie__icon" width="24" height="24" aria-hidden="true">
-              <use xlink:href="images/sprite.svg#icon-thumbs-up"></use>
-            </svg>
-          </button>
-          <div class="cookie__wrap">
-            <p class="cookie__text">
-              Мы&nbsp;обрабатываем файлы cookie, чтобы улучшить работу сайта. Оставаясь на&nbsp;нашем сайте,
-              вы&nbsp;соглашаетесь с&nbsp;<a class="cookie__link" href="#">Политикой пользовательских данных</a>. Если вы&nbsp;хотите запретить обработку
-              файлов cookie, отключите cookie в&nbsp;настройках вашего браузера
-            </p>
-            <button class="cookie__button btn-icon btn-icon--grey" type="button" aria-label="Отменить поиск">
+        <div class="search__content">
+          <div class="search__error">
+            <picture>
+              <source media="(min-width: 1023px)"
+                srcset="images/search-results-empty/site-search-desktop.png 1x, images/search-results-empty/site-search-desktop@2x.png 2x">
+              <source media="(min-width: 767px)"
+                srcset="images/search-results-empty/site-search-tablet.png 1x, images/search-results-empty/site-search-tablet@2x.png 2x">
+              <img class="search__error-img" src="images/search-results-empty/site-search-mobile.png"
+                srcset="images/search-results-empty/site-search-mobile@2x.png 2x" width="140" height="140" alt="Папка">
+            </picture>
+            <div class="search__error-wrap">
+              <h2 class="search__error-title">Ничего не нашлось</h2>
+              <span class="search__error-text">Попробуйте изменить запрос</span>
+            </div>
+          </div>
+
+          <div class="cookie">
+            <button class="cookie__btn" type="button">
+              <svg class="cookie__icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-thumbs-up"></use>
+              </svg>
+            </button>
+            <div class="cookie__wrap">
+              <p class="cookie__text">
+                Мы&nbsp;обрабатываем файлы cookie, чтобы улучшить работу сайта. Оставаясь на&nbsp;нашем сайте,
+                вы&nbsp;соглашаетесь с&nbsp;<a class="cookie__link" href="#">Политикой пользовательских данных</a>.
+                Если вы&nbsp;хотите запретить обработку
+                файлов cookie, отключите cookie в&nbsp;настройках вашего браузера
+              </p>
+              <button class="cookie__button btn-icon btn-icon--grey" type="button" aria-label="Отменить поиск">
                 <svg class="cookie__icon" width="24" height="24" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#icon-cancel"></use>
                 </svg>
-            </button>
+              </button>
+            </div>
           </div>
+          <div class="search-technology">
+          <p class="search-technology__text">Поисковая технология</p>
+          <svg class="search-technology__icon" width="66" height="20" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#icon-yandex"></use>
+          </svg>
+        </div>
         </div>
       </div>
-    </div>
     </section>
   </main>
   <footer class="footer">

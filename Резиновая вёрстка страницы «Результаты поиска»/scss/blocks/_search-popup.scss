@@ -36,7 +36,7 @@
         width: 100%;
         max-width: 1254px;
         margin: 0 auto;
-        padding: 25px 0 40px;
+        padding: 25px 15px 40px;
 
         @include vp-768 {
             padding: 40px 20px 40px;
@@ -59,6 +59,17 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 8px;
+
+        @include vp-768{
+            padding: 30px 0 0;
+            gap: 13px;
+        }
+
+        @include vp-1024{
+            padding: 20px 0 0;
+            gap: 10px;
+        }
+            
     }
 
     &__item {
