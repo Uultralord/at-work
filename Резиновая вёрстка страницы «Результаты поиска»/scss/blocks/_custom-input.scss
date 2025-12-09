@@ -4,10 +4,19 @@
     gap: 16px;
 
     &__field {
+        outline:none;
         border: $color-periwinkle 1px solid;
         border-radius: 8px;
         padding: 17px 86px 17px 16px;
         width: 100%;
+
+        &:hover{
+            border: $color-manatee 1px solid;
+        }
+
+        &:focus-visible{
+            border: $color-royal-blue-1 1px solid;
+        }
     }
 
     &__buttons-wrap {
@@ -33,10 +42,6 @@
         @include vp-1304 {
             right: 18%;
         }
-    }
-
-    &__field:focus+&__buttons-wrap {
-        bottom: 52%;
     }
 
     &__btn {
