@@ -17,21 +17,13 @@
   }
 
   &--open {
-    &::after {
-      z-index: 5;
-      position: absolute;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(30, 34, 46, 0.5);
-    }
+    padding-bottom: 0;
 
     .header__bottom {
       display: block;
     }
 
-    .header__bottom .custom-input__buttons-wrap {
-
+    .custom-input__buttons-wrap {
       @include vp-1024 {
         right: 3%;
       }
@@ -164,20 +156,27 @@
 
   &__bottom {
     display: none;
-    position: fixed;
+    position: relative;
     left: 0;
     right: 0;
-    top: 56px;
     border-bottom-right-radius: 24px;
     border-bottom-left-radius: 24px;
     background-color: $color-white;
     margin-top: 15px;
-    z-index: 10;
+
+    &::after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      top: 100px;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(30, 34, 46, 0.5);
+    }
 
     @include vp-768 {
-      top: 60px;
 
-      &::after {
+      &::before {
         position: absolute;
         content: "";
         left: 50%;
@@ -190,10 +189,9 @@
     }
 
     @include vp-1024 {
-      top: 56px;
       margin-top: 17px;
 
-      &::after {
+      &::before {
         display: none;
       }
     }
