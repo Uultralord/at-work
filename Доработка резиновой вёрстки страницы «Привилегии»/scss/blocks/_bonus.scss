@@ -44,7 +44,7 @@
     flex-direction: column;
     gap: 16px 0;
 
-    @include vp-1024 {
+    @media (min-width:960px) {
       flex-direction: row;
       gap: 0 16px;
     }
@@ -55,7 +55,7 @@
   }
 
   &__item {
-    @include vp-1024 {
+   @media (min-width:960px) {
       width: calc(50% - 8px);
     }
 

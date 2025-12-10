@@ -1,10 +1,6 @@
 .custom-input {
   position: relative;
-  width: 330px;
-
-  @include vp-768 {
-    width: 728px;
-  }
+  width: 100%;
 
   &__field {
     width: 100%;

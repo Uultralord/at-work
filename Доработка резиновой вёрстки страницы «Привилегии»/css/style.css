@@ -904,12 +904,7 @@ a {
 
 .custom-input {
   position: relative;
-  width: 330px;
-}
-@media (min-width: 768px) {
-  .custom-input {
-    width: 728px;
-  }
+  width: 100%;
 }
 .custom-input__field {
   width: 100%;
@@ -1051,7 +1046,7 @@ a {
   background-color: #FFF2EB;
   border-radius: 16px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus-card {
     min-height: 294px;
     justify-content: space-between;
@@ -1099,7 +1094,7 @@ a {
   font-size: 20px;
   line-height: 24px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus-card__title {
     max-width: 180px;
     font-size: 28px;
@@ -1117,7 +1112,7 @@ a {
   font-size: 16px;
   line-height: 22px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus-card__text {
     max-width: 180px;
   }
@@ -1143,7 +1138,7 @@ a {
   display: none;
   flex-shrink: 0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus-card__image {
     display: block;
   }
@@ -1321,14 +1316,10 @@ a {
 }
 .intro__image {
   margin: 0 auto;
-  height: 220px;
-  width: 100%;
 }
 @media (min-width: 1304px) {
   .intro__image {
     margin: 0;
-    height: unset;
-    width: unset;
   }
 }
 
@@ -1382,7 +1373,7 @@ a {
   flex-direction: column;
   gap: 16px 0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus__list {
     flex-direction: row;
     gap: 0 16px;
@@ -1393,7 +1384,7 @@ a {
     gap: 0 20px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 960px) {
   .bonus__item {
     width: calc(50% - 8px);
   }
@@ -1713,6 +1704,7 @@ a {
   .connect__list {
     gap: 32px;
     display: flex;
+    justify-content: space-evenly;
   }
 }
 .connect__list-item {
@@ -1776,7 +1768,7 @@ a {
 .connect__list-item:nth-child(3)::before {
   content: "3";
 }
-.connect__list-item:last-child::before {
+.connect__list-item:nth-child(4)::before {
   content: "4";
 }
 .connect__item-title {

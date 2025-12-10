@@ -138,6 +138,7 @@
     @include vp-1304 {
       gap: 32px;
       display: flex;
+      justify-content: space-evenly;
     }
   }
 
@@ -201,11 +202,9 @@
       content: "3";
     }
 
-    &:last-child::before {
+    &:nth-child(4)::before {
       content: "4";
     }
-
-    
   }
 
   &__item-title {

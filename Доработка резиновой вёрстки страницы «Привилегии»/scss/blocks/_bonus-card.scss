@@ -5,7 +5,7 @@
   background-color: $color-seashell;
   border-radius: 16px;
 
-  @include vp-1024 {
+  @media (min-width:960px) {
     min-height: 294px;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +51,7 @@
     font-size: 20px;
     line-height: 24px;
 
-    @include vp-1024 {
+    @media (min-width:960px) {
       max-width: 180px;
       font-size: 28px;
       line-height: 32px;
@@ -68,7 +68,7 @@
     font-size: 16px;
     line-height: 22px;
 
-    @include vp-1024 {
+    @media (min-width:960px) {
       max-width: 180px;
     }
 
@@ -95,7 +95,7 @@
     display: none;
     flex-shrink: 0;
 
-    @include vp-1024 {
+    @media (min-width:960px) {
       display: block;
     }
 
