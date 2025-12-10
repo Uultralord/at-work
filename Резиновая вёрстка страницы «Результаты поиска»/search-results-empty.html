@@ -72,8 +72,8 @@
     <section class="search search--empty">
       <div class="container">
         <h1 class="search__title">Результаты поиска</h1>
-        <div class="search-popup">
-          <div class="search-popup__wrap">
+        <div class="search__content">
+          <form class="search__form" method="post" action="#">
             <div class="custom-input">
               <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка" value="вжуч">
               <div class="custom-input__buttons-wrap">
@@ -82,31 +82,29 @@
                     <use xlink:href="images/sprite.svg#icon-cancel"></use>
                   </svg>
                 </button>
-                <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Поиск">
+                <button class="custom-input__button btn-icon btn-icon--grey" type="submit" aria-label="Поиск">
                   <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
                     <use xlink:href="images/sprite.svg#icon-search"></use>
                   </svg>
                 </button>
               </div>
-              <button class="custom-input__btn btn btn--secondary" type="button">Найти</button>
             </div>
-            <ul class="search-popup__list">
-              <li class="search-popup__item">
-                <button class="search-popup__btn btn btn--quaternary">Что входит в Привилегии?</button>
-              </li>
-              <li class="search-popup__item">
-                <button class="search-popup__btn btn btn--quaternary">Курсы валют</button>
-              </li>
-              <li class="search-popup__item">
-                <button class="search-popup__btn btn btn--quaternary">Где скачать приложение?</button>
-              </li>
-              <li class="search-popup__item">
-                <button class="search-popup__btn btn btn--quaternary">Рефинансирование</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="search__content">
+            <button class="search__btn btn btn--secondary" type="submit">Найти</button>
+          </form>
+          <ul class="search-list">
+            <li class="search-list__item">
+              <button class="search-list__btn btn btn--quaternary">Что входит в Привилегии?</button>
+            </li>
+            <li class="search-list__item">
+              <button class="search-list__btn btn btn--quaternary">Курсы валют</button>
+            </li>
+            <li class="search-list__item">
+              <button class="search-list__btn btn btn--quaternary">Где скачать приложение?</button>
+            </li>
+            <li class="search-list__item">
+              <button class="search-list__btn btn btn--quaternary">Рефинансирование</button>
+            </li>
+          </ul>
           <div class="search__error">
             <picture>
               <source media="(min-width: 1023px)"
@@ -122,32 +120,12 @@
             </div>
           </div>
 
-          <div class="cookie">
-            <button class="cookie__btn" type="button">
-              <svg class="cookie__icon" width="24" height="24" aria-hidden="true">
-                <use xlink:href="images/sprite.svg#icon-thumbs-up"></use>
-              </svg>
-            </button>
-            <div class="cookie__wrap">
-              <p class="cookie__text">
-                Мы&nbsp;обрабатываем файлы cookie, чтобы улучшить работу сайта. Оставаясь на&nbsp;нашем сайте,
-                вы&nbsp;соглашаетесь с&nbsp;<a class="cookie__link" href="#">Политикой пользовательских данных</a>.
-                Если вы&nbsp;хотите запретить обработку
-                файлов cookie, отключите cookie в&nbsp;настройках вашего браузера
-              </p>
-              <button class="cookie__button btn-icon btn-icon--grey" type="button" aria-label="Отменить поиск">
-                <svg class="cookie__icon" width="24" height="24" aria-hidden="true">
-                  <use xlink:href="images/sprite.svg#icon-cancel"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
           <div class="search-technology">
-          <p class="search-technology__text">Поисковая технология</p>
-          <svg class="search-technology__icon" width="66" height="20" aria-hidden="true">
-            <use xlink:href="images/sprite.svg#icon-yandex"></use>
-          </svg>
-        </div>
+            <p class="search-technology__text">Поисковая технология</p>
+            <svg class="search-technology__icon" width="66" height="20" aria-hidden="true">
+              <use xlink:href="images/sprite.svg#icon-yandex"></use>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
@@ -367,6 +345,26 @@
       </div>
     </div>
   </footer>
+  <div class="info-block">
+    <button class="like" type="button">
+      <svg class="like__icon" width="24" height="24" aria-hidden="true">
+        <use xlink:href="images/sprite.svg#icon-thumbs-up"></use>
+      </svg>
+    </button>
+    <div class="cookie">
+      <p class="cookie__text">
+        Мы&nbsp;обрабатываем файлы cookie, чтобы улучшить работу сайта. Оставаясь на&nbsp;нашем сайте,
+        вы&nbsp;соглашаетесь с&nbsp;<a class="cookie__link" href="#">Политикой пользовательских данных</a>.
+        Если вы&nbsp;хотите запретить обработку
+        файлов cookie, отключите cookie в&nbsp;настройках вашего браузера
+      </p>
+      <button class="cookie__button btn-icon btn-icon--grey" type="button" aria-label="Отменить поиск">
+        <svg class="cookie__icon" width="24" height="24" aria-hidden="true">
+          <use xlink:href="images/sprite.svg#icon-cancel"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 </body>
 
 </html>

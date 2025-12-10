@@ -1,4 +1,5 @@
 .custom-input {
+    width: 100%;
     position: relative;
     display: flex;
     gap: 16px;
@@ -29,26 +30,6 @@
         @include vp-768 {
             right: 3%;
             gap: 16px;
-        }
-
-        @include vp-1024 {
-            right: 18%;
-        }
-
-        @media (min-width:1150px) {
-            right: 15%;
-        }
-
-        @include vp-1304 {
-            right: 18%;
-        }
-    }
-
-    &__btn {
-        display: none !important;
-
-        @include vp-1024 {
-            display: flex !important;
         }
     }
 }

@@ -16,31 +16,24 @@
     background-color: $color-solitude-2;
   }
 
-  &--active {
+  &--open {
+    &::after {
+      z-index: 5;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(30, 34, 46, 0.5);
+    }
 
-    ~main .search-popup,
-    ~.overlay {
+    .header__bottom {
       display: block;
     }
 
-    ~.search-popup {
+    .header__bottom .custom-input__buttons-wrap {
+
       @include vp-1024 {
-        background-color: $color-white;
-      }
-    }
-
-    ~main .search-popup .custom-input__buttons-wrap{
-
-      @media (min-width:1050px) {
-        right: 15%;
-      }
-
-      @media (min-width:1200px) {
-        right: 13%;
-      }
-
-      @include vp-1304{
-         right: 12%;
+        right: 3%;
       }
     }
   }
@@ -161,11 +154,81 @@
   }
 
   .header__login {
-    display: none ;
+    display: none;
 
     @include vp-1024 {
       display: flex;
       margin: 0 16px 0 0;
+    }
+  }
+
+  &__bottom {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 56px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    background-color: $color-white;
+    margin-top: 15px;
+    z-index: 10;
+
+    @include vp-768 {
+      top: 60px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 0;
+        width: 100vw;
+        height: 1px;
+        transform: translate3d(-50%, 0, 0);
+        background-color: $color-hawkes-blue;
+      }
+    }
+
+    @include vp-1024 {
+      top: 56px;
+      margin-top: 17px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__bottom-wrap {
+    width: 100%;
+    max-width: 1254px;
+    margin: 0 auto;
+    padding: 25px 0 40px;
+
+    @include vp-768 {
+      padding: 40px 0 40px;
+    }
+
+    @include vp-1024 {
+      padding: 40px 0;
+    }
+
+    @include vp-1304 {
+      padding: 60px 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  &__btn {
+    display: none !important;
+
+    @include vp-1024 {
+      display: flex !important;
     }
   }
 }

@@ -1,0 +1,23 @@
+.info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+    max-width: 330px;
+    margin: 0 0 0 auto;
+    z-index: 10;
+    position: absolute;
+    bottom: 41%;
+    right: 15px;
+
+    @include vp-768 {
+        max-width: 380px;
+        gap: 20px;
+        right: 20px;
+    }
+
+    @include vp-1024{
+        bottom: 28%;
+    }
+}

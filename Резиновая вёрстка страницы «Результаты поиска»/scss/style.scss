@@ -11,11 +11,10 @@
 /* Blocks */
 /* ------------------------------------ */
 @import "blocks/_header";
-@import "blocks/_search-popup";
+@import "blocks/_search-list";
 @import "blocks/_overlay.scss";
 @import "blocks/_breadcrumbs";
 @import "blocks/_search.scss";
-@import "blocks/_cookie.scss";
 @import "blocks/_custom-input.scss";
 @import "blocks/_pages.scss";
 @import "blocks/_search-technology.scss";
@@ -23,3 +22,6 @@
 @import "blocks/_btn";
 @import "blocks/_btn-icon";
 @import "blocks/_socials";
+@import "blocks/_info-block";
+@import "blocks/_like";
+@import "blocks/_cookie.scss";

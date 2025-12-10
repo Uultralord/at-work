@@ -9,50 +9,90 @@
   <title>Результаты поиска - Газпромбанк</title>
 </head>
 
-<body><!--header--active-->
-  <header class="header ">
-    <div class="container">
-      <div class="header__wrapper">
-        <svg class="header__icon-decor" width="24" height="24" aria-hidden="true">
-          <use xlink:href="images/sprite.svg#icon-decor"></use>
-        </svg>
-        <a class="header__logo-link" href="#" aria-label="Ссылка на главную страницу">
-          <svg class="header__logo-image" width="188" height="40" aria-hidden="true">
-            <use xlink:href="images/sprite.svg#logo-gazprombank"></use>
+<body><!---->
+  <header class="header header--open">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__wrapper">
+          <svg class="header__icon-decor" width="24" height="24" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#icon-decor"></use>
           </svg>
-        </a>
-        <div class="header__links">
-          <a class="header__link" href="#">
-            Частным клиентам
+          <a class="header__logo-link" href="#" aria-label="Ссылка на главную страницу">
+            <svg class="header__logo-image" width="188" height="40" aria-hidden="true">
+              <use xlink:href="images/sprite.svg#logo-gazprombank"></use>
+            </svg>
           </a>
-          <a class="header__link header__link--light" href="#">
-            Private Banking
-          </a>
-          <a class="header__link header__link--light" href="#">
-            МСБ
-          </a>
-        </div>
-        <div class="header__links">
-          <button class="header__link header__link--active">
-            Москва
+          <div class="header__links">
+            <a class="header__link" href="#">
+              Частным клиентам
+            </a>
+            <a class="header__link header__link--light" href="#">
+              Private Banking
+            </a>
+            <a class="header__link header__link--light" href="#">
+              МСБ
+            </a>
+          </div>
+          <div class="header__links">
+            <button class="header__link header__link--active">
+              Москва
+            </button>
+            <a class="header__link" href="#">
+              Офисы и банкоматы
+            </a>
+          </div>
+          <button class="header__search btn-icon" aria-label="Открыть поиск">
+            <svg class="btn-icon__icon" width="24" height="24" aria-hidden="true">
+              <use xlink:href="images/sprite.svg#icon-search"></use>
+            </svg>
           </button>
-          <a class="header__link" href="#">
-            Офисы и банкоматы
+          <a class="header__login btn" href="#">
+            Войти
           </a>
+          <button class="header__burger btn-icon" aria-label="Открыть меню">
+            <svg class="btn-icon__icon" width="24" height="24" aria-hidden="true">
+              <use xlink:href="images/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
         </div>
-        <button class="header__search btn-icon" aria-label="Открыть поиск">
-          <svg class="btn-icon__icon" width="24" height="24" aria-hidden="true">
-            <use xlink:href="images/sprite.svg#icon-search"></use>
-          </svg>
-        </button>
-        <a class="header__login btn" href="#">
-          Войти
-        </a>
-        <button class="header__burger btn-icon" aria-label="Открыть меню">
-          <svg class="btn-icon__icon" width="24" height="24" aria-hidden="true">
-            <use xlink:href="images/sprite.svg#icon-burger"></use>
-          </svg>
-        </button>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom-wrap">
+          <form class="header__form" method="post" action="#">
+            <div class="custom-input">
+              <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка" value="ИИС">
+              <div class="custom-input__buttons-wrap">
+                <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Отменить поиск">
+                  <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-cancel"></use>
+                  </svg>
+                </button>
+                <button class="custom-input__button btn-icon btn-icon--grey" type="submit" aria-label="Поиск">
+                  <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <button class="header__btn btn btn--secondary" type="submit">Найти</button>
+          </form>
+          <ul class="search-list">
+            <li class="search-list__item">
+              <button class="search-list__btn btn btn--quaternary">Что входит в Привилегии?</button>
+            </li>
+            <li class="search-list__item">
+              <button class="search-list__btn btn btn--quaternary">Курсы валют</button>
+            </li>
+            <li class="search-list__item">
+              <button class="search-list__btn btn btn--quaternary">Где скачать приложение?</button>
+            </li>
+            <li class="search-list__item">
+              <button class="search-list__btn btn btn--quaternary">Рефинансирование</button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -73,8 +113,8 @@
     <section class="search">
       <div class="container">
         <h1 class="search__title">Результаты поиска</h1>
-        <div class="search-popup">
-          <div class="search-popup__wrap">
+        <div class="search__content">
+          <form class="search__form" method="post" action="#">
             <div class="custom-input">
               <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка" value="ИИС">
               <div class="custom-input__buttons-wrap">
@@ -83,65 +123,35 @@
                     <use xlink:href="images/sprite.svg#icon-cancel"></use>
                   </svg>
                 </button>
-                <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Поиск">
+                <button class="custom-input__button btn-icon btn-icon--grey" type="submit" aria-label="Поиск">
                   <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
                     <use xlink:href="images/sprite.svg#icon-search"></use>
                   </svg>
                 </button>
               </div>
-              <button class="custom-input__btn btn btn--secondary" type="button">Найти</button>
             </div>
-            <ul class="search-popup__list">
-              <li class="search-popup__item">
-                <button class="search-popup__btn btn btn--quaternary">Что входит в Привилегии?</button>
-              </li>
-              <li class="search-popup__item">
-                <button class="search-popup__btn btn btn--quaternary">Курсы валют</button>
-              </li>
-              <li class="search-popup__item">
-                <button class="search-popup__btn btn btn--quaternary">Где скачать приложение?</button>
-              </li>
-              <li class="search-popup__item">
-                <button class="search-popup__btn btn btn--quaternary">Рефинансирование</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="search__content">
-          <div class="custom-input">
-            <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка" value="ИИС">
-            <div class="custom-input__buttons-wrap">
-              <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Отменить поиск">
-                <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
-                  <use xlink:href="images/sprite.svg#icon-cancel"></use>
-                </svg>
-              </button>
-              <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Поиск">
-                <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
-                  <use xlink:href="images/sprite.svg#icon-search"></use>
-                </svg>
-              </button>
-            </div>
-            <button class="custom-input__btn btn btn--secondary" type="button">Найти</button>
-          </div>
-
+            <button class="search__btn btn btn--secondary" type="submit">Найти</button>
+          </form>
           <h2 class="visually-hidden">Статьи по запросу</h2>
           <ul class="search__list">
             <li class="search__item">
-              <a class="search__link" href="#">ИИС в&nbsp;2024&nbsp;&mdash; как открыть индивидуальный инвестиционный счет</a>
+              <a class="search__link" href="#">ИИС в&nbsp;2024&nbsp;&mdash; как открыть индивидуальный инвестиционный
+                счет</a>
               <p class="search__text"><span class="search__text-bold">ИИС</span>&nbsp;&mdash; это вид брокерского <span
                   class="search__text-bold">счета</span> с&nbsp;дополнительной функцией.
                 С&nbsp;его помощью можно не&nbsp;только торговать валютой и&nbsp;ценными бумаги, но&nbsp;и&nbsp;получать
                 до&nbsp;52&nbsp;000&nbsp;руб.&nbsp;за&nbsp;счет налогового вычета.</p>
             </li>
             <li class="search__item">
-              <a class="search__link" href="#">Индивидуальный инвестиционный счет&nbsp;&mdash; открыть в&nbsp;Газпромбанке</a>
+              <a class="search__link" href="#">Индивидуальный инвестиционный счет&nbsp;&mdash; открыть
+                в&nbsp;Газпромбанке</a>
               <p class="search__text"><span class="search__text-bold">Индивидуальный инвестиционный счет</span>
                 в&nbsp;Газпромбанке для частных лиц.
                 Воспользуйтесь калькулятором и&nbsp;рассчитайте доходность с&nbsp;новым инструментом для накоплений.</p>
             </li>
             <li class="search__item">
-              <a class="search__link" href="#">ИИС&nbsp;&mdash; открытие индивидуального счета&nbsp;|&nbsp;Газпромбанк</a>
+              <a class="search__link" href="#">ИИС&nbsp;&mdash; открытие индивидуального
+                счета&nbsp;|&nbsp;Газпромбанк</a>
               <p class="search__text">Откройте <span class="search__text-bold">индивидуальный инвестиционный счет</span>
                 онлайн от&nbsp;Газпромбанка: доступный
                 способ размещения средств, четыре стратегии на&nbsp;выбор, налоговый вычет
@@ -157,7 +167,8 @@
                 вычет типа&nbsp;А или Б.&nbsp;При этом воспользоваться можно только одним способом.</p>
             </li>
             <li class="search__item">
-              <a class="search__link" href="#">&laquo;О&nbsp;запрете на&nbsp;покупку иностранных бумаг на&nbsp;ИИС&raquo;
+              <a class="search__link" href="#">&laquo;О&nbsp;запрете на&nbsp;покупку иностранных бумаг
+                на&nbsp;ИИС&raquo;
                 от&nbsp;29&nbsp;января</a>
               <p class="search__text">Являются иностранные государства (далее&nbsp;&mdash; иностранные ценные бумаги),
                 Банком ГПБ (АО) с&nbsp;29.01.2024 заблокирована возможность покупки клиентами иностранных ценных бумаг

@@ -1,52 +1,16 @@
 .cookie {
+
+    background-color: $color-white;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 15px;
-    margin-top: 20px;
-    max-width: 330px;
-    margin: 0 0 0 auto;
-    z-index: 10;
-    position: absolute;
-    bottom: 3%;
-    right: 15px;
+    border: $color-hawkes-blue 1px solid;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px 0px #32364133;
+    padding: 12px;
+    gap: 16px;
+    align-items: center;
 
     @include vp-768 {
-        max-width: 380px;
-        gap: 20px;
-        right: 20px;
-        bottom: 4%;
-    }
-
-    @include vp-1024{
-        bottom: 3%;
-    }
-
-    &__btn {
-        outline: none;
-        background-color: $color-black-russian;
-        border-radius: 50%;
-        padding: 10px;
-        z-index: 2;
-
-        &:hover, &:focus-visible{
-            background-color: $color-blue-zodiac;
-        }
-    }
-
-    &__wrap {
-        background-color: $color-white;
-        display: flex;
-        border: $color-hawkes-blue 1px solid;
-        border-radius: 12px;
-        box-shadow: 0px 6px 20px 0px #32364133;
-        padding: 12px;
-        gap: 16px;
-        align-items: center;
-
-        @include vp-768 {
-            gap: 30px;
-        }
+        gap: 30px;
     }
 
     &__text {
@@ -72,5 +36,4 @@
         color: $color-royal-blue-1;
     }
 
-    &__button {}
 }
