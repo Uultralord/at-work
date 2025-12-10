@@ -197,9 +197,15 @@
       content: "2";
     }
 
-    &:last-child::before {
+     &:nth-child(3)::before {
       content: "3";
     }
+
+    &:last-child::before {
+      content: "4";
+    }
+
+    
   }
 
   &__item-title {
