@@ -1,0 +1,236 @@
+.debit {
+    padding: 0 0 60px 0;
+    overflow: hidden;
+
+    @include vp-1024 {
+        padding: 0;
+        margin: 0 0 100px 0;
+    }
+
+    @include vp-1304 {
+        margin: 0 0 120px 0;
+    }
+
+    &__wrap {
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        margin: 0 0 28px;
+
+        @include vp-768 {
+            margin: 0 0 32px;
+        }
+
+        @include vp-1024 {
+            gap: 20px;
+            margin: 0 0 35px;
+            text-align: center;
+            position: relative;
+            align-items: center;
+            width: 100%;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100vw;
+                height: 2px;
+                top: 35%;
+                background-color: $color-royal-blue-1;
+                z-index: -1;
+            }
+        }
+
+        @include vp-1304 {
+            margin: 0 0 55px;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 32px;
+        margin: 0;
+
+        @include vp-768 {
+            font-size: 28px;
+        }
+
+        @include vp-1024 {
+            max-width: 740px;
+            font-size: 40px;
+            line-height: 44px;
+            background-color: $color-white;
+        }
+    }
+
+    &__txt {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: $color-storm-grey-1;
+
+        @include vp-1024 {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 0 0 60px;
+        padding: 0;
+        display: grid;
+        gap: 8px;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+
+        @include vp-768 {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            height: max-content;
+            margin: 0 0 73px;
+        }
+
+        @include vp-1024 {
+            gap: 10px 0;
+            margin: 0 0 90px;
+        }
+
+        @include vp-1304 {
+            gap: 10px 30px;
+            margin: 0 0 100px;
+        }
+    }
+
+    &__item {
+        border-radius: 16px;
+        background-color: $color-solitude-1;
+        padding: 20px 20px 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        @include vp-768 {
+            padding: 24px 24px 26px;
+        }
+
+        @include vp-1024 {
+            background-color: transparent;
+            gap: 16px;
+            align-items: center;
+        }
+    }
+
+    &__icon {
+        @include vp-1024 {
+            padding: 16px;
+            border-radius: 12px;
+            color: $color-white;
+            background-color: $color-royal-blue-1;
+        }
+    }
+
+    &__heading {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0;
+
+        @include vp-1024 {
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: $color-storm-grey-1;
+
+        @include vp-1024 {
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+        }
+    }
+
+    &__link {
+        color: $color-royal-blue-1;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        background-color: $color-alice-blue;
+        border-radius: 12px;
+        padding: 16px 20px;
+        position: relative;
+
+        @include vp-768 {
+            padding: 25px 24px;
+        }
+
+        @include vp-1024 {
+            padding: 48px 120px;
+        }
+    }
+
+    &__bottom-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        max-width: 200px;
+
+        @include vp-768 {
+            max-width: none;
+        }
+    }
+
+    &__bottom-heading {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0;
+
+        @include vp-1024 {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+
+    &__bottom-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+
+        @include vp-1024 {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    &__picture {
+        position: absolute;
+        right: 0;
+        top: 10px;
+
+        @include vp-768 {
+            top: -15px;
+            right: 20px;
+        }
+
+        @include vp-1024 {
+            top: -30px;
+            right: 25px;
+        }
+
+        @include vp-1304 {
+            top: -22px;
+            right: 15%;
+        }
+    }
+}

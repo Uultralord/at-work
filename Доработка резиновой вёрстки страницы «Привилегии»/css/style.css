@@ -771,7 +771,7 @@ a {
 }
 .footer__policy {
   row-gap: 8px;
-  margin: 0 0 24px 0;
+  margin: 0 0 35px 0;
 }
 @media (min-width: 768px) {
   .footer__policy {
@@ -1330,6 +1330,12 @@ a {
   gap: 16px;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .intro__bottom {
+    padding: 24px;
+    gap: 24px;
+  }
+}
 @media (min-width: 960px) {
   .intro__bottom {
     box-shadow: none;
@@ -1376,6 +1382,252 @@ a {
   .intro__text-grey {
     font-size: 16px;
     line-height: 22px;
+  }
+}
+
+.debit {
+  padding: 0 0 60px 0;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .debit {
+    padding: 0;
+    margin: 0 0 100px 0;
+  }
+}
+@media (min-width: 1304px) {
+  .debit {
+    margin: 0 0 120px 0;
+  }
+}
+.debit__wrap {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  margin: 0 0 28px;
+}
+@media (min-width: 768px) {
+  .debit__wrap {
+    margin: 0 0 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__wrap {
+    gap: 20px;
+    margin: 0 0 35px;
+    text-align: center;
+    position: relative;
+    align-items: center;
+    width: 100%;
+  }
+  .debit__wrap::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    top: 35%;
+    background-color: #476BF0;
+    z-index: -1;
+  }
+}
+@media (min-width: 1304px) {
+  .debit__wrap {
+    margin: 0 0 55px;
+  }
+}
+.debit__title {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 32px;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .debit__title {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__title {
+    max-width: 740px;
+    font-size: 40px;
+    line-height: 44px;
+    background-color: #FFFFFF;
+  }
+}
+.debit__txt {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #6A6E80;
+}
+@media (min-width: 1024px) {
+  .debit__txt {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.debit__list {
+  list-style-type: none;
+  margin: 0 0 60px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+}
+@media (min-width: 768px) {
+  .debit__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    height: -moz-max-content;
+    height: max-content;
+    margin: 0 0 73px;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__list {
+    gap: 10px 0;
+    margin: 0 0 90px;
+  }
+}
+@media (min-width: 1304px) {
+  .debit__list {
+    gap: 10px 30px;
+    margin: 0 0 100px;
+  }
+}
+.debit__item {
+  border-radius: 16px;
+  background-color: #F4F6FA;
+  padding: 20px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .debit__item {
+    padding: 24px 24px 26px;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__item {
+    background-color: transparent;
+    gap: 16px;
+    align-items: center;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__icon {
+    padding: 16px;
+    border-radius: 12px;
+    color: #FFFFFF;
+    background-color: #476BF0;
+  }
+}
+.debit__heading {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+}
+@media (min-width: 1024px) {
+  .debit__heading {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+  }
+}
+.debit__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6A6E80;
+}
+@media (min-width: 1024px) {
+  .debit__text {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+  }
+}
+.debit__link {
+  color: #476BF0;
+}
+.debit__bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  background-color: #DDF1FF;
+  border-radius: 12px;
+  padding: 16px 20px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .debit__bottom {
+    padding: 25px 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__bottom {
+    padding: 48px 120px;
+  }
+}
+.debit__bottom-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 200px;
+}
+@media (min-width: 768px) {
+  .debit__bottom-wrap {
+    max-width: none;
+  }
+}
+.debit__bottom-heading {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+}
+@media (min-width: 1024px) {
+  .debit__bottom-heading {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+.debit__bottom-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+@media (min-width: 1024px) {
+  .debit__bottom-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.debit__picture {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+@media (min-width: 768px) {
+  .debit__picture {
+    top: -15px;
+    right: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .debit__picture {
+    top: -30px;
+    right: 25px;
+  }
+}
+@media (min-width: 1304px) {
+  .debit__picture {
+    top: -22px;
+    right: 15%;
   }
 }
 
@@ -1883,7 +2135,7 @@ a {
 }
 @media (min-width: 1304px) {
   .benefit__wrapper {
-    padding: 80px;
+    padding: 80px 0 80px 80px;
     display: flex;
     flex-direction: row-reverse;
   }
@@ -1903,7 +2155,7 @@ a {
 }
 @media (min-width: 1304px) {
   .benefit__content {
-    max-width: 560px;
+    max-width: 700px;
   }
 }
 .benefit__title {
@@ -2065,8 +2317,26 @@ a {
 .faq__element {
   border-bottom: 2px solid #EAEDF4;
 }
+@media (min-width: 1024px) {
+  .faq__element {
+    border-bottom: none;
+  }
+}
 .faq__element.is-active .faq__content {
   display: block;
+}
+@media (min-width: 1024px) {
+  .faq__element.is-active .faq__content {
+    background-color: #F4F6FA;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+}
+.faq__element.is-active .faq__button {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .faq__element.is-active .faq__button-icon::after {
   opacity: 0;
@@ -2095,7 +2365,15 @@ a {
   .faq__button {
     align-items: flex-start;
     padding: 18px 24px;
+    background-color: #F4F6FA;
+    border-radius: 12px;
   }
+}
+.faq__button.is-active {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .faq__button-text {
   max-width: 280px;
@@ -2108,6 +2386,9 @@ a {
 @media (min-width: 1024px) {
   .faq__button-text {
     max-width: 450px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 @media (min-width: 1304px) {

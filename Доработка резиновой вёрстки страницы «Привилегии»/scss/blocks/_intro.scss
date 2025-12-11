@@ -130,6 +130,11 @@
     gap: 16px;
     flex-direction: column;
 
+    @include vp-768{
+      padding: 24px;
+      gap: 24px;
+    }
+
     @media (min-width:960px) {
       box-shadow: none;
       border-radius: unset;

@@ -87,9 +87,26 @@
   &__element {
     border-bottom: 2px solid $color-solitude-3;
 
+    @include vp-1024 {
+      border-bottom: none;
+    }
+
     &.is-active {
       .faq__content {
         display: block;
+
+        @include vp-1024 {
+          background-color: $color-solitude-1;
+          border-bottom-left-radius: 12px;
+          border-bottom-right-radius: 12px;
+        }
+      }
+
+      .faq__button {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
       }
 
       .faq__button-icon {
@@ -122,6 +139,15 @@
     @include vp-1024 {
       align-items: flex-start;
       padding: 18px 24px;
+      background-color: $color-solitude-1;
+      border-radius: 12px;
+    }
+
+    &.is-active {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
   }
 
@@ -134,6 +160,9 @@
 
     @include vp-1024 {
       max-width: 450px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
     }
 
     @include vp-1304 {
