@@ -129,6 +129,7 @@
     margin: 0;
     display: grid;
     gap: 24px 0;
+    counter-reset: count;
 
     @include vp-1024 {
       grid-template-columns: repeat(2, 1fr);
@@ -146,6 +147,7 @@
     display: flex;
     align-items: flex-start;
     gap: 0 12px;
+    counter-increment: count;
 
     @include vp-768 {
       gap: 0 20px;
@@ -174,6 +176,7 @@
       color: $color-white;
       background-color: $color-royal-blue-1;
       border-radius: 50%;
+      content: counter(count);
 
       @include vp-768 {
         width: 56px;
@@ -188,22 +191,6 @@
         font-size: 28px;
         line-height: 32px;
       }
-    }
-
-    &:first-child::before {
-      content: "1";
-    }
-
-    &:nth-child(2)::before {
-      content: "2";
-    }
-
-     &:nth-child(3)::before {
-      content: "3";
-    }
-
-    &:nth-child(4)::before {
-      content: "4";
     }
   }
 

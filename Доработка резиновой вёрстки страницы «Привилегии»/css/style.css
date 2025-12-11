@@ -1693,6 +1693,7 @@ a {
   margin: 0;
   display: grid;
   gap: 24px 0;
+  counter-reset: count;
 }
 @media (min-width: 1024px) {
   .connect__list {
@@ -1711,6 +1712,7 @@ a {
   display: flex;
   align-items: flex-start;
   gap: 0 12px;
+  counter-increment: count;
 }
 @media (min-width: 768px) {
   .connect__list-item {
@@ -1742,6 +1744,7 @@ a {
   color: #FFFFFF;
   background-color: #476BF0;
   border-radius: 50%;
+  content: counter(count);
 }
 @media (min-width: 768px) {
   .connect__list-item::before {
@@ -1758,18 +1761,6 @@ a {
     font-size: 28px;
     line-height: 32px;
   }
-}
-.connect__list-item:first-child::before {
-  content: "1";
-}
-.connect__list-item:nth-child(2)::before {
-  content: "2";
-}
-.connect__list-item:nth-child(3)::before {
-  content: "3";
-}
-.connect__list-item:nth-child(4)::before {
-  content: "4";
 }
 .connect__item-title {
   margin: 0 0 8px 0;
