@@ -78,6 +78,7 @@
   }
 
   &__list {
+    list-style-type: none;
     margin: 0 0 35px 0;
     padding: 0;
     display: flex;
@@ -93,6 +94,15 @@
     @include vp-1024 {
       margin: 0 0 40px 0;
     }
+  }
+
+  &__item{
+    display: flex;
+    gap: 12px;
+  }
+
+  &__icon{
+    flex-shrink: 0;
   }
 
   &__text {

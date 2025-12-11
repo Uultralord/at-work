@@ -11,48 +11,88 @@
 
 <body>
   <header class="header">
-    <div class="container">
-      <div class="header__wrapper">
-        <svg class="header__icon-decor" width="24" height="24" aria-hidden="true">
-          <use xlink:href="images/sprite.svg#icon-decor"></use>
-        </svg>
-        <a class="header__logo-link" href="#" aria-label="Ссылка на главную страницу">
-          <svg class="header__logo-image" width="188" height="40" aria-hidden="true">
-            <use xlink:href="images/sprite.svg#logo-gazprombank"></use>
+    <div class="header__top">
+      <div class="container">
+        <div class="header__wrapper">
+          <svg class="header__icon-decor" width="24" height="24" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#icon-decor"></use>
           </svg>
-        </a>
-        <div class="header__links">
-          <a class="header__link" href="#">
-            Частным клиентам
+          <a class="header__logo-link" href="#" aria-label="Ссылка на главную страницу">
+            <svg class="header__logo-image" width="188" height="40" aria-hidden="true">
+              <use xlink:href="images/sprite.svg#logo-gazprombank"></use>
+            </svg>
           </a>
-          <a class="header__link header__link--light" href="#">
-            Private Banking
-          </a>
-          <a class="header__link header__link--light" href="#">
-            МСБ
-          </a>
-        </div>
-        <div class="header__links">
-          <button class="header__link header__link--active">
-            Москва
+          <div class="header__links">
+            <a class="header__link" href="#">
+              Частным клиентам
+            </a>
+            <a class="header__link header__link--light" href="#">
+              Private Banking
+            </a>
+            <a class="header__link header__link--light" href="#">
+              МСБ
+            </a>
+          </div>
+          <div class="header__links">
+            <button class="header__link header__link--active">
+              Москва
+            </button>
+            <a class="header__link" href="#">
+              Офисы и банкоматы
+            </a>
+          </div>
+          <button class="header__search btn-icon" aria-label="Открыть поиск">
+            <svg class="btn-icon__icon" width="24" height="24" aria-hidden="true">
+              <use xlink:href="images/sprite.svg#icon-search"></use>
+            </svg>
           </button>
-          <a class="header__link" href="#">
-            Офисы и банкоматы
+          <a class="header__login btn" href="#">
+            Войти
           </a>
+          <button class="header__burger btn-icon" aria-label="Открыть меню">
+            <svg class="btn-icon__icon" width="24" height="24" aria-hidden="true">
+              <use xlink:href="images/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
         </div>
-        <button class="header__search btn-icon" aria-label="Открыть поиск">
-          <svg class="btn-icon__icon" width="24" height="24" aria-hidden="true">
-            <use xlink:href="images/sprite.svg#icon-search"></use>
-          </svg>
-        </button>
-        <a class="header__login btn" href="#">
-          Войти
-        </a>
-        <button class="header__burger btn-icon" aria-label="Открыть меню">
-          <svg class="btn-icon__icon" width="24" height="24" aria-hidden="true">
-            <use xlink:href="images/sprite.svg#icon-burger"></use>
-          </svg>
-        </button>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__bottom-wrap">
+          <form class="search-form" method="post" action="#">
+            <div class="custom-input">
+              <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка" value="ИИС">
+              <div class="custom-input__buttons-wrap">
+                <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Отменить поиск">
+                  <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-cancel"></use>
+                  </svg>
+                </button>
+                <button class="custom-input__button btn-icon btn-icon--grey" type="submit" aria-label="Поиск">
+                  <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <button class="header__btn btn btn--secondary" type="submit">Найти</button>
+          </form>
+          <ul class="search-list">
+            <li class="search-list__item">
+              <button class="search-list__btn btn btn--quaternary">Что входит в Привилегии?</button>
+            </li>
+            <li class="search-list__item">
+              <button class="search-list__btn btn btn--quaternary">Курсы валют</button>
+            </li>
+            <li class="search-list__item">
+              <button class="search-list__btn btn btn--quaternary">Где скачать приложение?</button>
+            </li>
+            <li class="search-list__item">
+              <button class="search-list__btn btn btn--quaternary">Рефинансирование</button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -73,38 +113,42 @@
       <div class="container">
         <h1 class="search__title">Результаты поиска</h1>
         <div class="search__content">
-          <form class="search__form" method="post" action="#">
-            <div class="custom-input">
-              <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка" value="вжуч">
-              <div class="custom-input__buttons-wrap">
-                <button class="custom-input__button btn-icon btn-icon--grey" type="button" aria-label="Отменить поиск">
-                  <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="images/sprite.svg#icon-cancel"></use>
-                  </svg>
-                </button>
-                <button class="custom-input__button btn-icon btn-icon--grey" type="submit" aria-label="Поиск">
-                  <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="images/sprite.svg#icon-search"></use>
-                  </svg>
-                </button>
+          <div class="search__wrap">
+            <form class="search-form" method="post" action="#">
+              <div class="custom-input">
+                <input class="custom-input__field" type="search" name="search" aria-label="Поисковая строка"
+                  value="вжуч">
+                <div class="custom-input__buttons-wrap">
+                  <button class="custom-input__button btn-icon btn-icon--grey" type="button"
+                    aria-label="Отменить поиск">
+                    <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="images/sprite.svg#icon-cancel"></use>
+                    </svg>
+                  </button>
+                  <button class="custom-input__button btn-icon btn-icon--grey" type="submit" aria-label="Поиск">
+                    <svg class="custom-input__icon" width="24" height="24" aria-hidden="true">
+                      <use xlink:href="images/sprite.svg#icon-search"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
-            </div>
-            <button class="search__btn btn btn--secondary" type="submit">Найти</button>
-          </form>
-          <ul class="search-list">
-            <li class="search-list__item">
-              <button class="search-list__btn btn btn--quaternary">Что входит в Привилегии?</button>
-            </li>
-            <li class="search-list__item">
-              <button class="search-list__btn btn btn--quaternary">Курсы валют</button>
-            </li>
-            <li class="search-list__item">
-              <button class="search-list__btn btn btn--quaternary">Где скачать приложение?</button>
-            </li>
-            <li class="search-list__item">
-              <button class="search-list__btn btn btn--quaternary">Рефинансирование</button>
-            </li>
-          </ul>
+              <button class="search-form__btn btn btn--secondary" type="submit">Найти</button>
+            </form>
+            <ul class="search-list">
+              <li class="search-list__item">
+                <button class="search-list__btn btn btn--quaternary">Что входит в Привилегии?</button>
+              </li>
+              <li class="search-list__item">
+                <button class="search-list__btn btn btn--quaternary">Курсы валют</button>
+              </li>
+              <li class="search-list__item">
+                <button class="search-list__btn btn btn--quaternary">Где скачать приложение?</button>
+              </li>
+              <li class="search-list__item">
+                <button class="search-list__btn btn btn--quaternary">Рефинансирование</button>
+              </li>
+            </ul>
+          </div>
           <div class="search__error">
             <picture>
               <source media="(min-width: 1023px)"

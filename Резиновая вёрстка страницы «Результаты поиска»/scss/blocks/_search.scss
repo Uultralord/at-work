@@ -74,19 +74,11 @@
     }
   }
 
-  &__form {
+  &__wrap{
     display: flex;
-    flex-direction: row;
-    gap: 16px;
+    flex-direction: column;
+    gap: 20px;
   }
-
-  &__btn {
-        display: none !important;
-
-        @include vp-1024 {
-            display: flex !important;
-        }
-    }
 
   &__title {
     position: relative;

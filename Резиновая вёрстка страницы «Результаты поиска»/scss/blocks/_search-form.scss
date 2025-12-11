@@ -1,0 +1,13 @@
+.search-form {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  &__btn {
+    display: none !important;
+
+    @include vp-1024 {
+      display: flex !important;
+    }
+  }
+}

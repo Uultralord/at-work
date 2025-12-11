@@ -4,21 +4,8 @@
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 15px 0;
-  background-color: $color-white;
-
-  @include vp-768 {
-    padding: 20px 0;
-  }
-
-  @include vp-1024 {
-    padding: 16px 0;
-    background-color: $color-solitude-2;
-  }
 
   &--open {
-    padding-bottom: 0;
-
     .header__bottom {
       display: block;
     }
@@ -28,6 +15,21 @@
         right: 3%;
       }
     }
+  }
+
+  &__top {
+    padding: 15px 0;
+    background-color: $color-white;
+
+    @include vp-768 {
+      padding: 20px 0;
+    }
+
+    @include vp-1024 {
+      padding: 16px 0;
+      background-color: $color-solitude-2;
+    }
+
   }
 
   &__wrapper {
@@ -156,13 +158,18 @@
 
   &__bottom {
     display: none;
-    position: relative;
-    left: 0;
-    right: 0;
     border-bottom-right-radius: 24px;
     border-bottom-left-radius: 24px;
     background-color: $color-white;
-    margin-top: 15px;
+    padding: 25px 0 40px;
+
+    @include vp-1024 {
+      padding: 40px 0;
+    }
+
+    @include vp-1304{
+      padding: 60px 0;
+    }
 
     &::after {
       z-index: -1;
@@ -175,7 +182,6 @@
     }
 
     @include vp-768 {
-
       &::before {
         position: absolute;
         content: "";
@@ -189,8 +195,6 @@
     }
 
     @include vp-1024 {
-      margin-top: 17px;
-
       &::before {
         display: none;
       }
@@ -198,35 +202,8 @@
   }
 
   &__bottom-wrap {
-    width: 100%;
-    max-width: 1254px;
-    margin: 0 auto;
-    padding: 25px 0 40px;
-
-    @include vp-768 {
-      padding: 40px 0 40px;
-    }
-
-    @include vp-1024 {
-      padding: 40px 0;
-    }
-
-    @include vp-1304 {
-      padding: 60px 0;
-    }
-  }
-
-  &__form {
     display: flex;
-    flex-direction: row;
-    gap: 16px;
-  }
-
-  &__btn {
-    display: none !important;
-
-    @include vp-1024 {
-      display: flex !important;
-    }
+    flex-direction: column;
+    gap: 20px;
   }
 }

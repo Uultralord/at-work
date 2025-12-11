@@ -8,16 +8,17 @@
     margin: 0 0 0 auto;
     z-index: 10;
     position: absolute;
-    bottom: 41%;
+    bottom: -14%;
     right: 15px;
 
     @include vp-768 {
         max-width: 380px;
         gap: 20px;
         right: 20px;
+        bottom: -7%;
     }
 
     @include vp-1024{
-        bottom: 28%;
+        bottom: -30%;
     }
 }
