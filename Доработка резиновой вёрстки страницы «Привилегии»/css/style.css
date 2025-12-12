@@ -740,7 +740,7 @@ a {
 }
 @media (min-width: 1304px) {
   .footer__nav-list {
-    max-width: 390px;
+    max-width: 400px;
   }
 }
 .footer__nav-item {
@@ -1488,7 +1488,7 @@ a {
 @media (min-width: 1024px) {
   .debit__list {
     gap: 10px 0;
-    margin: 0 0 90px;
+    margin: 0 0 80px;
   }
 }
 @media (min-width: 1304px) {
@@ -1570,7 +1570,7 @@ a {
 }
 @media (min-width: 1024px) {
   .debit__bottom {
-    padding: 48px 120px;
+    padding: 48px 100px;
   }
 }
 .debit__bottom-wrap {
@@ -1610,23 +1610,23 @@ a {
 .debit__picture {
   position: absolute;
   right: 0;
-  top: 10px;
+  top: 5%;
 }
 @media (min-width: 768px) {
   .debit__picture {
-    top: -15px;
-    right: 20px;
+    top: -18%;
+    right: 5%;
   }
 }
 @media (min-width: 1024px) {
   .debit__picture {
-    top: -30px;
-    right: 25px;
+    top: -13%;
+    right: 4%;
   }
 }
 @media (min-width: 1304px) {
   .debit__picture {
-    top: -22px;
+    top: -15%;
     right: 15%;
   }
 }
@@ -2138,6 +2138,8 @@ a {
     padding: 80px 0 80px 80px;
     display: flex;
     flex-direction: row-reverse;
+    position: relative;
+    justify-content: flex-end;
   }
 }
 @media (min-width: 1304px) {
@@ -2154,8 +2156,15 @@ a {
   }
 }
 @media (min-width: 1304px) {
+  .benefit__image {
+    position: absolute;
+    top: 10%;
+    right: 0;
+  }
+}
+@media (min-width: 1304px) {
   .benefit__content {
-    max-width: 700px;
+    max-width: 560px;
   }
 }
 .benefit__title {
@@ -2260,6 +2269,8 @@ a {
     margin: 0;
     width: 380px;
     flex-shrink: 0;
+    position: sticky;
+    top: 80px;
   }
 }
 .faq__icon-wrapper {

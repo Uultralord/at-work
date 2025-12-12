@@ -94,7 +94,7 @@
 
         @include vp-1024 {
             gap: 10px 0;
-            margin: 0 0 90px;
+            margin: 0 0 80px;
         }
 
         @include vp-1304 {
@@ -175,7 +175,7 @@
         }
 
         @include vp-1024 {
-            padding: 48px 120px;
+            padding: 48px 100px;
         }
     }
 
@@ -216,20 +216,20 @@
     &__picture {
         position: absolute;
         right: 0;
-        top: 10px;
+        top: 5%;
 
         @include vp-768 {
-            top: -15px;
-            right: 20px;
+            top: -18%;
+            right: 5%;
         }
 
         @include vp-1024 {
-            top: -30px;
-            right: 25px;
+            top: -13%;
+            right: 4%;
         }
 
         @include vp-1304 {
-            top: -22px;
+            top: -15%;
             right: 15%;
         }
     }

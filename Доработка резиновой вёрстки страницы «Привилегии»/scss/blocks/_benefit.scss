@@ -26,6 +26,8 @@
       padding: 80px 0 80px 80px;
       display: flex;
       flex-direction: row-reverse;
+      position: relative;
+      justify-content: flex-end;
     }
   }
 
@@ -41,11 +43,18 @@
     @include vp-768 {
       margin: 0 auto 40px auto;
     }
+
+    @include vp-1304{
+      position: absolute;
+      top: 10%;
+      right: 0;
+    }
   }
 
   &__content {
     @include vp-1304 {
-      max-width: 700px;
+      max-width: 560px;
+
     }
   }
 
