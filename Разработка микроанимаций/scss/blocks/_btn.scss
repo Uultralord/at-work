@@ -30,10 +30,11 @@
     line-height: 20px;
     letter-spacing: -0.02em;
     border-radius: 16px;
+    transition: background-color 5s ease-in;
 
     &:hover,
     &:focus-visible {
-      background: linear-gradient(270deg, #9548BD 0%, #547CCB 100%);
+      background-color: linear-gradient(270deg, #9548BD 0%, #547CCB 100%);
     }
   }
 
@@ -42,3 +43,5 @@
     z-index: 1;
   }
 }
+
+
