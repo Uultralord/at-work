@@ -1,0 +1,94 @@
+.custom-radio-payment {
+  display: flex;
+  $root: &;
+
+  &--error {
+    #{$root}__label::after {
+      border-color: $color-persian-red;
+    }
+  }
+
+  &__field {
+    &:hover,
+    &:focus-visible {
+      + #{$root}__label {
+        border-color: $color-summer-sky;
+      }
+    }
+
+    &:checked {
+      + #{$root}__label {
+        border-color: $color-summer-sky;
+
+        #{$root}__icon {
+          opacity: 1;
+        }
+
+        &::after {
+          background-color: #259DD6;
+        }
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    column-gap: 16px;
+    width: 100%;
+    padding: 10px 54px 14px 14px;
+    border-radius: 20px;
+    border: 2px solid $color-solitude;
+    cursor: pointer;
+    user-select: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 14px;
+      top: 13px;
+      width: 24px;
+      height: 24px;
+      border: 2px solid $color-summer-sky;
+      border-radius: 50%;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__period,
+  &__savings,
+  &__text {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  &__period,
+  &__savings-number {
+    font-weight: 700;
+  }
+
+  &__amount {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    top: 19px;
+    opacity: 0;
+    pointer-events: none;
+    color: $color-white;
+  }
+}
+
+

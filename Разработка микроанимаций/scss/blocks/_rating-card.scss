@@ -1,0 +1,92 @@
+.rating-card {
+  align-items: flex-start;
+  background-color: $color-solitude-3;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px 28px;
+  width: 392px;
+  $root: &;
+
+  &__prediction {
+    align-items: center;
+    display: flex;
+    gap: 0 8px;
+    margin: 0 0 20px 0;
+  }
+
+  &__prediction-text {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  &__icon {
+    color: $color-black-russian-2;
+    flex-shrink: 0;
+  }
+
+  &__value {
+    background-color: transparent;
+    border: none;
+    color: $color-royal-blue-1;
+    cursor: pointer;
+    font-size: 32px;
+    line-height: 36px;
+    margin: 0 0 auto 0;
+    padding: 0;
+    position: relative;
+
+    &::after {
+      background-color: $color-royal-blue-1;
+      bottom: 0;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transform: scale(0, 1);
+      transform-origin: left;
+      width: 100%;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $color-royal-blue-2;
+
+      &::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__agency {
+    display: flex;
+    font-size: 14px;
+    gap: 0 4px;
+    line-height: 18px;
+    margin: 19px 0 0 0;
+  }
+
+  &__link {
+    align-items: center;
+    color: $color-royal-blue-1;
+    display: flex;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-royal-blue-2;
+
+      #{$root}__arrow {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__arrow {
+    height: 16px;
+    margin: 0 0 0 4px;
+    width: 16px;
+  }
+}

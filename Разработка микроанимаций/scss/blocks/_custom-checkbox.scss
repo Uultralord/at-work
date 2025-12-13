@@ -1,0 +1,64 @@
+.custom-checkbox {
+  padding: 0 22px 0 20px;
+  $root: &;
+
+  &--error {
+    #{$root}__label::before {
+      border-color: $color-persian-red;
+    }
+  }
+
+  &__field {
+    &:checked {
+      + #{$root}__label::before {
+        background-color: $color-royal-blue-1;
+        border-color: $color-royal-blue-1;
+      }
+
+      + #{$root}__label #{$root}__icon-check {
+        opacity: 1;
+      }
+    }
+
+    &:hover,
+    &:focus-visible {
+      + #{$root}__label::before {
+        border-color: $color-pelorous;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      content: "";
+      align-self: flex-start;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-link-water;
+      border-radius: 4px;
+    }
+  }
+
+  &__icon-check {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    opacity: 0;
+    color: $color-summer-sky;
+  }
+
+  &__text {
+    margin: 0 auto 0 0;
+    max-width: 340px;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+}

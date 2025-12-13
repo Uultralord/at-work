@@ -1,0 +1,94 @@
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  row-gap: 8px;
+  $root: &;
+
+  &--error {
+    #{$root}__field {
+      background-color: $color-snow;
+      border-color: $color-your-pink;
+    }
+
+    #{$root}__icon,
+    #{$root}__button-icon {
+      color: $color-your-pink;
+    }
+
+    #{$root}__error {
+      display: block;
+    }
+  }
+
+  &__field {
+    border: 1px solid $color-periwinkle;
+    border-radius: 8px;
+    color: $color-black-russian;
+    font-family: inherit;
+    font-size: 14px;
+    height: 44px;
+    line-height: 16px;
+    outline: none;
+    padding: 0 56px 0 16px;
+
+    &::placeholder {
+      color: $color-manatee;
+    }
+
+    &:hover,
+    &:focus-visible {
+      border-color: $color-free-speech-blue;
+
+      ~ #{$root}__icon {
+        color: $color-free-speech-blue;
+      }
+
+      ~ #{$root}__button {
+        color: $color-free-speech-blue;
+      }
+    }
+  }
+
+  &__label {
+    background-color: $color-white;
+    color: $color-manatee;
+    font-size: 14px;
+    left: 13px;
+    line-height: 16px;
+    padding: 0 4px;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    user-select: none;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    color: $color-manatee;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+  }
+
+  &__icon {
+    color: $color-manatee;
+    pointer-events: none;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+  }
+
+  &__error {
+    color: $color-sunset-orange;
+    display: none;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0;
+  }
+}

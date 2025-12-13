@@ -1,0 +1,45 @@
+.subscribe-card {
+  background: $color-ghost-white url("../images/subscribe-bg.png") no-repeat right bottom;
+  border-radius: 12px;
+  color: $color-black-russian;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  padding: 20px;
+  position: relative;
+  width: 420px;
+  $root: &;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 0 10px 0;
+    max-width: 220px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0 0 15px 0;
+    max-width: 220px;
+  }
+
+  &__icon {
+    bottom: 39px;
+    left: 148px;
+    position: absolute;
+  }
+
+  &__btn {
+    margin: auto 0 0;
+    width: 115px;
+
+    &:hover,
+    &:focus-visible {
+      ~ #{$root}__icon {
+        transform: translate(-5px, 5px);
+      }
+    }
+  }
+}

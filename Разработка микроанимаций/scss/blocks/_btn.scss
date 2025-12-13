@@ -1,0 +1,44 @@
+.btn {
+  align-items: center;
+  background-color: $color-royal-blue-1;
+  border: none;
+  border-radius: 8px;
+  color: $color-white;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  width: 140px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+
+  &:hover,
+  &:focus-visible {
+    &:not(.btn--xl) {
+      background-color: $color-free-speech-blue;
+    }
+  }
+
+  &--xl {
+    background: $color-deep-lilac;
+    padding: 18px;
+    width: 276px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    border-radius: 16px;
+
+    &:hover,
+    &:focus-visible {
+      background: linear-gradient(270deg, #9548BD 0%, #547CCB 100%);
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+  }
+}
