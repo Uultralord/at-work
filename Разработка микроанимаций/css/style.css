@@ -476,7 +476,6 @@ textarea {
   background-color: #3356D7;
 }
 .btn--xl {
-  background: #9548BD;
   padding: 18px;
   width: 276px;
   font-weight: 700;
@@ -484,10 +483,14 @@ textarea {
   line-height: 20px;
   letter-spacing: -0.02em;
   border-radius: 16px;
-  transition: background-color 5s ease-in;
+  background: linear-gradient(270deg, #9548BD 0%, #547CCB 100%);
+  transition: background ease-in 0.3s;
 }
 .btn--xl:hover, .btn--xl:focus-visible {
-  background-color: linear-gradient(270deg, #9548BD 0%, #547CCB 100%);
+  background: #9548BD;
+}
+.btn--xl:active {
+  background: #873EAD;
 }
 .btn__text {
   position: relative;

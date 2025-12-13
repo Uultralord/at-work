@@ -22,7 +22,6 @@
   }
 
   &--xl {
-    background: $color-deep-lilac;
     padding: 18px;
     width: 276px;
     font-weight: 700;
@@ -30,11 +29,16 @@
     line-height: 20px;
     letter-spacing: -0.02em;
     border-radius: 16px;
-    transition: background-color 5s ease-in;
+    background: linear-gradient(270deg, $color-deep-lilac 0%, #547CCB 100%) ;
+    transition: background $transition-300;
 
     &:hover,
     &:focus-visible {
-      background-color: linear-gradient(270deg, #9548BD 0%, #547CCB 100%);
+      background: $color-deep-lilac;
+    }
+
+    &:active{
+      background:#873EAD;
     }
   }
 
@@ -43,5 +47,3 @@
     z-index: 1;
   }
 }
-
-
