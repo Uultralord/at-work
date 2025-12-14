@@ -843,6 +843,7 @@ textarea {
   bottom: 39px;
   left: 148px;
   position: absolute;
+  transition: transform ease-in 0.3s;
 }
 .subscribe-card__btn {
   margin: auto 0 0;
@@ -897,6 +898,7 @@ textarea {
 }
 .advantage-card__icon {
   flex-shrink: 0;
+  transition: transform ease-in 0.3s;
 }
 
 .card-news {
@@ -936,9 +938,11 @@ textarea {
   position: absolute;
   top: 0;
   width: 100%;
+  transition: opacity ease-in 0.3s;
 }
 .card-news__image {
   width: 100%;
+  transition: transform ease-in 0.3s;
 }
 .card-news__content {
   padding: 20px 0 0;
@@ -966,6 +970,7 @@ textarea {
   font-weight: 700;
   line-height: 24px;
   margin: 0 0 8px 0;
+  transition: color ease-in 0.3s;
 }
 .card-news__text {
   font-size: 15px;
@@ -1019,6 +1024,7 @@ textarea {
   transform: scale(0, 1);
   transform-origin: left;
   width: 100%;
+  transition: transform ease-in 0.3s, opacity ease-in 0.3s;
 }
 .rating-card__value:hover, .rating-card__value:focus-visible {
   color: #2F54DF;
@@ -1038,6 +1044,7 @@ textarea {
   align-items: center;
   color: #476BF0;
   display: flex;
+  transition: color ease-in 0.3s;
 }
 .rating-card__link:hover, .rating-card__link:focus-visible {
   color: #2F54DF;
@@ -1049,4 +1056,5 @@ textarea {
   height: 16px;
   margin: 0 0 0 4px;
   width: 16px;
+  transition: transform ease-in 0.3s;
 }/*# sourceMappingURL=style.css.map */

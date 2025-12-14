@@ -48,6 +48,7 @@
       transform: scale(0, 1);
       transform-origin: left;
       width: 100%;
+      transition: transform $transition-300, opacity $transition-300;;
     }
 
     &:hover,
@@ -73,6 +74,7 @@
     align-items: center;
     color: $color-royal-blue-1;
     display: flex;
+    transition: color $transition-300;;
 
     &:hover,
     &:focus-visible {
@@ -88,5 +90,6 @@
     height: 16px;
     margin: 0 0 0 4px;
     width: 16px;
+    transition: transform $transition-300;
   }
 }

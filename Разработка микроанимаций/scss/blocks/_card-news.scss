@@ -44,10 +44,12 @@
     position: absolute;
     top: 0;
     width: 100%;
+    transition: opacity $transition-300;
   }
 
   &__image {
     width: 100%;
+    transition: transform $transition-300;
   }
 
   &__content {
@@ -81,6 +83,7 @@
     font-weight: 700;
     line-height: 24px;
     margin: 0 0 8px 0;
+    transition: color $transition-300;
   }
 
   &__text {
