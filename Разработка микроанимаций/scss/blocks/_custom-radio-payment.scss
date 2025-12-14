@@ -43,6 +43,7 @@
     border: 2px solid $color-solitude;
     cursor: pointer;
     user-select: none;
+    transition: border $transition-300;
 
     &::after {
       content: "";
@@ -88,6 +89,7 @@
     opacity: 0;
     pointer-events: none;
     color: $color-white;
+    transition: opacity $transition-300;
   }
 }
 

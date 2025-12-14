@@ -43,6 +43,7 @@
       height: 20px;
       border: 1px solid $color-link-water;
       border-radius: 4px;
+      transition: border $transition-300, background-color $transition-300;
     }
   }
 
@@ -52,6 +53,7 @@
     top: 4px;
     opacity: 0;
     color: $color-summer-sky;
+    transition: opacity $transition-300;
   }
 
   &__text {

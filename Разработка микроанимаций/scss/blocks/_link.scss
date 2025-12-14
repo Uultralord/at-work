@@ -6,6 +6,7 @@
   font-weight: 500;
   gap: 4px;
   line-height: 18px;
+  transition: color $transition-300;
 
   &:hover,
   &:focus-visible {
@@ -20,6 +21,7 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     text-underline-offset: 2px;
+    transition: color $transition-300;
 
     &:hover,
     &:focus-visible {
@@ -32,6 +34,7 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 16px;
+    transition: color $transition-300;
 
     &:hover,
     &:focus-visible {
@@ -43,6 +46,7 @@
     font-size: 13px;
     line-height: 16px;
     color: $color-royal-blue-1;
+    transition: color $transition-300;
 
     &:hover,
     &:focus-visible {
@@ -53,6 +57,7 @@
   &--xl {
     font-size: 20px;
     line-height: 28px;
+    transition: color $transition-300;
 
     &:hover,
     &:focus-visible {

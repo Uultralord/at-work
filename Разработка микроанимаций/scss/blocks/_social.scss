@@ -14,6 +14,7 @@
     justify-content: center;
     background-color: $color-solitude;
     border-radius: 50%;
+    transition: background-color $transition-300;
 
     &:hover,
     &:focus-visible {

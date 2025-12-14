@@ -471,8 +471,9 @@ textarea {
   font-size: 14px;
   line-height: 20px;
   position: relative;
+  transition: background-color ease-in 0.3s;
 }
-.btn:hover:not(.btn--xl), .btn:focus-visible:not(.btn--xl) {
+.btn:hover:not(.btn--xl), .btn:focus-visible:not(.btn--xl), .btn:active:not(.btn--xl) {
   background-color: #3356D7;
 }
 .btn--xl {
@@ -484,12 +485,22 @@ textarea {
   letter-spacing: -0.02em;
   border-radius: 16px;
   background: linear-gradient(270deg, #9548BD 0%, #547CCB 100%);
+}
+.btn--xl::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(270deg, #9548BD 0%, #547CCB 100%);
   transition: background ease-in 0.3s;
 }
-.btn--xl:hover, .btn--xl:focus-visible {
+.btn--xl:hover::after, .btn--xl:focus-visible::after {
   background: #9548BD;
 }
-.btn--xl:active {
+.btn--xl:active::after {
   background: #873EAD;
 }
 .btn__text {
@@ -530,6 +541,7 @@ textarea {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  transition: border ease-in 0.3s;
 }
 .custom-radio-payment__label::after {
   content: "";
@@ -567,6 +579,7 @@ textarea {
   opacity: 0;
   pointer-events: none;
   color: #ffffff;
+  transition: opacity ease-in 0.3s;
 }
 
 .custom-checkbox {
@@ -603,6 +616,7 @@ textarea {
   height: 20px;
   border: 1px solid #C7CED3;
   border-radius: 4px;
+  transition: border ease-in 0.3s, background-color ease-in 0.3s;
 }
 .custom-checkbox__icon-check {
   position: absolute;
@@ -610,6 +624,7 @@ textarea {
   top: 4px;
   opacity: 0;
   color: #259DD6;
+  transition: opacity ease-in 0.3s;
 }
 .custom-checkbox__text {
   margin: 0 auto 0 0;
@@ -628,8 +643,21 @@ textarea {
 .custom-input--error .custom-input__field {
   background-color: #FFFBFB;
   border-color: #F9C4C2;
+  transition: border-color ease-in 0.3s, background-color ease-in 0.3s;
 }
-.custom-input--error .custom-input__icon,
+.custom-input--error .custom-input__field:hover, .custom-input--error .custom-input__field:focus-visible {
+  border-color: #e6817e;
+  background-color: #fff7f7;
+}
+.custom-input--error .custom-input__field:hover ~ .custom-input__icon, .custom-input--error .custom-input__field:focus-visible ~ .custom-input__icon {
+  color: #e6817e;
+}
+.custom-input--error .custom-input__field:hover ~ .custom-input__button-icon, .custom-input--error .custom-input__field:focus-visible ~ .custom-input__button-icon {
+  color: #e6817e;
+}
+.custom-input--error .custom-input__icon {
+  color: #F9C4C2;
+}
 .custom-input--error .custom-input__button-icon {
   color: #F9C4C2;
 }
@@ -646,6 +674,7 @@ textarea {
   line-height: 16px;
   outline: none;
   padding: 0 56px 0 16px;
+  transition: border ease-in 0.3s;
 }
 .custom-input__field::-moz-placeholder {
   color: #8F939F;
@@ -658,9 +687,11 @@ textarea {
 }
 .custom-input__field:hover ~ .custom-input__icon, .custom-input__field:focus-visible ~ .custom-input__icon {
   color: #3356D7;
+  transform: scale(1.1);
 }
 .custom-input__field:hover ~ .custom-input__button, .custom-input__field:focus-visible ~ .custom-input__button {
   color: #3356D7;
+  transform: scale(1.1);
 }
 .custom-input__label {
   background-color: #ffffff;
@@ -688,12 +719,16 @@ textarea {
   right: 16px;
   top: 10px;
 }
+.custom-input__button-icon {
+  transition: color ease-in 0.3s, transform ease-in 0.3s;
+}
 .custom-input__icon {
   color: #8F939F;
   pointer-events: none;
   position: absolute;
   right: 16px;
   top: 10px;
+  transition: color ease-in 0.3s, transform ease-in 0.3s;
 }
 .custom-input__error {
   color: #F6514B;
@@ -711,6 +746,7 @@ textarea {
   font-weight: 500;
   gap: 4px;
   line-height: 18px;
+  transition: color ease-in 0.3s;
 }
 .link:hover, .link:focus-visible {
   color: #259DD6;
@@ -724,6 +760,7 @@ textarea {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   text-underline-offset: 2px;
+  transition: color ease-in 0.3s;
 }
 .link--xs:hover, .link--xs:focus-visible {
   color: #9D1881;
@@ -733,6 +770,7 @@ textarea {
   font-size: 14px;
   font-weight: 600;
   line-height: 16px;
+  transition: color ease-in 0.3s;
 }
 .link--s:hover, .link--s:focus-visible {
   color: #9D1881;
@@ -741,6 +779,7 @@ textarea {
   font-size: 13px;
   line-height: 16px;
   color: #476BF0;
+  transition: color ease-in 0.3s;
 }
 .link--m:hover, .link--m:focus-visible {
   color: #2F54DF;
@@ -748,6 +787,7 @@ textarea {
 .link--xl {
   font-size: 20px;
   line-height: 28px;
+  transition: color ease-in 0.3s;
 }
 .link--xl:hover, .link--xl:focus-visible {
   color: #476BF0;
@@ -769,6 +809,7 @@ textarea {
   justify-content: center;
   background-color: #E2E4E8;
   border-radius: 50%;
+  transition: background-color ease-in 0.3s;
 }
 .social__link:hover, .social__link:focus-visible {
   background-color: #DBDBDD;

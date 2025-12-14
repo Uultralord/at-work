@@ -9,10 +9,28 @@
     #{$root}__field {
       background-color: $color-snow;
       border-color: $color-your-pink;
+      transition: border-color $transition-300, background-color $transition-300;
+
+      &:hover,
+      &:focus-visible {
+        border-color: #e6817e;
+        background-color: #fff7f7;
+
+        ~#{$root}__icon {
+          color: #e6817e;
+        }
+
+        ~#{$root}__button-icon {
+          color: #e6817e;
+        }
+      }
     }
 
-    #{$root}__icon,
-    #{$root}__button-icon {
+    #{$root}__icon{
+      color: $color-your-pink;
+    }
+
+    #{$root}__button-icon{
       color: $color-your-pink;
     }
 
@@ -31,6 +49,7 @@
     line-height: 16px;
     outline: none;
     padding: 0 56px 0 16px;
+    transition: border $transition-300;
 
     &::placeholder {
       color: $color-manatee;
@@ -40,12 +59,14 @@
     &:focus-visible {
       border-color: $color-free-speech-blue;
 
-      ~ #{$root}__icon {
+      ~#{$root}__icon {
         color: $color-free-speech-blue;
+        transform: scale(1.1); 
       }
 
-      ~ #{$root}__button {
+      ~#{$root}__button {
         color: $color-free-speech-blue;
+        transform: scale(1.1); 
       }
     }
   }
@@ -76,12 +97,17 @@
     top: 10px;
   }
 
+  &__button-icon {
+    transition: color $transition-300,transform $transition-300;
+  }
+
   &__icon {
     color: $color-manatee;
     pointer-events: none;
     position: absolute;
     right: 16px;
     top: 10px;
+    transition: color $transition-300, transform $transition-300;
   }
 
   &__error {

@@ -155,7 +155,21 @@
               Неверный пароль
             </p>
           </div>
-          <div class="custom-input">
+          <div class="custom-input custom-input--error">
+            <input class="custom-input__field" id="user-password" type="password" name="password" required>
+            <label class="custom-input__label" for="user-password">
+              Пароль
+            </label>
+            <button class="custom-input__button" type="button" aria-label="Показать пароль">
+              <svg class="custom-input__button-icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-eye-closed"></use>
+              </svg>
+            </button>
+            <p class="custom-input__error">
+              Неверный пароль
+            </p>
+          </div>
+          <div class="custom-input custom-input--error">
             <input class="custom-input__field" id="user-login" type="text" name="login" required>
             <label class="custom-input__label" for="user-login">
               Логин
