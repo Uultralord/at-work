@@ -1,0 +1,27 @@
+.burger {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  position: relative;
+  z-index: 20;
+  $root: &;
+
+  .header--open & {
+    #{$root}__icon--open {
+      display: none;
+    }
+
+    #{$root}__icon--close {
+      display: flex;
+    }
+  }
+
+  &__icon--close {
+    display: none;
+  }
+}
