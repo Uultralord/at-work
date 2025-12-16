@@ -10,18 +10,79 @@
   position: relative;
   z-index: 20;
   $root: &;
+  cursor: pointer;
 
   .header--open & {
-    #{$root}__icon--open {
-      display: none;
+    //#{$root}__icon--open {
+    //  display: none;
+    //}
+
+    //#{$root}__icon--close {
+    //  display: flex;
+    //}
+
+    #{$root}__top {
+      position: relative;
+      z-index: 100;
+      animation: iconTopDown 0.5s linear forwards, iconTopRotate 0.5s linear 0.5s forwards;
+      transform-origin: center;
     }
 
-    #{$root}__icon--close {
-      display: flex;
+    #{$root}__bottom {
+      position: relative;
+      z-index: 100;
+      animation: iconBottomUp 0.5s linear forwards, iconBottomRotate 0.5s linear 0.5s forwards;
+      transform-origin: center;
     }
   }
 
   &__icon--close {
     display: none;
+    transition-duration: 0.1s;
+    transition-delay: .25s;
+    background: transparent;
+  }
+
+}
+
+@keyframes iconTopDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    color: $color-white;
+    transform: translateY(15%);
+  }
+}
+
+@keyframes iconTopRotate {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 45deg;
+  }
+}
+
+@keyframes iconBottomUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15%);
+    color: $color-white;
+  }
+}
+
+@keyframes iconBottomRotate {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: -45deg;
   }
 }

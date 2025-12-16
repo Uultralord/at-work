@@ -44,7 +44,8 @@
     position: absolute;
     bottom: 0;
     right: -59px;
-
+    animation: circleText 10s linear infinite;
+    transform-origin: center;
   }
 
   &__mouse-button {
@@ -55,5 +56,29 @@
     border: none;
     padding: 0;
     margin: auto auto 0;
+  }
+
+  &__icon-mouse-button{
+    animation: mouseButton 1.2s ease-out infinite;
+  }
+}
+
+@keyframes circleText {
+    0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mouseButton {
+  0%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(30%);
   }
 }
