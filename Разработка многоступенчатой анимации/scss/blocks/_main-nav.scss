@@ -10,6 +10,20 @@
     padding: 0;
   }
 
+  &__item {
+    position: relative;
+
+    &--submenu {
+      &:hover {
+        .main-nav__sublist {
+          opacity: 1;
+          pointer-events: all;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
   &__link {
     color: $color-black-russian;
     display: flex;
@@ -36,6 +50,36 @@
     svg {
       height: 20px;
       width: 20px;
+    }
+  }
+
+  &__sublist {
+    list-style: none;
+    margin: 0;
+    padding: 16px 20px;
+    background-color: $color-white;
+    box-shadow: 0px 4px 16px 0px #23233229;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    left: -10px;
+    top: calc(100% + 12px);
+    min-width: 268px;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $transition-300, transform $transition-300;
+    transform: translateY(-10%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 20px;
+      top: -20px;
+      width: 100%;
+      left: -20px;
     }
   }
 }

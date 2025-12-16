@@ -1,15 +1,31 @@
 .hero {
   position: relative;
   overflow: hidden;
-  background-color: $color-solitude-3;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-solitude-3;
+    opacity: 0;
+    animation: heroBackground 1s ease-in 1s forwards;
+  }
 
   &__wrapper {
     display: flex;
     gap: 56px;
     align-items: center;
-    min-height: calc(100vh - 88px);
+    //min-height: calc(100vh - 88px);
     padding: 70px 0;
-    background-color: $color-solitude-3;
+  }
+
+  &__content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   &__heading {
@@ -18,6 +34,8 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 48px;
+    opacity: 0;
+    animation: heroHeading 0.7s ease-in 2s forwards;
   }
 
   &__text {
@@ -26,11 +44,15 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
+    opacity: 0;
+    animation: heroText 0.7s ease-in 2.7s forwards;
   }
 
   &__buttons {
     display: flex;
     gap: 16px;
+    opacity: 0;
+    animation: heroButtons 0.7s ease-in 3.4s forwards;
   }
 
   &__download {
@@ -52,5 +74,69 @@
     border: none;
     border-radius: 8px;
     background-color: $color-royal-blue-1;
+  }
+
+  &__image{
+    position: relative; 
+    opacity: 0;
+    animation: heroImage 2s ease-out 1s forwards;
+  }
+}
+
+@keyframes heroBackground {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes heroImage {
+  0%{
+    opacity: 1;
+    right: -100%;
+    transform: scale(1.5);
+  }
+  50%{
+     right: 0;
+     transform: scale(1.5);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes heroHeading {
+  0%{
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroText {
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroButtons {
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
   }
 }

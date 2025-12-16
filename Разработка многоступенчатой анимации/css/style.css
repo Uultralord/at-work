@@ -419,6 +419,8 @@ textarea {
 .header {
   padding: 24px 0;
   background-color: #ffffff;
+  opacity: 0;
+  animation: header 1s ease-in 1s forwards;
 }
 .header__wrapper {
   align-items: center;
@@ -485,6 +487,14 @@ textarea {
   width: 20px;
 }
 
+@keyframes header {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .main-nav {
   margin: 0 20px 0 0;
 }
@@ -495,6 +505,14 @@ textarea {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.main-nav__item {
+  position: relative;
+}
+.main-nav__item--submenu:hover .main-nav__sublist {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
 }
 .main-nav__link {
   color: #1E222E;
@@ -520,19 +538,60 @@ textarea {
   height: 20px;
   width: 20px;
 }
+.main-nav__sublist {
+  list-style: none;
+  margin: 0;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 16px 0px rgba(35, 35, 50, 0.1607843137);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: absolute;
+  left: -10px;
+  top: calc(100% + 12px);
+  min-width: 268px;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity ease-in 0.3s, transform ease-in 0.3s;
+  transform: translateY(-10%);
+}
+.main-nav__sublist::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  top: -20px;
+  width: 100%;
+  left: -20px;
+}
 
 .hero {
   position: relative;
   overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: #F4F6FA;
+  opacity: 0;
+  animation: heroBackground 1s ease-in 1s forwards;
 }
 .hero__wrapper {
   display: flex;
   gap: 56px;
   align-items: center;
-  min-height: calc(100vh - 88px);
   padding: 70px 0;
-  background-color: #F4F6FA;
+}
+.hero__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .hero__heading {
   margin: 0 0 24px;
@@ -540,6 +599,8 @@ textarea {
   font-size: 40px;
   font-weight: 700;
   line-height: 48px;
+  opacity: 0;
+  animation: heroHeading 0.7s ease-in 2s forwards;
 }
 .hero__text {
   margin: 0 0 48px;
@@ -547,10 +608,14 @@ textarea {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
+  opacity: 0;
+  animation: heroText 0.7s ease-in 2.7s forwards;
 }
 .hero__buttons {
   display: flex;
   gap: 16px;
+  opacity: 0;
+  animation: heroButtons 0.7s ease-in 3.4s forwards;
 }
 .hero__download {
   padding: 18px 32px;
@@ -571,7 +636,65 @@ textarea {
   border-radius: 8px;
   background-color: #476BF0;
 }
+.hero__image {
+  position: relative;
+  opacity: 0;
+  animation: heroImage 2s ease-out 1s forwards;
+}
 
+@keyframes heroBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes heroImage {
+  0% {
+    opacity: 1;
+    right: -100%;
+    transform: scale(1.5);
+  }
+  50% {
+    right: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes heroHeading {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes heroText {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes heroButtons {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .socials {
   display: flex;
   flex-wrap: wrap;
@@ -590,6 +713,10 @@ textarea {
   background-color: #EDEEEF;
 }
 
+.footer {
+  opacity: 0;
+  animation: footer 1s ease-in 1s forwards;
+}
 .footer__wrapper {
   display: flex;
   align-items: flex-start;
@@ -668,4 +795,13 @@ textarea {
   color: rgba(106, 110, 128, 0.4);
   font-size: 10px;
   line-height: 12px;
+}
+
+@keyframes footer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
