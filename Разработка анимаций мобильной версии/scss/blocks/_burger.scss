@@ -13,13 +13,13 @@
   cursor: pointer;
 
   .header--open & {
-    //#{$root}__icon--open {
-    //  display: none;
-    //}
+    #{$root}__icon--open {
+      animation: iconOpen 0.5s linear 2s forwards;
+  }
 
-    //#{$root}__icon--close {
-    //  display: flex;
-    //}
+    #{$root}__icon--close {
+      animation: iconClose 0.5s linear 2s forwards;
+    }
 
     #{$root}__top {
       position: relative;
@@ -37,6 +37,7 @@
   }
 
   &__icon--close {
+    opacity: 0;
     display: none;
     transition-duration: 0.1s;
     transition-delay: .25s;
@@ -84,5 +85,26 @@
 
   100% {
     rotate: -45deg;
+  }
+}
+
+@keyframes iconOpen {
+  0%{
+    visibility: visible;
+
+  }
+  100%{
+    visibility: hidden;
+
+  }
+}
+
+@keyframes iconClose {
+  0%{visibility: hidden;
+
+  }
+  100%{
+
+    visibility: visible;
   }
 }

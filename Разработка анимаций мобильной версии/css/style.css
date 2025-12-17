@@ -399,7 +399,7 @@ textarea {
   z-index: 50;
   position: absolute;
   animation: headerSlide 1s ease-in forwards;
-  height: 59em;
+  height: 100vh;
   background: linear-gradient(171.29deg, #1919EF 0%, #060698 100%);
 }
 .header--open .header__menu {
@@ -427,7 +427,7 @@ textarea {
 }
 .header__menu {
   flex-direction: column;
-  min-height: 850px;
+  min-height: 90vh;
   justify-content: space-between;
   display: none;
 }
@@ -458,12 +458,10 @@ textarea {
 
 @keyframes headerSlide {
   0% {
-    transform: translateY(-100%);
     opacity: 0;
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 @keyframes headerBottom {
@@ -560,6 +558,12 @@ textarea {
   z-index: 20;
   cursor: pointer;
 }
+.header--open .burger .burger__icon--open {
+  animation: iconOpen 0.5s linear 2s forwards;
+}
+.header--open .burger .burger__icon--close {
+  animation: iconClose 0.5s linear 2s forwards;
+}
 .header--open .burger .burger__top {
   position: relative;
   z-index: 100;
@@ -573,6 +577,7 @@ textarea {
   transform-origin: center;
 }
 .burger__icon--close {
+  opacity: 0;
   display: none;
   transition-duration: 0.1s;
   transition-delay: 0.25s;
@@ -611,6 +616,22 @@ textarea {
   }
   100% {
     rotate: -45deg;
+  }
+}
+@keyframes iconOpen {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes iconClose {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
   }
 }
 .hero {

@@ -11,7 +11,7 @@
     z-index: 50;
     position: absolute;
     animation: headerSlide 1s ease-in forwards;
-    height: 59em;
+    height: 100vh;
     background: linear-gradient(171.29deg, $color-blue 0%, #060698 100%);
 
     .header__menu{
@@ -54,7 +54,7 @@
 
   &__menu {
     flex-direction: column;
-    min-height: 850px;
+    min-height: 90vh;
     justify-content: space-between;
     display: none;
   }
@@ -90,13 +90,11 @@
 
 @keyframes headerSlide {
   0% {
-    transform: translateY(-100%);
     opacity: 0;
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
