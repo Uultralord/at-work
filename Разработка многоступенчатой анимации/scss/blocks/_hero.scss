@@ -12,6 +12,7 @@
     background-color: $color-solitude-3;
     opacity: 0;
     animation: heroBackground 1s ease-in 1s forwards;
+    z-index: -1;
   }
 
   &__wrapper {
@@ -95,12 +96,10 @@
 @keyframes heroImage {
   0%{
     opacity: 1;
-    right: -100%;
-    transform: scale(1.5);
+    transform: scale(1.5) translateX(100%);
   }
   50%{
-     right: 0;
-     transform: scale(1.5);
+     transform: scale(1.5) translateX(0);
   }
   100%{
     opacity: 1;
