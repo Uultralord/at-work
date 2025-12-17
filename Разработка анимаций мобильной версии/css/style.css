@@ -559,10 +559,10 @@ textarea {
   cursor: pointer;
 }
 .header--open .burger .burger__icon--open {
-  animation: iconOpen 0.5s linear 2s forwards;
+  animation: iconOpen 1s linear forwards;
 }
 .header--open .burger .burger__icon--close {
-  animation: iconClose 0.5s linear 2s forwards;
+  animation: iconClose 1s linear forwards;
 }
 .header--open .burger .burger__top {
   position: relative;
@@ -577,8 +577,7 @@ textarea {
   transform-origin: center;
 }
 .burger__icon--close {
-  opacity: 0;
-  display: none;
+  transform: translateX(100%);
   transition-duration: 0.1s;
   transition-delay: 0.25s;
   background: transparent;
@@ -620,18 +619,18 @@ textarea {
 }
 @keyframes iconOpen {
   0% {
-    visibility: visible;
+    transform: translateY(0);
   }
   100% {
-    visibility: hidden;
+    transform: translateY(-100%);
   }
 }
 @keyframes iconClose {
   0% {
-    visibility: hidden;
+    transform: translateY(-100%);
   }
   100% {
-    visibility: visible;
+    transform: translateY(0);
   }
 }
 .hero {

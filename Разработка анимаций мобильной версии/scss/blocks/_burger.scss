@@ -14,11 +14,11 @@
 
   .header--open & {
     #{$root}__icon--open {
-      animation: iconOpen 0.5s linear 2s forwards;
-  }
+      animation: iconOpen 1s linear forwards,
+    }
 
     #{$root}__icon--close {
-      animation: iconClose 0.5s linear 2s forwards;
+      animation: iconClose 1s linear forwards,
     }
 
     #{$root}__top {
@@ -37,8 +37,7 @@
   }
 
   &__icon--close {
-    opacity: 0;
-    display: none;
+    transform: translateX(100%);
     transition-duration: 0.1s;
     transition-delay: .25s;
     background: transparent;
@@ -89,22 +88,21 @@
 }
 
 @keyframes iconOpen {
-  0%{
-    visibility: visible;
-
+  0% {
+     transform: translateY(0);
   }
-  100%{
-    visibility: hidden;
 
+  100% {
+    transform: translateY(-100%);
   }
 }
 
 @keyframes iconClose {
-  0%{visibility: hidden;
-
+  0% {
+    transform: translateY(-100%);
   }
-  100%{
 
-    visibility: visible;
+  100% {
+ transform: translateY(0);
   }
 }
