@@ -6,17 +6,11 @@
   left: 0;
   width: 100%;
   z-index: 10;
+  transition: background-color $transition-300;
 
   &--open {
-    z-index: 50;
-    position: absolute;
-    animation: headerSlide 1s ease-in forwards;
-    height: 100vh;
-    background: linear-gradient(171.29deg, $color-blue 0%, #060698 100%);
-
-    .header__menu{
-      display:flex;
-    }
+    transition: background-color $transition-300;
+    background-color: $color-blue;
 
     .header__logo {
       display: none;
@@ -24,14 +18,6 @@
 
     .header__wrapper {
       justify-content: flex-end;
-    }
-
-    .burger__bottom{
-
-    }
-
-    .burger__top{
-
     }
   }
 
@@ -50,61 +36,5 @@
       width: 238px;
       height: 12px;
     }
-  }
-
-  &__menu {
-    flex-direction: column;
-    min-height: 90vh;
-    justify-content: space-between;
-    display: none;
-  }
-
-  &__bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    opacity: 0;
-    animation: headerBottom 1s ease-in 1s forwards;
-  }
-
-  &__bottom-logo {
-    color: $color-white;
-  }
-
-  &__info {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 20px;
-    color: $color-white;
-  }
-
-  &__policy {
-    color: $color-white;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 20px;
-    text-decoration: underline;
-    text-decoration-style: solid;
-  }
-}
-
-@keyframes headerSlide {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes headerBottom {
-  0%{
-    opacity: 0;
-    transform: translateY(-10%);
-  }
-  100%{
-    opacity: 1;
-    transform: translateY(0);
   }
 }

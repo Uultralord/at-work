@@ -12,97 +12,84 @@
   $root: &;
   cursor: pointer;
 
+  &::before,
+  &::after {
+    background-color: $color-white;
+    content: "";
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    top: 9px;
+    transform: translate(-50%, 0);
+    width: 32px;
+    z-index: 100;
+    opacity: 0;
+  }
+
+  &::before {
+    transition: top $transition-300 0.3s, transform $transition-300, opacity $transition-300;
+  }
+
+  &::after {
+    transition: top $transition-300 0.3s, transform $transition-300 opacity $transition-300;
+    top: 19px;
+  }
+
+  .header--open & {
+    & {
+      &::after {
+        opacity: 1;
+        background-color: $color-white;
+        top: 15px;
+        transform: translate(-50%, 0) rotate(45deg);
+        transition: background-color $transition-300, top $transition-300, transform $transition-300 0.3s;
+      }
+
+      &::before {
+        opacity: 1;
+        background-color: $color-white;
+        top: 15px;
+        transform: translate(-50%, 0) rotate(-45deg);
+        transition: background-color $transition-300, top $transition-300, transform $transition-300 0.3s;
+      }
+    }
+  }
+
   .header--open & {
     #{$root}__icon--open {
-      animation: iconOpen 1s linear forwards,
+      animation: iconOpen $transition-300 0.5s forwards;
+      display: none;
     }
 
     #{$root}__icon--close {
-      animation: iconClose 1s linear forwards,
-    }
-
-    #{$root}__top {
-      position: relative;
-      z-index: 100;
-      animation: iconTopDown 0.5s linear forwards, iconTopRotate 0.5s linear 0.5s forwards;
-      transform-origin: center;
-    }
-
-    #{$root}__bottom {
-      position: relative;
-      z-index: 100;
-      animation: iconBottomUp 0.5s linear forwards, iconBottomRotate 0.5s linear 0.5s forwards;
-      transform-origin: center;
+      opacity: 0;
+      animation: iconClose $transition-300 0.5s forwards;
+      display: flex;
     }
   }
 
   &__icon--close {
-    transform: translateX(100%);
-    transition-duration: 0.1s;
-    transition-delay: .25s;
+    display: none;
     background: transparent;
-  }
-
-}
-
-@keyframes iconTopDown {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    color: $color-white;
-    transform: translateY(15%);
-  }
-}
-
-@keyframes iconTopRotate {
-  0% {
-    rotate: 0deg;
-  }
-
-  100% {
-    rotate: 45deg;
-  }
-}
-
-@keyframes iconBottomUp {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-15%);
-    color: $color-white;
-  }
-}
-
-@keyframes iconBottomRotate {
-  0% {
-    rotate: 0deg;
-  }
-
-  100% {
-    rotate: -45deg;
   }
 }
 
 @keyframes iconOpen {
   0% {
-     transform: translateY(0);
+    opacity: 1;
   }
 
   100% {
-    transform: translateY(-100%);
+    opacity: 0;
   }
 }
 
 @keyframes iconClose {
   0% {
-    transform: translateY(-100%);
+    opacity: 0;
   }
 
   100% {
- transform: translateY(0);
+    opacity: 1;
   }
 }

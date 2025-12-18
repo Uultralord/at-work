@@ -19,50 +19,48 @@
           </svg>
         </a>
         <button class="header__burger burger" type="button" aria-label="Открыть бургерное меню">
-          <svg class="burger__icon burger__icon--open" viewBox="0 0 32 32" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path class="burger__bottom" d="M32 19H0V23H32V19Z" fill="currentColor" />
-            <path class="burger__top" d="M32 9H0V13H32V9Z" fill="currentColor" />
+          <svg class="burger__icon burger__icon--open" width="32" height="32" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#icon-burger-open"></use>
           </svg>
           <svg class="burger__icon burger__icon--close" width="32" height="32" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-burger-close"></use>
           </svg>
         </button>
       </div>
-      <div class="header__menu">
-        <nav class="main-nav header__main-nav">
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--animation-1">
-                <a class="main-nav__link" href="#">вакансии</a>
-              </li>
-              <li class="main-nav__item main-nav__item--animation-2">
-                <a class="main-nav__link" href="#">события</a>
-              </li>
-              <li class="main-nav__item main-nav__item--animation-3">
-                <a class="main-nav__link" href="#">блог</a>
-              </li>
-              <li class="main-nav__item main-nav__item--animation-4">
-                <a class="main-nav__link" href="#">стартапам</a>
-              </li>
-              <li class="main-nav__item main-nav__item--animation-5">
-                <a class="main-nav__link" href="#">Новdigital startости</a>
-              </li>
-            </ul>
+    </div>
+    <nav class="main-nav header__main-nav">
+      <div class="container">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--animation-1">
+              <a class="main-nav__link" href="#">вакансии</a>
+            </li>
+            <li class="main-nav__item main-nav__item--animation-2">
+              <a class="main-nav__link" href="#">события</a>
+            </li>
+            <li class="main-nav__item main-nav__item--animation-3">
+              <a class="main-nav__link" href="#">блог</a>
+            </li>
+            <li class="main-nav__item main-nav__item--animation-4">
+              <a class="main-nav__link" href="#">стартапам</a>
+            </li>
+            <li class="main-nav__item main-nav__item--animation-5">
+              <a class="main-nav__link" href="#">Новdigital startости</a>
+            </li>
+          </ul>
+          <div class="main-nav__bottom">
+            <a class="main-nav__bottom-logo" href="#" aria-label="Ссылка на главную страницу">
+              <svg width="238" height="12" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-header-logo"></use>
+              </svg>
+            </a>
+            <span class="main-nav__info">&copy;&nbsp;1990-2024, Банк ГПБ (АО) Генеральная лицензия Банка России
+              &#8470;&nbsp;354, 117420, г. Москва, ул. Наметкина, д.&nbsp;16, корпус&nbsp;1.</span>
+            <a class="main-nav__policy" href="#">Политика обработки и&nbsp;защиты персональных данных</a>
           </div>
-        </nav>
-        <div class="header__bottom">
-          <a class="header__bottom-logo" href="#" aria-label="Ссылка на главную страницу">
-            <svg width="238" height="12" aria-hidden="true">
-              <use xlink:href="images/sprite.svg#icon-header-logo"></use>
-            </svg>
-          </a>
-          <span class="header__info">&copy;&nbsp;1990-2024, Банк ГПБ (АО) Генеральная лицензия Банка России
-            &#8470;&nbsp;354, 117420, г. Москва, ул. Наметкина, д.&nbsp;16, корпус&nbsp;1.</span>
-          <a class="header__policy" href="#">Политика обработки и&nbsp;защиты персональных данных</a>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
   <main>
     <section class="hero">

@@ -1,8 +1,62 @@
 .main-nav {
+    background: transparent;
+    pointer-events: none;
+    width: 100%;
+    position: fixed;
+    min-height: 100vh;
+    padding-top: 30px;
+    transition:  background $transition-300 10s;
+
+    .header--open & {
+        background: linear-gradient(171.29deg, $color-blue 0%, #060698 100%);
+        pointer-events: all;
+        transition:  background $transition-300 10s;
+
+        &__bottom {
+            opacity: 1;
+            transform: translateY(0);
+            transition: transform $transition-300 1s, opacity $transition-300 1s;
+        }
+
+        &__item {
+            &--animation-1 {
+                opacity: 1;
+                transform: translateX(0);
+                transition: opacity $transition-300 1s, transform $transition-300 1s;
+            }
+
+            &--animation-2 {
+                opacity: 1;
+                transform: translateX(0);
+                transition: opacity $transition-300 1.2s, transform $transition-300 1.2s;
+            }
+
+            &--animation-3 {
+                opacity: 1;
+                transform: translateX(0);
+                transition: opacity $transition-300 1.5s, transform $transition-300 1.5s;
+            }
+
+            &--animation-4 {
+                opacity: 1;
+                transform: translateX(0);
+                transition: opacity $transition-300 1.7s, transform $transition-300 1.71s;
+            }
+
+            &--animation-5 {
+                opacity: 1;
+                transform: translateX(0);
+                transition: opacity $transition-300 1.9s, transform $transition-300 1.9s;
+            }
+        }
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: column;
         gap: 16px;
+        min-height: 90vh;
+        justify-content: space-between;
     }
 
     &__list {
@@ -14,32 +68,39 @@
         gap: 16px;
     }
 
+
     &__item {
         &--animation-1 {
             opacity: 0;
-            animation: mainNavItem 1s ease-out 1s forwards;
+            transform: translateX(-10%);
+            transition: opacity $transition-300, transform $transition-300;
         }
 
         &--animation-2 {
             opacity: 0;
-            animation: mainNavItem 1s ease-out 1.2s forwards;
+            transform: translateX(-10%);
+            transition: opacity $transition-300 0.2s, transform $transition-300 0.2s;
         }
 
         &--animation-3 {
             opacity: 0;
-            animation: mainNavItem 1s ease-out 1.4s forwards;
+            transform: translateX(-10%);
+            transition: opacity $transition-300 0.5s, transform $transition-300 0.5s;
         }
 
         &--animation-4 {
             opacity: 0;
-            animation: mainNavItem 1s ease-out 1.6s forwards;
+            transform: translateX(-10%);
+            transition: opacity $transition-300 0.7s, transform $transition-300 0.7s;
         }
 
         &--animation-5 {
             opacity: 0;
-            animation: mainNavItem 1s ease-out 1.8s forwards;
+            transform: translateX(-10%);
+            transition: opacity $transition-300 0.9s, transform $transition-300 0.9s;
         }
     }
+
 
     &__link {
         color: $color-white;
@@ -72,6 +133,63 @@
             }
         }
     }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        opacity: 0;
+        transform: translateY(-10%);
+        transition: transform $transition-300, opacity $transition-300;
+    }
+
+    &__bottom-logo {
+        color: $color-white;
+    }
+
+    &__info {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-white;
+    }
+
+    &__policy {
+        color: $color-white;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        text-decoration: underline;
+        text-decoration-style: solid;
+    }
+}
+
+@keyframes mainNavSlide {
+    0% {
+        opacity: 0;
+        background: transparent;
+        pointer-events: none;
+    }
+
+    100% {
+        opacity: 1;
+        background: linear-gradient(171.29deg, $color-blue 0%, #060698 100%);
+        pointer-events: all;
+    }
+}
+
+@keyframes mainNavSlideOut {
+    0% {
+        opacity: 1;
+        background: linear-gradient(171.29deg, $color-blue 0%, #060698 100%);
+        pointer-events: all;
+    }
+
+    100% {
+        opacity: 0;
+        background: transparent;
+        pointer-events: none;
+    }
 }
 
 @keyframes mainNavItem {
@@ -83,5 +201,31 @@
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes mainBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mainBottomOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-10%);
+
     }
 }
