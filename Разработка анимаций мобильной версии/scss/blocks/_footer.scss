@@ -6,6 +6,9 @@
     padding: 0;
     margin: auto 0 0 0;
     position: relative;
+    opacity: 0;
+    transform: translateY(-10%);
+    transition: transform $transition-300 0.7s, opacity $transition-300 0.7s;
 
     #{$root}__logo {
       color: $color-white;
@@ -18,6 +21,12 @@
     #{$root}__link {
       color: $color-white;
       text-decoration: underline;
+    }
+
+    .header--open & {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform $transition-300 1s, opacity $transition-300 1s;
     }
   }
 

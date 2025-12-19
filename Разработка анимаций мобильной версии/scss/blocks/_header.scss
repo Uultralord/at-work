@@ -6,12 +6,8 @@
   left: 0;
   width: 100%;
   z-index: 10;
-  transition: background-color $transition-300;
 
   &--open {
-    transition: background-color $transition-300;
-    background-color: $color-blue;
-
     .header__logo {
       display: none;
     }
@@ -36,5 +32,48 @@
       width: 238px;
       height: 12px;
     }
+  }
+
+  &__mobile-menu {
+    pointer-events: none;
+    width: 100%;
+    position: absolute;
+    min-height: 100vh;
+    top: 0;
+    right: 0;
+    inset: 0;
+    padding-top: 80px;
+    //opacity: 0;
+    //transition: opacity $transition-300;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      background: linear-gradient(171.29deg, $color-blue 0%, #060698 100%);
+      transition: opacity $transition-300 1s;
+    }
+
+    .header--open & {
+      pointer-events: all;
+      //opacity: 1;
+      //transition: opacity $transition-300;
+      &::before{
+        transition: opacity $transition-300 ;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 87vh;
+    justify-content: space-between;
   }
 }

@@ -1,23 +1,5 @@
 .main-nav {
-    background: transparent;
-    pointer-events: none;
-    width: 100%;
-    position: fixed;
-    min-height: 100vh;
-    padding-top: 30px;
-    transition:  background $transition-300 10s;
-
     .header--open & {
-        background: linear-gradient(171.29deg, $color-blue 0%, #060698 100%);
-        pointer-events: all;
-        transition:  background $transition-300 10s;
-
-        &__bottom {
-            opacity: 1;
-            transform: translateY(0);
-            transition: transform $transition-300 1s, opacity $transition-300 1s;
-        }
-
         &__item {
             &--animation-1 {
                 opacity: 1;
@@ -50,15 +32,6 @@
             }
         }
     }
-
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        min-height: 90vh;
-        justify-content: space-between;
-    }
-
     &__list {
         list-style: none;
         margin: 0;
@@ -132,35 +105,6 @@
                 transform: scale(1);
             }
         }
-    }
-
-    &__bottom {
-        display: flex;
-        flex-direction: column;
-        gap: 28px;
-        opacity: 0;
-        transform: translateY(-10%);
-        transition: transform $transition-300, opacity $transition-300;
-    }
-
-    &__bottom-logo {
-        color: $color-white;
-    }
-
-    &__info {
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 20px;
-        color: $color-white;
-    }
-
-    &__policy {
-        color: $color-white;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 20px;
-        text-decoration: underline;
-        text-decoration-style: solid;
     }
 }
 
