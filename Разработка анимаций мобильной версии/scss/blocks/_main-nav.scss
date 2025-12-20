@@ -1,37 +1,71 @@
 .main-nav {
+    pointer-events: none;
+    width: 100%;
+    position: fixed;
+    min-height: 100vh;
+    inset: 0;
+    padding: 100px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    $root: &;
+    opacity: 0;
+    transition: opacity $transition-300 1s;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        background: linear-gradient(171.29deg, $color-blue 0%, #060698 100%);
+        transition: opacity $transition-300 1s;
+    }
+
     .header--open & {
-        &__item {
-            &--animation-1 {
-                opacity: 1;
-                transform: translateX(0);
-                transition: opacity $transition-300 1s, transform $transition-300 1s;
+        opacity: 1;
+        pointer-events: all;
+        transition: opacity $transition-300;
+
+        &::before {
+            opacity: 1;
+            transition: opacity $transition-300;
+        }
+
+        #{$root}__item {
+            &:nth-child(2) {
+                #{$root}__link {
+                    transition-delay: 0.3s;
+                }
             }
 
-            &--animation-2 {
-                opacity: 1;
-                transform: translateX(0);
-                transition: opacity $transition-300 1.2s, transform $transition-300 1.2s;
+            &:nth-child(3) {
+                #{$root}__link {
+                    transition-delay: 0.5s;
+                }
             }
 
-            &--animation-3 {
-                opacity: 1;
-                transform: translateX(0);
-                transition: opacity $transition-300 1.5s, transform $transition-300 1.5s;
+            &:nth-child(4) {
+                #{$root}__link {
+                    transition-delay: 0.7s;
+                }
             }
 
-            &--animation-4 {
-                opacity: 1;
-                transform: translateX(0);
-                transition: opacity $transition-300 1.7s, transform $transition-300 1.71s;
-            }
-
-            &--animation-5 {
-                opacity: 1;
-                transform: translateX(0);
-                transition: opacity $transition-300 1.9s, transform $transition-300 1.9s;
+            &:nth-child(5) {
+                #{$root}__link {
+                    transition-delay: 0.9s;
+                }
             }
         }
+
+        #{$root}__link {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: 0.3s;
+            transition: transform $transition-300,  opacity $transition-300;
+        }
     }
+
     &__list {
         list-style: none;
         margin: 0;
@@ -41,39 +75,31 @@
         gap: 16px;
     }
 
-
     &__item {
-        &--animation-1 {
-            opacity: 0;
-            transform: translateX(-10%);
-            transition: opacity $transition-300, transform $transition-300;
+        &:nth-child(2) {
+            #{$root}__link {
+                transition-delay: 0.3s;
+            }
         }
 
-        &--animation-2 {
-            opacity: 0;
-            transform: translateX(-10%);
-            transition: opacity $transition-300 0.2s, transform $transition-300 0.2s;
+        &:nth-child(3) {
+            #{$root}__link {
+                transition-delay: 0.5s;
+            }
         }
 
-        &--animation-3 {
-            opacity: 0;
-            transform: translateX(-10%);
-            transition: opacity $transition-300 0.5s, transform $transition-300 0.5s;
+        &:nth-child(4) {
+            #{$root}__link {
+                transition-delay: 0.7s;
+            }
         }
 
-        &--animation-4 {
-            opacity: 0;
-            transform: translateX(-10%);
-            transition: opacity $transition-300 0.7s, transform $transition-300 0.7s;
-        }
-
-        &--animation-5 {
-            opacity: 0;
-            transform: translateX(-10%);
-            transition: opacity $transition-300 0.9s, transform $transition-300 0.9s;
+        &:nth-child(5) {
+            #{$root}__link {
+                transition-delay: 0.9s;
+            }
         }
     }
-
 
     &__link {
         color: $color-white;
@@ -83,6 +109,9 @@
         text-transform: uppercase;
         width: min-content;
         display: block;
+        transform: translateX(-150%);
+        opacity: 0;
+        transition: transform $transition-300, opacity $transition-300;
 
         &::after {
             background-color: $color-white;
@@ -105,71 +134,5 @@
                 transform: scale(1);
             }
         }
-    }
-}
-
-@keyframes mainNavSlide {
-    0% {
-        opacity: 0;
-        background: transparent;
-        pointer-events: none;
-    }
-
-    100% {
-        opacity: 1;
-        background: linear-gradient(171.29deg, $color-blue 0%, #060698 100%);
-        pointer-events: all;
-    }
-}
-
-@keyframes mainNavSlideOut {
-    0% {
-        opacity: 1;
-        background: linear-gradient(171.29deg, $color-blue 0%, #060698 100%);
-        pointer-events: all;
-    }
-
-    100% {
-        opacity: 0;
-        background: transparent;
-        pointer-events: none;
-    }
-}
-
-@keyframes mainNavItem {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes mainBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(-10%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes mainBottomOut {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-10%);
-
     }
 }

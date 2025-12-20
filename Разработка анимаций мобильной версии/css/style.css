@@ -419,29 +419,7 @@ textarea {
   pointer-events: none;
   width: 100%;
   position: absolute;
-  min-height: 100vh;
-  top: 0;
-  right: 0;
   inset: 0;
-  padding-top: 80px;
-}
-.header__mobile-menu::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  background: linear-gradient(171.29deg, #1919EF 0%, #060698 100%);
-  transition: opacity ease-in 0.3s 1s;
-}
-.header--open .header__mobile-menu {
-  pointer-events: all;
-}
-.header--open .header__mobile-menu::before {
-  transition: opacity ease-in 0.3s;
-  opacity: 1;
 }
 .header__mobile-wrapper {
   display: flex;
@@ -451,30 +429,54 @@ textarea {
   justify-content: space-between;
 }
 
-.header--open .main-nav__item--animation-1 {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity ease-in 0.3s 1s, transform ease-in 0.3s 1s;
+.main-nav {
+  pointer-events: none;
+  width: 100%;
+  position: fixed;
+  min-height: 100vh;
+  inset: 0;
+  padding: 100px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity ease-in 0.3s 1s;
 }
-.header--open .main-nav__item--animation-2 {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity ease-in 0.3s 1.2s, transform ease-in 0.3s 1.2s;
+.main-nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: linear-gradient(171.29deg, #1919EF 0%, #060698 100%);
+  transition: opacity ease-in 0.3s 1s;
 }
-.header--open .main-nav__item--animation-3 {
+.header--open .main-nav {
   opacity: 1;
-  transform: translateX(0);
-  transition: opacity ease-in 0.3s 1.5s, transform ease-in 0.3s 1.5s;
+  pointer-events: all;
+  transition: opacity ease-in 0.3s;
 }
-.header--open .main-nav__item--animation-4 {
+.header--open .main-nav::before {
   opacity: 1;
-  transform: translateX(0);
-  transition: opacity ease-in 0.3s 1.7s, transform ease-in 0.3s 1.71s;
+  transition: opacity ease-in 0.3s;
 }
-.header--open .main-nav__item--animation-5 {
+.header--open .main-nav .main-nav__item:nth-child(2) .main-nav__link {
+  transition-delay: 0.3s;
+}
+.header--open .main-nav .main-nav__item:nth-child(3) .main-nav__link {
+  transition-delay: 0.5s;
+}
+.header--open .main-nav .main-nav__item:nth-child(4) .main-nav__link {
+  transition-delay: 0.7s;
+}
+.header--open .main-nav .main-nav__item:nth-child(5) .main-nav__link {
+  transition-delay: 0.9s;
+}
+.header--open .main-nav .main-nav__link {
   opacity: 1;
   transform: translateX(0);
-  transition: opacity ease-in 0.3s 1.9s, transform ease-in 0.3s 1.9s;
+  transition-delay: 0.3s;
+  transition: transform ease-in 0.3s, opacity ease-in 0.3s;
 }
 .main-nav__list {
   list-style: none;
@@ -484,30 +486,17 @@ textarea {
   flex-direction: column;
   gap: 16px;
 }
-.main-nav__item--animation-1 {
-  opacity: 0;
-  transform: translateX(-10%);
-  transition: opacity ease-in 0.3s, transform ease-in 0.3s;
+.main-nav__item:nth-child(2) .main-nav__link {
+  transition-delay: 0.3s;
 }
-.main-nav__item--animation-2 {
-  opacity: 0;
-  transform: translateX(-10%);
-  transition: opacity ease-in 0.3s 0.2s, transform ease-in 0.3s 0.2s;
+.main-nav__item:nth-child(3) .main-nav__link {
+  transition-delay: 0.5s;
 }
-.main-nav__item--animation-3 {
-  opacity: 0;
-  transform: translateX(-10%);
-  transition: opacity ease-in 0.3s 0.5s, transform ease-in 0.3s 0.5s;
+.main-nav__item:nth-child(4) .main-nav__link {
+  transition-delay: 0.7s;
 }
-.main-nav__item--animation-4 {
-  opacity: 0;
-  transform: translateX(-10%);
-  transition: opacity ease-in 0.3s 0.7s, transform ease-in 0.3s 0.7s;
-}
-.main-nav__item--animation-5 {
-  opacity: 0;
-  transform: translateX(-10%);
-  transition: opacity ease-in 0.3s 0.9s, transform ease-in 0.3s 0.9s;
+.main-nav__item:nth-child(5) .main-nav__link {
+  transition-delay: 0.9s;
 }
 .main-nav__link {
   color: #ffffff;
@@ -518,6 +507,9 @@ textarea {
   width: -moz-min-content;
   width: min-content;
   display: block;
+  transform: translateX(-150%);
+  opacity: 0;
+  transition: transform ease-in 0.3s, opacity ease-in 0.3s;
 }
 .main-nav__link::after {
   background-color: #ffffff;
@@ -537,60 +529,6 @@ textarea {
   transform: scale(1);
 }
 
-@keyframes mainNavSlide {
-  0% {
-    opacity: 0;
-    background: transparent;
-    pointer-events: none;
-  }
-  100% {
-    opacity: 1;
-    background: linear-gradient(171.29deg, #1919EF 0%, #060698 100%);
-    pointer-events: all;
-  }
-}
-@keyframes mainNavSlideOut {
-  0% {
-    opacity: 1;
-    background: linear-gradient(171.29deg, #1919EF 0%, #060698 100%);
-    pointer-events: all;
-  }
-  100% {
-    opacity: 0;
-    background: transparent;
-    pointer-events: none;
-  }
-}
-@keyframes mainNavItem {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes mainBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(-10%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes mainBottomOut {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-10%);
-  }
-}
 .burger {
   background-color: transparent;
   padding: 0;
