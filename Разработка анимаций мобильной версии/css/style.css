@@ -546,32 +546,24 @@ textarea {
   background-color: #ffffff;
   content: "";
   height: 3px;
-  left: 50%;
   position: absolute;
-  top: 9px;
-  transform: translate(-50%, 0);
+  transform: translateY(-150%);
   width: 32px;
   z-index: 100;
   opacity: 0;
-}
-.burger::before {
-  transition: top ease-in 0.3s 0.5s, transform ease-in 0.3s 0.3s, opacity ease-in 0.3s 1s;
+  transition: transform ease-in 0.3s 0.5s, opacity ease-in 0.3s 1s;
+  transform-origin: center;
 }
 .burger::after {
-  transition: top ease-in 0.3s 0.5s, transform ease-in 0.3s 0.3s, opacity ease-in 0.3s 1s;
-  top: 19px;
+  transform: translateY(150%);
 }
-.header--open .burger::after {
+.header--open .burger::before, .header--open .burger::after {
   opacity: 1;
-  top: 15px;
-  transform: translate(-50%, 0) rotate(45deg);
-  transition: top ease-in 0.3s 0.3s, transform ease-in 0.3s 0.5s, opacity ease-in 0.3s;
+  transform: translateY(0) rotate(45deg);
+  transition: transform ease-in 0.3s 0.5s, opacity ease-in 0.3s;
 }
 .header--open .burger::before {
-  opacity: 1;
-  top: 15px;
-  transform: translate(-50%, 0) rotate(-45deg);
-  transition: top ease-in 0.3s 0.3s, transform ease-in 0.3s 0.5s, opacity ease-in 0.3s;
+  transform: translateY(0) rotate(-45deg);
 }
 .header--open .burger .burger__icon--open {
   opacity: 0;

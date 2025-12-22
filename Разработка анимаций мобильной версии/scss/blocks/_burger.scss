@@ -17,38 +17,30 @@
     background-color: $color-white;
     content: "";
     height: 3px;
-    left: 50%;
     position: absolute;
-    top: 9px;
-    transform: translate(-50%, 0);
+    transform: translateY(-150%);
     width: 32px;
     z-index: 100;
     opacity: 0;
-  }
-
-  &::before {
-    transition: top $transition-300 0.5s, transform $transition-300 0.3s, opacity $transition-300 1s;
+    transition: transform $transition-300 0.5s, opacity $transition-300 1s;
+     transform-origin: center;
   }
 
   &::after {
-    transition: top $transition-300 0.5s, transform $transition-300 0.3s, opacity $transition-300 1s;
-    top: 19px;
+    transform: translateY(150%);
   }
 
   .header--open & {
     & {
+      &::before,
       &::after {
         opacity: 1;
-        top: 15px;
-        transform: translate(-50%, 0) rotate(45deg);
-        transition: top $transition-300 0.3s, transform $transition-300 0.5s, opacity $transition-300;
+        transform: translateY(0) rotate(45deg) ;
+        transition: transform $transition-300 0.5s, opacity $transition-300;
       }
 
       &::before {
-        opacity: 1;
-        top: 15px;
-        transform: translate(-50%, 0) rotate(-45deg);
-        transition: top $transition-300 0.3s, transform $transition-300 0.5s, opacity $transition-300;
+        transform: translateY(0) rotate(-45deg) ;
       }
     }
   }
