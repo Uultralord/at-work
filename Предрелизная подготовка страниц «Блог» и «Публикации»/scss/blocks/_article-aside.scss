@@ -1,0 +1,141 @@
+.article-aside {
+  position: sticky;
+  top: 50px;
+
+  @include vp-1023 {
+    position: relative;
+    width: 100%;
+    top: unset;
+  }
+
+  &__back {
+    margin: 0 0 32px 0;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &__title {
+    border-top: 1px solid $color-whisper;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    margin: 0 0 40px 0;
+    padding: 29px 0 0 0;
+    text-transform: uppercase;
+
+    @include vp-1023 {
+      padding: 0;
+      border: none;
+      margin: 0;
+    }
+
+    &--tablet-none {
+      @include vp-1023 {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    counter-reset: aside-list 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    margin: 0 0 32px;
+    padding: 0;
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+
+  &__item {
+    counter-increment: aside-list 1;
+    padding: 0 0 0 32px;
+    position: relative;
+
+    &::before {
+      color: $color-dim-gray;
+      content: counter(aside-list) ".";
+      font-size: 13px;
+      left: 0;
+      line-height: 16px;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &__link {
+    color: $color-dim-gray;
+    display: flex;
+    font-size: 13px;
+    line-height: 16px;
+    transition: color $transition-300;
+  }
+
+  &__inner {
+    @include vp-1023 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 31px 0;
+      border-top: 1px solid $color-whisper;
+    }
+
+    @include vp-767 {
+      padding: 23px 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0 0 32px 0;
+    padding: 0;
+
+    @include vp-1023 {
+      margin: 0;
+    }
+  }
+
+  &__tag {
+    display: flex;
+    border: 1px solid $color-dim-gray;
+    border-radius: 4px;
+    padding: 7px;
+    justify-content: center;
+    color: $color-dim-gray;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__social-link {
+    color: $color-black;
+    display: flex;
+    transition: color $transition-300;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-dim-gray;
+    }
+
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+}

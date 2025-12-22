@@ -1,0 +1,167 @@
+.article {
+  margin: 0 0 128px 0;
+
+  @include vp-767 {
+    margin: 0 0 77px 0;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+    align-items: start;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 8px;
+    }
+
+    @include vp-767 {
+      gap: 15px;
+    }
+  }
+
+  &__img {
+    height: 440px;
+    width: 820px;
+    margin: 58px 0;
+
+    @include vp-1023 {
+      width: 100%;
+      height: 520px;
+      margin: 60px 0;
+    }
+
+    @include vp-767 {
+      margin: 40px 0;
+      height: 160px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0 0 32px 0;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0 0 32px 0;
+    }
+
+    @include vp-767 {
+      margin: 0 0 24px 0;
+    }
+  }
+
+  &__blockquote {
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    margin: 32px 0;
+    border-radius: 20px;
+    padding: 60px 40px 60px 80px;
+
+    @media (max-width: 1250px) {
+      padding: 40px 30px;
+    }
+
+    @include vp-1023 {
+      padding: 40px 48px 60px 48px;
+    }
+
+    @include vp-767 {
+      padding: 24px 28px 60px 28px;
+      margin: 40px 0;
+    }
+  }
+
+  &__blockquote-inner {
+    min-height: 52px;
+    margin: 0 0 42px 0;
+    padding: 0 0 0 82px;
+    position: relative;
+
+    @media (max-width: 1250px) {
+      margin: 0 0 20px 0;
+      padding: 0 0 0 74px;
+    }
+
+    @include vp-1023 {
+      margin: 0 0 25px 0;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      margin: 0 0 24px 0;
+      min-height: unset;
+    }
+  }
+
+  &__blockquote-name {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    margin: 0;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 16px 0 0 0;
+    }
+  }
+
+  &__blockquote-position {
+    color: $color-dim-gray;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+      display: block;
+    }
+  }
+
+  &__blockquote-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 48px;
+    width: 48px;
+
+    @include vp-767 {
+      position: relative;
+      margin: 0;
+      display: block;
+    }
+  }
+
+  &__blockquote-text {
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    color: $color-blue;
+    font-size: 18px;
+    line-height: 32px;
+    margin: -20px 0 16px 0;
+    font-weight: 400;
+    padding: 20px 0 0;
+
+    @include vp-1023 {
+      margin: 0 0 16px 0;
+      padding: 0;
+    }
+
+    @include vp-767 {
+      line-height: 24px;
+    }
+  }
+}
