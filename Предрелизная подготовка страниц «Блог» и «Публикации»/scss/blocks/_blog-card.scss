@@ -1,11 +1,11 @@
-.card-info-banner {
-  position: relative;
+.blog-card {
+  background: $color-white;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   min-height: 360px;
   padding: 32px;
-  border-radius: 20px;
-  background: $color-white;
+  position: relative;
   $root: &;
 
   @include vp-1023 {
@@ -26,44 +26,53 @@
     }
   }
 
+  &:hover{
+    .blog-card__img{
+      transform: translate(-10px, 10px);
+    }
+  }
+
   &__img {
-    position: absolute;
-    z-index: 1;
-    top: -80px;
-    right: -48px;
-    width: 228px;
     height: 228px;
     object-fit: contain;
+    position: absolute;
+    right: -48px;
+    top: -80px;
+    width: 228px;
+    z-index: 1;
+    transform: translate(0, 0);
+    transition: transform $transition-300;
+    pointer-events: none;
 
     @media (max-width: 1299px) {
       right: -30px;
     }
 
     @include vp-1023 {
-      top: -48px;
-      right: -20px;
-      width: 188px;
       height: 188px;
+      right: -20px;
+      top: -48px;
+      width: 188px;
     }
 
     @include vp-767 {
-      top: -100px;
-      right: -20px;
-      width: 200px;
       height: 200px;
+      right: -20px;
+      top: -100px;
+      width: 200px;
     }
   }
 
   &__tags {
-    display: flex;
     align-items: flex-start;
+    display: flex;
     flex-direction: column;
-    min-height: 76px;
-    margin-top: 0;
-    margin-bottom: 72px;
-    padding: 0;
-    list-style: none;
     gap: 8px;
+    list-style: none;
+    margin-bottom: 72px;
+    margin-top: 0;
+    min-height: 76px;
+    padding: 0;
 
     @include vp-1023 {
       margin-bottom: 50px;
@@ -75,16 +84,16 @@
   }
 
   &__tag {
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 16px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 7px 8px;
-    color: $color-dim-gray;
     border: 1px solid $color-dim-gray;
     border-radius: 4px;
+    color: $color-dim-gray;
+    display: flex;
+    font-size: 13px;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 16px;
+    padding: 7px 8px;
 
     @include vp-1023 {
       padding: 6px;
@@ -99,13 +108,13 @@
   }
 
   &__date {
+    color: $color-black;
     font-size: 16px;
     font-weight: 300;
     line-height: 20px;
+    margin: 0;
     position: relative;
     z-index: 1;
-    margin: 0;
-    color: $color-black;
 
     @include vp-1023 {
       font-size: 14px;
@@ -114,11 +123,11 @@
   }
 
   &__title {
+    color: $color-black;
     font-size: 20px;
     font-weight: 300;
     line-height: 26px;
     margin: 0;
-    color: $color-black;
 
     @include vp-1023 {
       font-size: 18px;
@@ -126,18 +135,18 @@
     }
 
     @include vp-767 {
-      overflow: hidden;
       max-height: 104px;
+      overflow: hidden;
       text-overflow: ellipsis;
     }
   }
 
   &__link {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
     bottom: 0;
     left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
   }
 }

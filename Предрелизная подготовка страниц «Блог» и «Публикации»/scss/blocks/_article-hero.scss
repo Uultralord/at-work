@@ -71,10 +71,12 @@
   &__back {
     display: none;
 
+
     @include vp-1023 {
       display: flex;
       margin: 0 0 61px 0;
     }
+
 
     @include vp-767 {
       display: none;

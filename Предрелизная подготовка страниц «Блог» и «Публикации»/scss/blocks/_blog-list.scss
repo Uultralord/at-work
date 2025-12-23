@@ -55,8 +55,6 @@
     transition: background-color $transition-300, color $transition-300, border-color $transition-300;
 
     @include vp-1023 {
-      background-color: $color-blue;
-      color: $color-white;
       margin-top: 58px;
     }
 

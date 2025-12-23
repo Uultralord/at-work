@@ -24,6 +24,9 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="./fonts/Unbounded-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Unbounded-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <title>Как стать идеальным кандидатом на собеседовании - Газпромбанк.Тех</title>
 </head>
 
@@ -31,8 +34,8 @@
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
-        <a class="header__logo" href="#">
-          <svg class="header__logo-icon" aria-label="главная страница" width="354" height="19" aria-hidden="true">
+        <a class="header__logo" href="#" aria-label="главная страница">
+          <svg class="header__logo-icon"  width="354" height="19" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-logo-header"></use>
           </svg>
         </a>
@@ -50,7 +53,7 @@
               <a class="main-nav__link" href="#">события</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active" href="#">блог</a>
+              <a class="main-nav__link" href="blog.html">блог</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="#">стартапам</a>
@@ -78,7 +81,7 @@
         <picture>
           <source media="(max-width: 767px)" srcset="images/article/article-decor-mobile.png">
           <source media="(max-width: 1023px)" srcset="images/article/article-decor-tablet.png">
-          <img class="article-hero__decor-img" src="images/article/article-decor.png" width="1214" height="577"
+          <img class="article-hero__decor-img" fetchpriority="high" src="images/article/article-decor.png" width="1214" height="577"
             alt="Декоративный элемент">
         </picture>
       </div>
@@ -120,7 +123,7 @@
       <div class="container">
         <div class="article__wrapper">
           <aside class="article-aside">
-            <a class="article-aside__back link-back" href="#">
+            <a class="article-aside__back link-back" href="blog.html">
               <svg class="link-back__icon" width="46" height="14" aria-hidden="true">
                 <use xlink:href="images/sprite.svg#icon-arrow-left"></use>
               </svg>
@@ -129,28 +132,28 @@
             <h2 class="article-aside__title article-aside__title--tablet-none">Содержание:</h2>
             <ul class="article-aside__list">
               <li class="article-aside__item">
-                <a href="#" class="article-aside__link">Ставка на&nbsp;софт скиллы</a>
+                <a href="#Betting-on-soft-skills" class="article-aside__link">Ставка на&nbsp;софт скиллы</a>
               </li>
               <li class="article-aside__item">
-                <a href="#" class="article-aside__link">Отклик на&nbsp;вакансию&nbsp;&mdash; по&nbsp;всем правилам</a>
+                <a href="#Response-to-vacancy" class="article-aside__link">Отклик на&nbsp;вакансию&nbsp;&mdash; по&nbsp;всем правилам</a>
               </li>
               <li class="article-aside__item">
-                <a href="#" class="article-aside__link">Защита резюме</a>
+                <a href="#Resume-protection" class="article-aside__link">Защита резюме</a>
               </li>
               <li class="article-aside__item">
-                <a href="#" class="article-aside__link">Вакансия и&nbsp;проект: знать все</a>
+                <a href="#Vacancy-and-project" class="article-aside__link">Вакансия и&nbsp;проект: знать все</a>
               </li>
               <li class="article-aside__item">
-                <a href="#" class="article-aside__link">Собеседование: правила поведения</a>
+                <a href="#Interview-rules-of-conduct" class="article-aside__link">Собеседование: правила поведения</a>
               </li>
               <li class="article-aside__item">
-                <a href="#" class="article-aside__link">Установите контакт и&nbsp;будьте собой</a>
+                <a href="#Establish-contact" class="article-aside__link">Установите контакт и&nbsp;будьте собой</a>
               </li>
               <li class="article-aside__item">
-                <a href="" class="article-aside__link">Вопросы на&nbsp;собеседовании</a>
+                <a href="#Interview-questions" class="article-aside__link">Вопросы на&nbsp;собеседовании</a>
               </li>
               <li class="article-aside__item">
-                <a href="#" class="article-aside__link">Собеседуйтесь чаще</a>
+                <a href="#Get-interviewed" class="article-aside__link">Собеседуйтесь чаще</a>
               </li>
             </ul>
             <div class="article-aside__inner">
@@ -186,7 +189,7 @@
               <img class="article__img" fetchpriority="high" loading="eager" src="images/article/article-img-1.jpg"
                 srcset="images/article/article-img-1@2x.jpg 2x" height="820" width="440" alt="Иллюстрация новости">
             </picture>
-            <h2 class="article__heading">Ставка на&nbsp;софт скиллы</h2>
+            <h2 class="article__heading" id="Betting-on-soft-skills">Ставка на&nbsp;софт скиллы</h2>
             <p class="article__text">Быть профессионалом и&nbsp;с&nbsp;легкостью проходить все этапы
               собеседования&nbsp;&mdash; далеко не&nbsp;всегда одно и&nbsp;то&nbsp;же. Работодатель оценивает кандидатов
               комплексно. Чтобы получить хорошую работу и&nbsp;оправдать зарплатные ожидания, важно не&nbsp;только
@@ -194,7 +197,7 @@
               упакованный личный бренд. Покажите желание учиться и&nbsp;развиваться, интерес ко&nbsp;всему новому,
               умение вести диалог и&nbsp;работать в&nbsp;команде&nbsp;&mdash; все&nbsp;то, что входит в&nbsp;понятие
               софт скиллов.</p>
-            <h2 class="article__heading">Отклик на&nbsp;вакансию&nbsp;&mdash; по&nbsp;всем правилам</h2>
+            <h2 class="article__heading" id="Response-to-vacancy">Отклик на&nbsp;вакансию&nbsp;&mdash; по&nbsp;всем правилам</h2>
             <p class="article__text">Собеседование начинается не&nbsp;в&nbsp;кабинете руководителя. Оно начинается
               с&nbsp;отклика на&nbsp;вакансию и&nbsp;грамотного сопроводительного письма. Главная цель&nbsp;&mdash;
               выделиться на&nbsp;фоне остальных соискателей. Сопроводительное письмо&nbsp;&mdash; прекрасный повод
@@ -220,7 +223,7 @@
                 письме, написав: &laquo;Звоните&nbsp;&mdash; буду рад пообщаться лично&raquo;. И, конечно,
                 не&nbsp;забудьте прикрепить резюме. :)</p>
             </blockquote>
-            <h2 class="article__heading">Защита резюме</h2>
+            <h2 class="article__heading" id="Resume-protection">Защита резюме</h2>
             <p class="article__text">Перед собеседованием внимательно изучите собственное резюме. Вы&nbsp;должны быть
               готовы к&nbsp;вопросам, касающимся прошлого профессионального опыта. Освежите в&nbsp;памяти, чем
               вы&nbsp;занимались на&nbsp;разных должностях в&nbsp;разных компаниях, как выстраивали собственный
@@ -240,7 +243,7 @@
               и&nbsp;стараетесь найти подход к&nbsp;каждому, но&nbsp;это был исключительный случай: просто
               вы&nbsp;с&nbsp;шефом&nbsp;&mdash; очень разные люди. Не&nbsp;стоит обвинять бывшего начальника, будьте
               дипломатичны.</p>
-            <h2 class="article__heading">Вакансия и&nbsp;проект: знать все</h2>
+            <h2 class="article__heading" id="Vacancy-and-project">Вакансия и&nbsp;проект: знать все</h2>
             <p class="article__text">Самый простой и&nbsp;логичный способ показать свою заинтересованность&nbsp;&mdash;
               досконально изучить стек из&nbsp;описания вакансии. Это правило хорошего тона и&nbsp;демонстрация своей
               способности к&nbsp;обучаемости. Кроме того, так вы&nbsp;покажете рекрутеру, что уже вложили время
@@ -249,7 +252,7 @@
             <p class="article__text">Такое&nbsp;же правило распространяется на&nbsp;проект, с&nbsp;которым вам,
               возможно, предстоит работать. Погрузитесь в&nbsp;него, будьте готовы ответить на&nbsp;все связанные
               с&nbsp;ним вопросы.</p>
-            <h2 class="article__heading">Собеседование: правила поведения</h2>
+            <h2 class="article__heading" id="Interview-rules-of-conduct">Собеседование: правила поведения</h2>
             <p class="article__text">Общие рекомендации перед собеседованием: выспаться, не&nbsp;опаздывать, заранее
               сообщить, если не&nbsp;успеваете прийти вовремя.</p>
             <blockquote class="article__blockquote">
@@ -295,7 +298,7 @@
               <img class="article__img" loading="lazy" src="images/article/article-img-2.jpg"
                 srcset="images/article/article-img-2@2x.jpg 2x" height="820" width="440" alt="Иллюстрация новости">
             </picture>
-            <h2 class="article__heading">Установите контакт и&nbsp;будьте собой</h2>
+            <h2 class="article__heading" id="Establish-contact">Установите контакт и&nbsp;будьте собой</h2>
             <p class="article__text">На&nbsp;собеседовании общайтесь вежливо, не&nbsp;перебивайте рекрутера,
               не&nbsp;будьте слишком эмоциональны или слишком сдержанны, не&nbsp;нарушайте границы собеседника.
               Постарайтесь отвечать на&nbsp;вопросы искренне, но&nbsp;без негатива. Следите за&nbsp;словами:
@@ -315,7 +318,7 @@
                 соответствует&nbsp;ли будущее место его интересам и&nbsp;целям, сможет&nbsp;ли он&nbsp;реализовать здесь
                 свой потенциал и&nbsp;принести пользу компании.</p>
             </blockquote>
-            <h2 class="article__heading">Вопросы на&nbsp;собеседовании</h2>
+            <h2 class="article__heading" id="Interview-questions">Вопросы на&nbsp;собеседовании</h2>
             <p class="article__text">Собираясь на&nbsp;собеседование, нужно хотя&nbsp;бы примерно продумать, как
               вы&nbsp;будете отвечать на&nbsp;стандартные вопросы, а&nbsp;также продумать ответы на&nbsp;вопросы,
               которые могут поставить вас в&nbsp;тупик.</p>
@@ -339,7 +342,7 @@
               Внимательно следите за&nbsp;ответами и&nbsp;невербальными реакциями рекрутера или работодателя. Важно,
               чтобы формулировки были четкими, не&nbsp;расплывчатыми. Подробнее о&nbsp;том, какие вопросы задавать
               на&nbsp;собеседовании, мы&nbsp;рассказывали в&nbsp;этой статье.</p>
-            <h2 class="article__heading">СОБЕСЕДУЙТЕСЬ ЧАЩЕ</h2>
+            <h2 class="article__heading" id="Get-interviewed">СОБЕСЕДУЙТЕСЬ ЧАЩЕ</h2>
             <p class="article__text">Последнее правило: чтобы чувствовать себя увереннее, ходите на&nbsp;собеседования
               чаще. Так вы&nbsp;прокачаете умение выстраивать и&nbsp;вести диалог, научитесь не&nbsp;бояться возможного
               отказа и&nbsp;найдете наконец ту&nbsp;самую работу, например, в&nbsp;команде мечты Газпромбанка.</p>
@@ -352,7 +355,7 @@
         <h2 class="see-more__title">Другие статьи по&nbsp;теме</h2>
         <ul class="see-more__list">
           <li class="see-more__item">
-            <div class="card">
+            <a class="blog-card" href="#">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="images/blog/blog-img-mob-1.webp 1x, images/blog/blog-img-mob-1@2x.webp 2x">
@@ -363,21 +366,21 @@
                   srcset="images/blog/blog-img-mob-1.png 1x, images/blog/blog-img-mob-1@2x.png 2x">
                 <source media="(max-width: 1023px)"
                   srcset="images/blog/blog-img-tablet-1.png 1x, images/blog/blog-img-tablet-1@2x.png 2x">
-                <img class="card__img" loading="lazy" src="images/blog/blog-img-1.png" srcset="images/blog/blog-img-1@2x.png 2x"
+                <img class="blog-card__img" loading="lazy" src="images/blog/blog-img-1.png" srcset="images/blog/blog-img-1@2x.png 2x"
                   width="228" height="228" alt="">
               </picture>
-              <ul class="card__tags">
-                <li class="card__tag">Карьера</li>
-                <li class="card__tag">Разработка</li>
+              <ul class="blog-card__tags">
+                <li class="blog-card__tag">Карьера</li>
+                <li class="blog-card__tag">Разработка</li>
               </ul>
-              <div class="card__content">
-                <p class="card__date">14/06/2024</p>
-                <a href="#" class="card__title">Kubernetes: шпаргалка для собеседования. Часть 1</a>
+              <div class="blog-card__content">
+                <p class="blog-card__date">14/06/2024</p>
+                <p class="blog-card__title">Kubernetes: шпаргалка для собеседования. Часть 1</p>
               </div>
-            </div>
+            </a>
           </li>
           <li class="see-more__item">
-            <div class="card card--top">
+            <a class="blog-card blog-card--top" href="#">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="images/blog/blog-img-mob-2.webp 1x, images/blog/blog-img-mob-2@2x.webp 2x">
@@ -388,36 +391,36 @@
                   srcset="images/blog/blog-img-mob-2.png 1x, images/blog/blog-img-mob-2@2x.png 2x">
                 <source media="(max-width: 1023px)"
                   srcset="images/blog/blog-img-tablet-2.png 1x, images/blog/blog-img-tablet-2@2x.png 2x">
-                <img class="card__img" loading="lazy" src="images/blog/blog-img-2.png" srcset="images/blog/blog-img-2@2x.png 2x"
+                <img class="blog-card__img" loading="lazy" src="images/blog/blog-img-2.png" srcset="images/blog/blog-img-2@2x.png 2x"
                   width="228" height="228" alt="">
               </picture>
-              <ul class="card__tags">
-                <li class="card__tag">Карьера</li>
-                <li class="card__tag">Разработка</li>
+              <ul class="blog-card__tags">
+                <li class="blog-card__tag">Карьера</li>
+                <li class="blog-card__tag">Разработка</li>
               </ul>
-              <div class="card__content">
-                <p class="card__date">03/06/2024</p>
-                <a href="#" class="card__title">С&nbsp;завода в&nbsp;ИТ: почему менять карьерный трек никогда
-                  не&nbsp;поздно</a>
+              <div class="blog-card__content">
+                <p class="blog-card__date">03/06/2024</p>
+                <p class="blog-card__title">С&nbsp;завода в&nbsp;ИТ: почему менять карьерный трек никогда
+                  не&nbsp;поздно</p>
               </div>
-            </div>
+            </a>
           </li>
           <li class="see-more__item see-more__item--desktop">
-            <div class="card">
+            <a class="blog-card" href="#">
               <picture>
                 <source type="image/webp" srcset="images/blog/blog-img-7.webp 1x, images/blog/blog-img-7@2x.webp 2x">
-                <img class="card__img" loading="lazy" src="images/blog/blog-img-7.png" srcset="images/blog/blog-img-7@2x.png 2x"
+                <img class="blog-card__img" loading="lazy" src="images/blog/blog-img-7.png" srcset="images/blog/blog-img-7@2x.png 2x"
                   width="228" height="228" alt="">
               </picture>
-              <ul class="card__tags">
-                <li class="card__tag">Карьера</li>
+              <ul class="blog-card__tags">
+                <li class="blog-card__tag">Карьера</li>
               </ul>
-              <div class="card__content">
-                <p class="card__date">24/04/2024</p>
-                <a href="#" class="card__title">Проект Alumni; Как в&nbsp;Газпромбанке создали клуб бывших
-                  сотрудников</a>
+              <div class="blog-card__content">
+                <p class="blog-card__date">24/04/2024</p>
+                <p class="blog-card__title">Проект Alumni; Как в&nbsp;Газпромбанке создали клуб бывших
+                  сотрудников</p>
               </div>
-            </div>
+            </a>
           </li>
         </ul>
       </div>
@@ -432,7 +435,7 @@
         <div class="footer__column">
           <div class="footer__contacts">
             <span class="footer__contacts-title">Почта:</span>
-            <a class="footer__contacts-link" href="#">space @gazprombank.ru</a>
+            <a class="footer__contacts-link" href="mailto:space@gazprombank.ru">space @gazprombank.ru</a>
           </div>
           <div class="footer__contacts">
             <span class="footer__contacts-title">Адрес:</span>
@@ -442,8 +445,8 @@
       </div>
       <div class="footer__columns">
         <div class="footer__column">
-          <a class="footer__logo" href="#">
-            <svg class="footer__logo-icon" aria-label="главная страница" width="354" height="19" aria-hidden="true">
+          <a class="footer__logo" href="#" aria-label="главная страница">
+            <svg class="footer__logo-icon"  width="354" height="19" aria-hidden="true">
               <use xlink:href="images/sprite.svg#icon-logo-header"></use>
             </svg>
           </a>
