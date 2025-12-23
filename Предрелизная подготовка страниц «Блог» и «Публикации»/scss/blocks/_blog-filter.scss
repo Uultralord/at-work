@@ -36,7 +36,7 @@
       padding: 7px 9px;
     }
 
-    &--active {
+    &:checked {
       color: $color-blue;
       border: 1px solid $color-blue;
     }
@@ -44,6 +44,18 @@
     &:hover {
       background-color: $color-dim-gray;
       color: $color-white;
+    }
+  }
+
+  &__button-filed{
+    width: 100%;
+    height: max-content;
+    &:checked{
+      +.blog-filter__button{
+        color: $color-blue;
+      border: 1px solid $color-blue;
+      }
+      
     }
   }
 }

@@ -8,6 +8,14 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  
+  &::before{
+      content: "";
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+    }
 
   @include vp-1023 {
     display: flex;

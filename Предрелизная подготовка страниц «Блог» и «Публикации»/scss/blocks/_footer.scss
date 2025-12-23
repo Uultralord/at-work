@@ -46,7 +46,6 @@
     margin-top: 0;
     margin-bottom: 40px;
     color: $color-black;
-    height: 104px;
 
     @include vp-1023 {
       height: unset;

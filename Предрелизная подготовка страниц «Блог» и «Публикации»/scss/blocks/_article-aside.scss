@@ -21,7 +21,7 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 26px;
-    margin: 0 0 40px 0;
+    margin: 0 0 8px 0;
     padding: 29px 0 0 0;
     text-transform: uppercase;
 
@@ -65,6 +65,15 @@
       line-height: 16px;
       position: absolute;
       top: 0;
+      transition: color $transition-300;
+    }
+
+    &:hover,
+    &:focus-visible{
+      &::before,
+      .article-aside__link{
+        color: $color-black;
+      }
     }
   }
 

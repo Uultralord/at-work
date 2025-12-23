@@ -6,7 +6,14 @@
   line-height: 24px;
   font-weight: 300;
 
-  &__text {
+   &__text{
     color: $color-suva-grey;
+  }
+
+  &:hover, 
+  &:focus-visible{
+    .link-back__text{
+      color: $color-blue;
+    }
   }
 }

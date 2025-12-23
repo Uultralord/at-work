@@ -19,10 +19,10 @@
   }
 
   &--top {
-    margin-top: -80px;
+   margin-top: 0;
 
-    @media (max-width: 1399px) {
-      margin-top: 0;
+    @media (min-width: 1399px) {
+       margin-top: -80px;
     }
   }
 

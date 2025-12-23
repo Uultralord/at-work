@@ -73,7 +73,8 @@ a {
 */
 abbr[title] {
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
   border-bottom: none; /* 1 */
 }
 
@@ -362,7 +363,8 @@ main {
 img {
   display: block;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 100%;
 }
 
@@ -415,6 +417,9 @@ textarea {
 }
 .link-back__text {
   color: #8B8B8B;
+}
+.link-back:hover .link-back__text, .link-back:focus-visible .link-back__text {
+  color: #1919EF;
 }
 
 .header {
@@ -506,6 +511,13 @@ textarea {
   align-items: center;
   justify-content: center;
   position: relative;
+}
+.burger::before {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
 }
 @media (max-width: 1023px) {
   .burger {
@@ -606,7 +618,8 @@ textarea {
   .article-hero__decor-img {
     width: calc(1214px - 20%);
     height: calc(577px - 20%);
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 @media (max-width: 1150px) {
@@ -948,7 +961,7 @@ textarea {
   font-size: 16px;
   font-weight: 300;
   line-height: 26px;
-  margin: 0 0 40px 0;
+  margin: 0 0 8px 0;
   padding: 29px 0 0 0;
   text-transform: uppercase;
 }
@@ -991,6 +1004,12 @@ textarea {
   line-height: 16px;
   position: absolute;
   top: 0;
+  transition: color ease-in 0.3s;
+}
+.article-aside__item:hover::before,
+.article-aside__item:hover .article-aside__link, .article-aside__item:focus-visible::before,
+.article-aside__item:focus-visible .article-aside__link {
+  color: #000000;
 }
 .article-aside__link {
   color: #737373;
@@ -1136,11 +1155,13 @@ textarea {
   display: grid;
   margin-bottom: 11px;
   grid-template-columns: 500px 1fr;
-  column-gap: 92px;
+  -moz-column-gap: 92px;
+       column-gap: 92px;
 }
 @media (max-width: 1199px) {
   .footer__columns {
-    column-gap: 25px;
+    -moz-column-gap: 25px;
+         column-gap: 25px;
   }
 }
 @media (max-width: 1023px) {
@@ -1170,7 +1191,6 @@ textarea {
   margin-top: 0;
   margin-bottom: 40px;
   color: #000000;
-  height: 104px;
 }
 @media (max-width: 1023px) {
   .footer__title {
@@ -1439,13 +1459,22 @@ textarea {
     padding: 7px 9px;
   }
 }
-.blog-filter__button--active {
+.blog-filter__button:checked {
   color: #1919EF;
   border: 1px solid #1919EF;
 }
 .blog-filter__button:hover {
   background-color: #737373;
   color: #ffffff;
+}
+.blog-filter__button-filed {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+}
+.blog-filter__button-filed:checked + .blog-filter__button {
+  color: #1919EF;
+  border: 1px solid #1919EF;
 }
 
 .blog-list {
@@ -1461,7 +1490,7 @@ textarea {
 }
 @media (max-width: 767px) {
   .blog-list {
-    padding-top: 100px;
+    padding-top: 105px;
   }
 }
 .blog-list__grid {
@@ -1476,12 +1505,13 @@ textarea {
 }
 @media (max-width: 1399px) {
   .blog-list__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 1023px) {
   .blog-list__grid {
     gap: 80px 32px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 767px) {
@@ -1504,6 +1534,7 @@ textarea {
   margin: 60px auto 0;
   outline: none;
   padding: 10px 36px;
+  cursor: pointer;
   transition: background-color ease-in 0.3s, color ease-in 0.3s, border-color ease-in 0.3s;
 }
 @media (max-width: 1023px) {
@@ -1549,7 +1580,8 @@ textarea {
 }
 .card__img {
   height: 228px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
   right: -48px;
   top: -80px;
@@ -1686,11 +1718,11 @@ textarea {
   }
 }
 .card-info-banner--top {
-  margin-top: -80px;
+  margin-top: 0;
 }
-@media (max-width: 1399px) {
+@media (min-width: 1399px) {
   .card-info-banner--top {
-    margin-top: 0;
+    margin-top: -80px;
   }
 }
 .card-info-banner__img {
@@ -1700,7 +1732,8 @@ textarea {
   right: -48px;
   width: 228px;
   height: 228px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (max-width: 1299px) {
   .card-info-banner__img {
@@ -1808,6 +1841,4 @@ textarea {
   right: 0;
   bottom: 0;
   left: 0;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
