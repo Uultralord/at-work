@@ -57,6 +57,16 @@
     padding: 0 0 0 32px;
     position: relative;
 
+    
+  }
+
+  &__link {
+    color: $color-dim-gray;
+    display: flex;
+    font-size: 13px;
+    line-height: 16px;
+    transition: color $transition-300;
+    
     &::before {
       color: $color-dim-gray;
       content: counter(aside-list) ".";
@@ -71,18 +81,10 @@
     &:hover,
     &:focus-visible{
       &::before,
-      .article-aside__link{
+      &{
         color: $color-black;
       }
     }
-  }
-
-  &__link {
-    color: $color-dim-gray;
-    display: flex;
-    font-size: 13px;
-    line-height: 16px;
-    transition: color $transition-300;
   }
 
   &__inner {
