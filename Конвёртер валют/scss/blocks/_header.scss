@@ -1,0 +1,28 @@
+.header {
+    padding: 128px 0 40px;
+
+    @include vp-1023 {
+        padding: 99px 0 40px;
+    }
+
+    @include vp-767 {
+        padding: 60px 0 40px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 20.57px;
+        text-transform: uppercase;
+        margin: 0;
+
+        @include vp-1023 {
+            font-size: 30px;
+        }
+
+        @include vp-767 {
+            font-size: 22px;
+            line-height: 22px;
+        }
+    }
+}

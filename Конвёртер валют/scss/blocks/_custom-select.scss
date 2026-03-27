@@ -1,0 +1,81 @@
+.custom-select {
+    margin: 0 0 24px;
+    position: relative;
+
+    &__btn {
+        background-color: transparent;
+        border: none;
+        display: flex;
+
+    }
+
+    &__label {
+        background-color: $color-dark-blue;
+        border: 1px solid $color-grayish-blue;
+        color: $color-white;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 13px 21px;
+    }
+
+    &__btn-icon {
+        border: 1px solid $color-grayish-blue;
+        padding: 16px 24px;
+        width: 60px;
+        height: 40px;
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 32px;
+        display: none;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px 75px;
+        box-shadow: 0px 12px 60px 0px #00000026;
+        position: absolute;
+        z-index: 1000;
+
+        @include vp-1023 {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @include vp-767 {
+            gap: 26px;
+        }
+    }
+
+    &__item {}
+
+    &__sublink {
+        min-width: 242px;
+        background-color: transparent;
+        border: none;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+        display: flex;
+        justify-content: space-between;
+        color: $color-dark-grayishb-blue;
+
+        &-bold {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 14px;
+            text-transform: uppercase;
+            color: $color-black;
+        }
+
+        @include vp-1023 {
+            min-width: 476px;
+        }
+
+        @include vp-767 {
+            min-width: 316px;
+        }
+    }
+}
