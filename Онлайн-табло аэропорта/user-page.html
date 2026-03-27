@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <title>Онлайн-табло</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <h1 class="header__title">Онлайн-табло</h1>
+                <div class="header__search">
+                    <input class="header__search-input" type="search" name="header-search" id="header-search"
+                        placeholder="Поиск по направлению">
+                    <svg class="header__search-icon" width="17" height="17" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#search"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="arrival">
+            <div class="container">
+                <div class="arrival__wrap">
+                    <div class="arrival__links">
+                        <a href="#" class="arrival__link" id="departure">Вылет</a>
+                        <a href="#" class="arrival__link arrival__link--active" id="arrival">Прилет</a>
+                    </div>
+                    <div class="custom-table">
+                        <ul class="custom-table__thead">
+                            <li class="custom-table__head custom-table__head--date">Дата</li>
+                            <li class="custom-table__head custom-table__head--time">Время</li>
+                            <li class="custom-table__head custom-table__head--direction">Направление</li>
+                            <li class="custom-table__head custom-table__head--flight">Рейс</li>
+                            <li class="custom-table__head custom-table__head--airline">Авиакомпания</li>
+                            <li class="custom-table__head custom-table__head--status">Статус</li>
+                        </ul>
+                        <div class="custom-table__tbody">
+                            <ul class="custom-table__trow">
+                                <li class="custom-table__text custom-table__text--date">27 апр.</li>
+                                <li class="custom-table__text custom-table__text--time">08:55</li>
+                                <li class="custom-table__text custom-table__text--grey">Статус</li>
+                                <li class="custom-table__text custom-table__text--direction">Санкт-петербург</li>
+                                <li class="custom-table__text custom-table__text--flight">SU-1651</li>
+                                <li class="custom-table__text custom-table__text--airline"><img
+                                        class="custom-table__text-img" src="./images/logo-airline/aeroflot.png"
+                                        alt="Аэрофлот"></li>
+                                <li class="custom-table__text custom-table__text--status">Прибыл</li>
+                            </ul>
+                            <ul class="custom-table__trow">
+                                <li class="custom-table__text custom-table__text--date">27 апр.</li>
+                                <li class="custom-table__text custom-table__text--time">08:55</li>
+                                <li class="custom-table__text custom-table__text--grey">Статус</li>
+                                <li class="custom-table__text custom-table__text--direction">Москва SVO</li>
+                                <li class="custom-table__text custom-table__text--flight">SU-1651</li>
+                                <li class="custom-table__text custom-table__text--airline"><img
+                                        class="custom-table__line-img" src="./images/logo-airline/aeroflot.png"
+                                        alt="Аэрофлот"></li>
+                                <li class="custom-table__text custom-table__text--status">Прибыл</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script type="module" src="./js/main.js"></script>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

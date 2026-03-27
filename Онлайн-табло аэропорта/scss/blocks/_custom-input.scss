@@ -1,0 +1,35 @@
+.custom-input {
+    &--error {
+        .custom-input__error-message {
+            display: flex;
+        }
+    }
+
+    &__field {
+        width: 16ch;
+        border: 1px solid $color-kraiola-grey;
+        background-color: $color-white;
+        border-radius: 6px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 21.75px;
+        padding: 7px 40px 7px 12px;
+        height: 32px;
+
+        &--small {
+            width: 12ch;
+        }
+
+        &::placeholder {
+            color: $color-dark-blue;
+        }
+    }
+
+    &__error-message {
+        display: none;
+        color: $color-persian-red;
+        font-size: 10px;
+        position: absolute;
+        top: 25px;
+    }
+}

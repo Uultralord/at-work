@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <title>Онлайн-табло</title>
+</head>
+
+<body>
+    <header class="header header--admin">
+        <div class="container">
+            <div class="header__wrap">
+                <div class="header__edit">
+                    <h1 class="header__title">Онлайн-табло<button class="header__edit-btn">редактирование</button></h1>
+                    <button class="header__btn">Сохранить изменения</button>
+                </div>
+                <div class="header__search">
+                    <input class="header__search-input" type="search" name="header-search" id="header-search"
+                        placeholder="Поиск по направлению">
+                    <svg class="header__search-icon" width="17" height="17" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#search"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="flight">
+            <div class="container">
+                <div class="flight__wrap">
+                    <h2 class="flight__title">Добавить рейс</h2>
+                    <form class="flight__form" id="flight__form" novalidate>
+                        <div class="custom-input">
+                            <input class="custom-input__field" type="text" name="date" id="date" placeholder="Дата"
+                                required>
+                            <span class="custom-input__error-message">Заполните это поле</span>
+                        </div>
+                        <div class="custom-input">
+                            <input class="custom-input__field" type="text" name="time" id="time" placeholder="Время"
+                                required>
+                            <span class="custom-input__error-message">Заполните это поле</span>
+                        </div>
+                        <div class="custom-select custom-select--wider"><!--custom-select__btn--active-->
+                            <button type="button" class="custom-select__btn">
+                                <span class="custom-select__label" data-type="direction">Направление</span>
+                                <svg class="custom-select__icon" width="14" height="9" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </button>
+                            <span class="custom-select__error-message">Заполните это поле</span>
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Москва SVO
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Сочи
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Москва DME
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Самара
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Челябинск
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Санкт-Петербург
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Казань
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="custom-input">
+                            <input class="custom-input__field custom-input__field--small" type="text" name="flight"
+                                id="flight" placeholder="Рейс" required>
+                            <span class="custom-input__error-message">Заполните это поле</span>
+                        </div>
+                        <div class="custom-select">
+                            <button type="button" class="custom-select__btn ">
+                                <span class="custom-select__label" data-type="airline">Авиакомпания</span>
+                                <svg class="custom-select__icon" width="14" height="9" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </button>
+                            <span class="custom-select__error-message">Заполните это поле</span>
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Аэрофлот
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Россия
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Ural Airlines
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">S7 Airlines
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Nordwind
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Азимут
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="custom-select custom-select--small" id="status-list">
+                            <button type="button" class="custom-select__btn ">
+                                <span class="custom-select__label" data-type="status" id="status">Статус</span>
+                                <svg class="custom-select__icon" width="14" height="9" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </button>
+                            <span class="custom-select__error-message">Заполните это поле</span>
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink custom-select__sublink--green"
+                                        type="button">Прибыл
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink custom-select__sublink--blue"
+                                        type="button">Посадка
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink custom-select__sublink--red"
+                                        type="button">Отменен
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink custom-select__sublink--blue" type="button">В
+                                        полете
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink custom-select__sublink--red"
+                                        type="button">Задерживается
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Регистрация
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="custom-select custom-select--average">
+                            <button type="button" class="custom-select__btn ">
+                                <span class="custom-select__label" data-type="type">Тип</span>
+                                <svg class="custom-select__icon" width="14" height="9" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </button>
+                            <span class="custom-select__error-message">Заполните это поле</span>
+                            <ul class="custom-select__list">
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Вылет
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="custom-select__item">
+                                    <button class="custom-select__sublink" type="button">Прилет
+                                        <svg class="custom-select__item-icon" width="14" height="9" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#arrow-check"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                    <button class="flight__btn" type="submit" form="flight__form">Добавить</button>
+                </div>
+            </div>
+        </section>
+        <section class="arrival arrival--admin">
+            <div class="container">
+                <div class="arrival__wrap">
+                    <div class="arrival__links">
+                        <a href="#" class="arrival__link" id="departure">Вылет</a>
+                        <a href="#" class="arrival__link arrival__link--active" id="arrival">Прилет</a>
+                    </div>
+                    <div class="custom-table">
+                        <ul class="custom-table__thead">
+                            <li class="custom-table__head custom-table__head--date">Дата</li>
+                            <li class="custom-table__head custom-table__head--time">Время</li>
+                            <li class="custom-table__head custom-table__head--direction">Направление</li>
+                            <li class="custom-table__head custom-table__head--flight">Рейс</li>
+                            <li class="custom-table__head custom-table__head--airline">Авиакомпания</li>
+                            <li class="custom-table__head custom-table__head--status">Статус</li>
+                        </ul>
+                        <div class="custom-table__tbody">
+                            <ul class="custom-table__trow">
+                                <li class="custom-table__text custom-table__text--date">27 апр.</li>
+                                <li class="custom-table__text custom-table__text--time">08:55</li>
+                                <li class="custom-table__text custom-table__text--grey">Статус</li>
+                                <li class="custom-table__text custom-table__text--direction">Санкт-петербург</li>
+                                <li class="custom-table__text custom-table__text--flight">SU-1651</li>
+                                <li class="custom-table__text custom-table__text--airline"><img
+                                        class="custom-table__text-img" src="./images/logo-airline/aeroflot.png"
+                                        alt="Аэрофлот"></li>
+                                <li class="custom-table__text custom-table__text--status">Прибыл</li>
+                            </ul>
+                            <ul class="custom-table__trow">
+                                <li class="custom-table__text custom-table__text--date">27 апр.</li>
+                                <li class="custom-table__text custom-table__text--time">08:55</li>
+                                <li class="custom-table__text custom-table__text--grey">Статус</li>
+                                <li class="custom-table__text custom-table__text--direction">Москва SVO</li>
+                                <li class="custom-table__text custom-table__text--flight">SU-1651</li>
+                                <li class="custom-table__text custom-table__text--airline"><img
+                                        class="custom-table__line-img" src="./images/logo-airline/aeroflot.png"
+                                        alt="Аэрофлот"></li>
+                                <li class="custom-table__text custom-table__text--status">Прибыл</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script type="module" src="./js/main.js"></script>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

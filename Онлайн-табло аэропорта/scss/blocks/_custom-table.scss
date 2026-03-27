@@ -1,0 +1,245 @@
+.custom-table {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &--edit {
+        .custom-table__trow {
+            grid-template-columns: 60px 70px 150px 90px 70px 1fr;
+            padding: 8px 0;
+
+            @include vp-1023 {
+                grid-template-columns: 70px 55px 150px 100px 1fr;
+            }
+
+            @include vp-767 {
+                grid-template-columns: repeat(2, 40px) 1fr;
+                grid-template-rows: repeat(4, 1fr) 32px;
+                padding: 14px 0;
+            }
+        }
+
+        .custom-table__text--grey {
+            @include vp-767 {
+                grid-column: span 2 / span 2;
+                grid-column-start: 1;
+                grid-row-start: 4;
+                justify-content: flex-start;
+            }
+        }
+
+        .custom-table__text-wrap {
+            @include vp-767 {
+                grid-column: span 4 / span 4;
+                grid-column-start: 1;
+                grid-row-start: 5;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__thead {
+        display: grid;
+        grid-template-columns: repeat(6, fit-content(150px));
+        gap: 28px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @include vp-767 {
+            display: none;
+        }
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        color: $color-dark-blue;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 21.75px;
+
+        &--date {
+            padding-right: 40px;
+
+            @include vp-1023 {
+                padding: 0 13px;
+            }
+        }
+
+        &--time {
+            padding-right: 50px;
+
+            @include vp-1023 {
+                padding: 0;
+            }
+        }
+
+        &--direction {
+            padding-right: 70px;
+
+            @include vp-1023 {
+                padding-right: 45px;
+            }
+        }
+
+        &--flight {
+            padding-right: 45px;
+
+            @include vp-1023 {
+                padding-right: 55px;
+            }
+        }
+
+        &--airline {
+            padding-right: 10px;
+
+            @include vp-768 {
+                display: none;
+            }
+        }
+    }
+
+    &__trow {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 60px 75px 150px 85px 75px 135px;
+        align-items: center;
+        gap: 46px;
+        position: relative;
+        padding: 11px 0;
+        margin: 0;
+
+        @include vp-1023 {
+            grid-template-columns: 70px 55px 150px 100px 130px;
+            gap: 20px;
+        }
+
+        @include vp-767 {
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 40px) repeat(2, 1fr);
+            gap: 8px 9px;
+            padding: 14px 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: -50px;
+            max-width: 985px;
+            width: calc(100% + 91px);
+            height: 1px;
+            background-color: $color-cloudy-blue;
+
+            @include vp-1023 {
+                width: calc(100% + 63px);
+                left: -33px;
+            }
+
+            @include vp-767 {
+                width: calc(100% + 22px);
+                left: -10px;
+            }
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 26.1px;
+
+        &--date {
+            @include vp-1023 {
+                padding: 0;
+            }
+
+            @include vp-767 {
+                font-size: 10px;
+                line-height: 13.9px;
+            }
+        }
+
+        &--time {
+            @include vp-1023 {
+                padding: 0;
+            }
+
+            @include vp-767 {
+                font-size: 10px;
+                line-height: 13.9px;
+            }
+        }
+
+        &--grey {
+            display: none;
+
+            @include vp-767 {
+                display: flex;
+                grid-column: span 2 / span 2;
+                justify-content: flex-end;
+                font-size: 10px;
+                line-height: 13.9px;
+                color: $color-tangled-web;
+            }
+        }
+
+        &--direction {
+            @include vp-767 {
+                grid-column: span 3 / span 3;
+                grid-row-start: 2;
+                font-size: 14px;
+                line-height: 13.9px;
+            }
+        }
+
+        &--flight {
+            @include vp-767 {
+                grid-column: span 4 / span 4;
+                grid-row-start: 3;
+                font-size: 10px;
+                line-height: 13.9px;
+            }
+        }
+
+        &--airline {
+            display: flex;
+            justify-content: center;
+
+            @include vp-768 {
+                display: none;
+            }
+        }
+
+        &--status {
+            @include vp-767 {
+                grid-column-start: 4;
+                grid-row-start: 2;
+                text-align: right;
+                font-size: 14px;
+                line-height: 13.9px;
+            }
+        }
+    }
+
+    &__text-wrap {
+        display: flex;
+
+        @include vp-1023 {
+            gap: 12px;
+        }
+    }
+
+    &__delete-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        @include vp-767 {
+            grid-column-start: 4;
+            grid-row-start: 4;
+            text-align: right;
+        }
+    }
+}

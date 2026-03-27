@@ -1,0 +1,23 @@
+// Colors
+$color-white: #ffffff;
+$color-black: #000000;
+$color-cloudy-blue: #A8AFBF;
+$color-navy-blue :#005FCB;
+$color-light-grey :rgba(0, 21, 62, 0.3);
+$color-green: #0B8C00;
+$color-persian-red: #DB2525;
+$color-solitude: #EFF1F5;
+$color-kraiola-grey: #B3B9C6;
+$color-dark-blue: #00153E4D;
+$color-tangled-web: #B0B0B0;
+$color-background : linear-gradient(180deg, #064EB4 0%, #1967C9 20%, #3D87DE 40%, #7CAAE8 60%, #B3C2E9 80%, #B3C2E9 100%);
+
+// Typography
+$ff-main: "Inter", "Arial", sans-serif;
+
+// Viewport
+$vp-tablet: 1023px;
+$vp-mobile: 767px;
+
+// Animation
+$transition: ease-in 0.3s;
