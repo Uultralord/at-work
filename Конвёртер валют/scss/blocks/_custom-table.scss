@@ -1,0 +1,109 @@
+.custom-table {
+
+
+    @include vp-1023 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__thead {
+        list-style: none;
+        margin: 0;
+        padding: 22px 24px;
+        background-color: $color-light-grayish-cyan;
+        border: 1px solid $color-grayish-blue;
+        display: grid;
+        grid-template-columns: repeat(2, 118px) repeat(2, 1fr);
+        gap: 20px;
+
+        @include vp-1023 {
+            grid-template-columns: none;
+            grid-template-rows: repeat(4, 1fr);
+            gap: 0;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+        }
+
+        &--background {
+            @include vp-1023 {
+                background-color: $color-light-grayish-cyan;
+            }
+        }
+    }
+
+    &__head {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+
+        @include vp-1023 {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 100%;
+            padding: 24px 16px;
+            border: 1px solid $color-grayish-blue;
+            border-right: none;
+        }
+    }
+
+    &__trow {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid $color-grayish-blue;
+        padding: 22px 24px;
+        display: grid;
+        grid-template-columns: repeat(2, 118px) repeat(2, 1fr);
+        gap: 20px;
+
+        @include vp-1023 {
+            grid-template-columns: none;
+            grid-template-rows: repeat(4, 1fr);
+            gap: 0;
+            padding: 0;
+            border: none;
+        }
+
+        &--background {
+            .custom-table__text {
+                @include vp-1023 {
+                    background-color: $color-light-grayish-cyan;
+                }
+            }
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+
+        @include vp-1023 {
+            font-size: 20px;
+            line-height: 20px;
+            padding: 24px 16px;
+            border: 1px solid $color-grayish-blue;
+            border-left: none;
+        }
+
+
+        &--code {
+            text-transform: uppercase;
+        }
+
+        &--unit {
+            color: $color-dark-grayish-blue;
+        }
+
+        &--currency {
+            color: $color-dark-grayish-blue;
+        }
+
+        &--basic-course {
+            @include vp-1023 {
+                font-weight: 600;
+            }
+        }
+    }
+}

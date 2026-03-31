@@ -13,4 +13,10 @@
     <path d="M0.5 0.5L6.5 6.5L12.5 0.5" stroke="black" stroke-linecap="round"/>
 </symbol>
 
+<symbol id='cross' viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M26 14L14 26" stroke="#777F85" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 14L26 26" stroke="#777F85" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+
 </svg>

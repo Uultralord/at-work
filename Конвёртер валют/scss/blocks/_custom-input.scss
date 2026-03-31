@@ -1,0 +1,17 @@
+.custom-input {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 100%;
+    padding: 32px 24px 60px;
+    border: 1px solid $color-grayish-blue;
+    border-radius: 2px;
+    width: 100%;
+
+    @include vp-1023 {
+        padding: 78px 24px 62px;
+    }
+
+    @include vp-767 {
+        padding: 53px 24px 47px;
+    }
+}

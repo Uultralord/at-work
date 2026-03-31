@@ -1,11 +1,10 @@
 .converter {
+    margin: 0 0 122px;
 
     &__wrap {
         display: flex;
         flex-direction: row;
         gap: 65px;
-        position: relative;
-        z-index: 1;
 
         @include vp-1023 {
             flex-direction: column;
@@ -17,12 +16,26 @@
         }
     }
 
-    &__wrap-left {
-        position: relative;
+    &__wrap-right {
 
-        &--active {
-            .custom-select__list {
-                display: grid;
+        @include vp-1023 {
+            position: relative;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .custom-select__list {
+            right: 32px;
+
+            @include vp-1023 {
+                right: 0;
+            }
+        }
+
+        .converter__text {
+            @include vp-1023 {
+                position: absolute;
+                top: -15px;
             }
         }
     }
@@ -31,6 +44,7 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
+        width: min-content;
 
         .converter__btn-icon--round {
             display: none;
@@ -41,17 +55,30 @@
         }
 
         @include vp-1023 {
+            margin: 0 0 0 auto;
+
+
             .converter__btn-icon--round {
+                width: 88px;
+                height: 88px;
                 display: flex;
+                border-radius: 100%;
+                padding: 10px;
+                box-shadow: 0px 5px 13px 0px #C0CAD680;
             }
 
             .converter__btn-icon--straight {
                 display: none;
             }
         }
-    }
 
-    &__wrap-right {}
+        @include vp-767 {
+            .converter__btn-icon--round {
+                width: 55px;
+                height: 55px;
+            }
+        }
+    }
 
     &__text {
         font-weight: 400;
