@@ -1,6 +1,7 @@
 import currencyApi from '../api/api.js'
 
 const customSelect = document.querySelectorAll('.custom-select')
+const sublink = document.querySelectorAll('.custom-select__sublink')
 const customSelectList = document.querySelectorAll('.custom-select__list')
 
 export default class CustomSelect {
@@ -30,22 +31,16 @@ export default class CustomSelect {
     get CharCode() { return this._CharCode; }
 
     createTableTr() {
-        if (!customSelectList) {
-            console.log('customSelectList не создан')
-        }
-
         this.liEl = this.createLi()
 
-        this.NameEl = this.createBtn(this.CharCode);
-        this.CharCodeEl = this.createSpan(this.Name);
+        this.NameEl = this.createBtn(this.Name);
+        this.CharCodeEl = this.createSpan(this.CharCode);
 
         this.NameEl.append(this.CharCodeEl)
 
         this.liEl.append(this.NameEl)
 
-        customSelectList.append(this.liEl)
-
-        return customSelectList;
+        return this.liEl;
     }
 
     createUl() {
@@ -75,22 +70,41 @@ export default class CustomSelect {
     }
 }
 
-export async function showCurrencyInfo2() {
-    try {
-        // Получаем дату
-        const CharCode = await currencyApi.getCurrenciesList()
-        CharCode.forEach(code => {
-            const customSelect = new CustomSelect(code)
-            console.log(customSelect)
-        })
-    } catch (error) {
-        console.error('Ошибка при получении данных:', error);
-    }
+export function initFormSelect() {
+    const customSelects = document.querySelectorAll('.custom-select');
+
+    // Обрабатываем каждый элемент .custom-select
+    customSelects.forEach(select => {
+        const customSelectBtn = select.querySelector('.custom-select__btn');
+        const label = select.querySelector('.custom-select__label');
+        const list = select.querySelector('.custom-select__list')
+
+        label.dataset.originalText = label.textContent;
+
+        // Проверяем, что элементы найдены
+        if (!customSelectBtn || !label) {
+            console.warn('В элементе .custom-select не найдены необходимые дочерние элементы');
+            return;
+        }
+
+        // Обработчик клика по кнопке
+        customSelectBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            select.classList.toggle('custom-select--active');
+        });
+
+        // Закрытие при клике вне элемента
+        document.addEventListener('click', () => {
+            select.classList.remove('custom-select--active');
+        });
+
+        list.addEventListener('click', (e) => {
+            const button = e.target.closest('.custom-select__sublink');
+            if (!button) return;
+            e.stopPropagation();
+            const match = button.textContent.match(/([А-Яа-я\s]+)(\w+)/);
+            label.textContent = match[1] + ' ' + match[2]
+        });
+    });
 }
 
-
-customSelect.forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('custom-select--active')
-    })
-})
