@@ -1,12 +1,11 @@
 import currencyApi from './api/api.js'
 import CustomSelect, { initFormSelect } from './components/custom-select.js'
 import Table from './components/custom-table.js'
-
+import getButton from './components/converter.js'
 
 const customSelectBtn = document.querySelectorAll('.custom-select__btn')
 const dateEl = document.getElementById('date')
 const customSelectList = document.querySelectorAll('.custom-select__list')
-const customTableTbody = document.querySelector('.custom-table__tbody ')
 
 async function showCurrencyInfo() {
     try {
@@ -25,19 +24,6 @@ async function showCurrencyInfo() {
                 list.append(liCopy);
             })
         });
-        // Заполняем таблицу
-        const courses = await currencyApi.getCurrentRates();
-        const valutes = Object.values(courses.Valute)
-        console.log(valutes)
-        valutes.forEach(valute => {
-            const table = new Table(valute)
-            const liEl = table.createTableTr();
-            // customSelectList.forEach(list => {
-            //     const liCopy = liEl.cloneNode(true);
-            //     list.append(liCopy);
-            // })
-            customTableTbody.append(liEl)
-        });
     } catch (error) {
         console.error('Ошибка при получении данных:', error);
     }
@@ -45,6 +31,7 @@ async function showCurrencyInfo() {
 
 
 customSelectBtn.forEach(item => {
+    getButton()
     item.addEventListener('click', () => {
         item.classList.toggle('custom-select__btn--active')
     })
@@ -53,4 +40,5 @@ customSelectBtn.forEach(item => {
 document.addEventListener('DOMContentLoaded', () => {
     showCurrencyInfo()
     initFormSelect()
+
 });

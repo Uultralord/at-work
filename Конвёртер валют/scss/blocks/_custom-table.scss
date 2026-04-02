@@ -1,12 +1,11 @@
 .custom-table {
 
-
     @include vp-1023 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
-    &__thead {
+    &__thead-trow {
         list-style: none;
         margin: 0;
         padding: 22px 24px;

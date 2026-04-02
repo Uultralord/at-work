@@ -1,5 +1,6 @@
 import currencyApi from '../api/api.js';
-
+let rowId = 1
+let headId = 1
 export default class Table {
     _CharCode = '';
     _Name = '';
@@ -12,6 +13,7 @@ export default class Table {
         this.Name = data.Name;
         this.Nominal = data.Nominal;
         this.Value = data.Value;
+
     }
 
     set CharCode(value) {
@@ -51,7 +53,6 @@ export default class Table {
 
         this.CharCodeEl = this.createLi(this.CharCode);
         this.CharCodeEl.classList.add('custom-table__text--code');
-
         this.NameEl = this.createLi(this.Name);
         this.NameEl.classList.add('custom-table__text--currency');
         this.NominalEl = this.createLi(this.Nominal);
@@ -60,25 +61,49 @@ export default class Table {
         this.ValueEl.classList.add('custom-table__text--basic-course');
 
 
-        const svgPath = `./images/sprite/flags/${this.CharCode}.svg`;
+        // const svgPath = `./images/sprite/flags/${this.CharCode}.svg`;
+        // const checker = new Image();
 
-        // Создаём временный img для проверки существования файла
-        const checker = new Image();
-        checker.onload = () => {
-            // Файл найден — добавляем видимый <img> с SVG
-            const img = document.createElement('img');
-            img.src = svgPath;
-            img.alt = this.CharCode;
-            img.classList.add('currency-icon'); // опциональный класс для стилизации
-            this.CharCodeEl.appendChild(img);
-            console.log(`SVG добавлен для ${this.CharCode}`);
-        };
-        checker.onerror = () => {
-            // Файл не найден — оставляем контейнер пустым
-            console.log(`SVG для ${this.CharCode} не найден, контейнер оставлен пустым`);
-        };
-        // Запускаем проверку — устанавливаем src у checker
-        checker.src = svgPath;;
+        // checker.onload = () => {
+        //     const img = document.createElement('img');
+        //     img.src = svgPath;
+        //     img.alt = this.CharCode;
+        //     img.classList.add('custom-table__text-icon');
+        //     this.CharCodeEl.appendChild(img);
+        //     console.log(`SVG добавлен для ${this.CharCode}`);
+        // };
+
+        // checker.onerror = () => {
+        //     this.CharCodeEl.style.paddingLeft = '35px';
+        //     console.log(`SVG для ${this.CharCode} не найден, добавлен отступ`);
+        // };
+
+        // checker.src = svgPath;
+
+        this.tRowEl.append(
+            this.CharCodeEl,
+            this.NominalEl,
+            this.NameEl,
+            this.ValueEl
+        );
+
+        return this.tRowEl;
+    }
+
+    createTableHead() {
+        this.tRowEl = this.createTrowHead();
+        if (this.tRowEl.id % 2 !== 0) {
+            this.tRowEl.classList.add('custom-table__thead-trow--background')
+        }
+
+        this.CharCodeEl = this.createLiHead('Код');
+        this.CharCodeEl.classList.add('custom-table__head--code');
+        this.NameEl = this.createLiHead('Единица');
+        this.NameEl.classList.add('custom-table__head--currency');
+        this.NominalEl = this.createLiHead('Валюта');
+        this.NominalEl.classList.add('custom-table__head--unit');
+        this.ValueEl = this.createLiHead('Курс базовой валюты');
+        this.ValueEl.classList.add('custom-table__head--basic-course');
 
         this.tRowEl.append(
             this.CharCodeEl,
@@ -93,6 +118,14 @@ export default class Table {
     createTrow() {
         const trowEl = document.createElement('ul');
         trowEl.classList.add('custom-table__trow');
+        trowEl.id = `${rowId++}`
+        return trowEl;
+    }
+
+    createTrowHead() {
+        const trowEl = document.createElement('ul');
+        trowEl.classList.add('custom-table__thead-trow');
+        trowEl.id = `${headId++}`
         return trowEl;
     }
 
@@ -102,13 +135,65 @@ export default class Table {
         liEl.textContent = text;
         return liEl;
     }
+
+    createLiHead(text) {
+        const liEl = document.createElement('li');
+        liEl.classList.add('custom-table__head');
+        liEl.textContent = text;
+        return liEl;
+    }
 }
 
-// async function fileExists(filePath) {
-//     return new Promise((resolve) => {
-//         const img = new Image();
-//         img.onload = () => resolve(true);
-//         img.onerror = () => resolve(false);
-//         img.src = filePath;
-//     });
-// }
+const customTableTbody = document.querySelector('.custom-table__tbody ')
+const customTableThead = document.querySelector('.custom-table__thead ')
+
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+async function renderCurrencyTable() {
+    rowId = 1;
+    headId = 1;
+
+    customTableThead.innerHTML = '';
+    customTableTbody.innerHTML = '';
+
+    const courses = await currencyApi.getCurrentRates();
+    const valutes = Object.values(courses.Valute);
+
+    if (window.innerWidth >= 1024) {
+        const tableHead = new Table();
+        const tableThead = tableHead.createTableHead();
+        customTableThead.append(tableThead);
+        valutes.forEach(valute => {
+            const table = new Table(valute);
+            const liEl = table.createTableTr();
+            customTableTbody.append(liEl);
+        });
+    } else {
+        valutes.forEach(valute => {
+            const tableHead = new Table();
+            const tableThead = tableHead.createTableHead();
+            customTableThead.append(tableThead);
+
+            const table = new Table(valute);
+            const liEl = table.createTableTr();
+            if (liEl.id % 2 !== 0) {
+                liEl.classList.add('custom-table__trow--background')
+            }
+            customTableTbody.append(liEl);
+        });
+    }
+}
+
+renderCurrencyTable();
+
+window.addEventListener('resize', debounce(renderCurrencyTable, 100));

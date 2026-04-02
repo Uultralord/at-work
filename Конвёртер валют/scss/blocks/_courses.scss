@@ -1,4 +1,14 @@
 .courses {
+    margin: 0 0 162px;
+
+    @include vp-1023 {
+        margin: 0 0 254px;
+    }
+
+    @include vp-767 {
+        margin: 0 0 96px;
+    }
+
     &__text {
         font-weight: 700;
         font-size: 22px;

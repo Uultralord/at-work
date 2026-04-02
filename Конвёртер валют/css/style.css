@@ -699,7 +699,7 @@ textarea {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.custom-table__thead {
+.custom-table__thead-trow {
   list-style: none;
   margin: 0;
   padding: 22px 24px;
@@ -710,7 +710,7 @@ textarea {
   gap: 20px;
 }
 @media (max-width: 1023px) {
-  .custom-table__thead {
+  .custom-table__thead-trow {
     grid-template-columns: none;
     grid-template-rows: repeat(4, 1fr);
     gap: 0;
@@ -720,7 +720,7 @@ textarea {
   }
 }
 @media (max-width: 1023px) {
-  .custom-table__thead--background {
+  .custom-table__thead-trow--background {
     background-color: #F2F5F5;
   }
 }
@@ -797,6 +797,19 @@ textarea {
   }
 }
 
+.courses {
+  margin: 0 0 162px;
+}
+@media (max-width: 1023px) {
+  .courses {
+    margin: 0 0 254px;
+  }
+}
+@media (max-width: 767px) {
+  .courses {
+    margin: 0 0 96px;
+  }
+}
 .courses__text {
   font-weight: 700;
   font-size: 22px;
