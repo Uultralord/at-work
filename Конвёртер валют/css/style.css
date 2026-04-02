@@ -779,6 +779,11 @@ textarea {
 }
 .custom-table__text--code {
   text-transform: uppercase;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
 }
 .custom-table__text--unit {
   color: #777F85;

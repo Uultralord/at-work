@@ -90,6 +90,11 @@
 
         &--code {
             text-transform: uppercase;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
         }
 
         &--unit {

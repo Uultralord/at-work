@@ -1,4 +1,4 @@
-import currencyApi from '../api/api'
+import currencyApi from '../api/api.js';
 
 export default class Table {
     _CharCode = '';
@@ -12,15 +12,6 @@ export default class Table {
         this.Name = data.Name;
         this.Nominal = data.Nominal;
         this.Value = data.Value;
-
-        this.airlineImages = {
-            'Аэрофлот': './images/logo-airline/aeroflot.png',
-            'Азимут': './images/logo-airline/azimuth.png',
-            'Nordwind': './images/logo-airline/nordwind.png',
-            'Россия': './images/logo-airline/russia.png',
-            'S7 Airlines': './images/logo-airline/s7-airlines.png',
-            'Ural Airlines': './images/logo-airline/ural-airlines.png'
-        };
     }
 
     set CharCode(value) {
@@ -60,6 +51,7 @@ export default class Table {
 
         this.CharCodeEl = this.createLi(this.CharCode);
         this.CharCodeEl.classList.add('custom-table__text--code');
+
         this.NameEl = this.createLi(this.Name);
         this.NameEl.classList.add('custom-table__text--currency');
         this.NominalEl = this.createLi(this.Nominal);
@@ -67,11 +59,32 @@ export default class Table {
         this.ValueEl = this.createLi(this.Value);
         this.ValueEl.classList.add('custom-table__text--basic-course');
 
+
+        const svgPath = `./images/sprite/flags/${this.CharCode}.svg`;
+
+        // Создаём временный img для проверки существования файла
+        const checker = new Image();
+        checker.onload = () => {
+            // Файл найден — добавляем видимый <img> с SVG
+            const img = document.createElement('img');
+            img.src = svgPath;
+            img.alt = this.CharCode;
+            img.classList.add('currency-icon'); // опциональный класс для стилизации
+            this.CharCodeEl.appendChild(img);
+            console.log(`SVG добавлен для ${this.CharCode}`);
+        };
+        checker.onerror = () => {
+            // Файл не найден — оставляем контейнер пустым
+            console.log(`SVG для ${this.CharCode} не найден, контейнер оставлен пустым`);
+        };
+        // Запускаем проверку — устанавливаем src у checker
+        checker.src = svgPath;;
+
         this.tRowEl.append(
             this.CharCodeEl,
             this.NominalEl,
             this.NameEl,
-            this.ValueEl,
+            this.ValueEl
         );
 
         return this.tRowEl;
@@ -91,28 +104,11 @@ export default class Table {
     }
 }
 
-const svgCache = new Map();
-
-async function checkSvgWithCache(currencyCode, folderPath = 'svgs/') {
-    const cacheKey = `${folderPath}${currencyCode}`;
-
-    // Проверяем кэш
-    if (svgCache.has(cacheKey)) {
-        return svgCache.get(cacheKey);
-    }
-
-    const filename = `${folderPath}${currencyCode}.svg`;
-    let exists = false;
-
-    try {
-        const response = await fetch(filename, { method: 'HEAD' });
-        exists = response.status === 200;
-    } catch (error) {
-        console.warn(`Файл ${filename} не найден:`, error.message);
-    }
-
-    // Сохраняем в кэш
-    svgCache.set(cacheKey, exists);
-    return exists;
-}
-checkSvgWithCache()
+// async function fileExists(filePath) {
+//     return new Promise((resolve) => {
+//         const img = new Image();
+//         img.onload = () => resolve(true);
+//         img.onerror = () => resolve(false);
+//         img.src = filePath;
+//     });
+// }
