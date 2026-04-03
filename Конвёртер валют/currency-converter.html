@@ -24,7 +24,7 @@
                         <span class="converter__text">У меня имеется</span>
                         <div class="custom-select">
                             <button type="button" class="custom-select__btn">
-                                <span class="custom-select__label" data-type="available">Российский рубль rur</span>
+                                <span class="custom-select__label"  id="select-input">Российский рубль RUR</span>
                                 <svg class="custom-select__btn-icon" width="12" height="6" aria-hidden="true">
                                     <use xlink:href="images/sprite.svg#down-arrow"></use>
                                 </svg>
@@ -36,17 +36,12 @@
                                 </svg>
                                 <li class="custom-select__item">
                                     <button class="custom-select__sublink" type="button">Российский рубль <span
-                                            class="custom-select__sublink-bold">rur</span>
-                                    </button>
-                                </li>
-                                <li class="custom-select__item">
-                                    <button class="custom-select__sublink" type="button">Российский рубль <span
-                                            class="custom-select__sublink-bold">rur</span>
+                                            class="custom-select__sublink-bold">RUR</span>
                                     </button>
                                 </li>
                             </ul>
                         </div>
-                        <input class="custom-input" type="number">
+                        <input class="custom-input" type="number" id="input">
                     </div>
                     <button class="converter__btn-revers" type="button">
                         <svg class="converter__btn-icon converter__btn-icon--straight" width="48" height="51"
@@ -60,27 +55,26 @@
                     </button>
                     <div class="converter__wrap-right "><!--converter__wrap-left--active-->
                         <span class="converter__text">Хочу приобрести</span>
-                        <div class="custom-select">
+                        <div class="custom-select" id="select-result">
                             <button type="button" class="custom-select__btn">
-                                <span class="custom-select__label" data-type="available">Российский рубль rur</span>
+                                <span class="custom-select__label" >Российский рубль RUR</span>
                                 <svg class="custom-select__btn-icon" width="12" height="6" aria-hidden="true">
                                     <use xlink:href="images/sprite.svg#down-arrow"></use>
                                 </svg>
                             </button>
                             <ul class="custom-select__list">
+                                <svg class="custom-select__list-icon" id="cross2" width="40" height="40"
+                                    aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#cross"></use>
+                                </svg>
                                 <li class="custom-select__item">
                                     <button class="custom-select__sublink" type="button">Российский рубль <span
-                                            class="custom-select__sublink-bold">rur</span>
-                                    </button>
-                                </li>
-                                <li class="custom-select__item">
-                                    <button class="custom-select__sublink" type="button">Российский рубль <span
-                                            class="custom-select__sublink-bold">rur</span>
+                                            class="custom-select__sublink-bold">RUR</span>
                                     </button>
                                 </li>
                             </ul>
                         </div>
-                        <input class="custom-input" type="number">
+                        <input class="custom-input" type="number" id="result">
                     </div>
                 </div>
             </div>

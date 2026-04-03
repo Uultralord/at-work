@@ -2,7 +2,7 @@
 
     @include vp-1023 {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     &__thead-trow {
@@ -83,15 +83,13 @@
             line-height: 20px;
             padding: 24px 16px;
             border: 1px solid $color-grayish-blue;
-            border-left: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
         }
 
-
         &--code {
-            text-transform: uppercase;
             display: flex;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
             align-items: center;
             gap: 8px;
         }
@@ -102,6 +100,8 @@
 
         &--currency {
             color: $color-dark-grayish-blue;
+            word-break: break-all;
+            white-space: pre-wrap;
         }
 
         &--basic-course {

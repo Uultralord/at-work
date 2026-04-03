@@ -35,6 +35,8 @@ export default class CustomSelect {
 
         this.NameEl = this.createBtn(this.Name);
         this.CharCodeEl = this.createSpan(this.CharCode);
+        this.NameEl.dataset.type = this.CharCode
+        this.CharCodeEl.dataset.type = this.CharCode
 
         this.NameEl.append(this.CharCodeEl)
 
@@ -78,8 +80,7 @@ export function initFormSelect() {
         const customSelectBtn = select.querySelector('.custom-select__btn');
         const label = select.querySelector('.custom-select__label');
         const list = select.querySelector('.custom-select__list')
-
-        label.dataset.originalText = label.textContent;
+        //4label.dataset.originalText = label.textContent;
 
         // Проверяем, что элементы найдены
         if (!customSelectBtn || !label) {
@@ -90,18 +91,21 @@ export function initFormSelect() {
         // Обработчик клика по кнопке
         customSelectBtn.addEventListener('click', (e) => {
             e.stopPropagation();
+            customSelects.forEach(select => { select.classList.remove('custom-select--active'); })
             select.classList.toggle('custom-select--active');
         });
 
         // Закрытие при клике вне элемента
         document.addEventListener('click', () => {
             select.classList.remove('custom-select--active');
+
         });
 
         list.addEventListener('click', (e) => {
             const button = e.target.closest('.custom-select__sublink');
             if (!button) return;
             e.stopPropagation();
+            select.classList.remove('custom-select--active');
             const match = button.textContent.match(/([А-Яа-я\s]+)(\w+)/);
             label.textContent = match[1] + ' ' + match[2]
         });

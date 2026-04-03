@@ -458,25 +458,27 @@ textarea {
     gap: 1px;
   }
 }
+.converter__wrap-right {
+  position: relative;
+}
 @media (max-width: 1023px) {
   .converter__wrap-right {
-    position: relative;
     display: flex;
     flex-direction: column-reverse;
   }
 }
-.converter__wrap-right .custom-select__list {
-  right: 32px;
-}
-@media (max-width: 1023px) {
-  .converter__wrap-right .custom-select__list {
-    right: 0;
+@media (max-width: 767px) {
+  .converter__wrap-right {
+    position: static;
   }
+}
+.converter__wrap-right .custom-select__list {
+  right: 0;
 }
 @media (max-width: 1023px) {
   .converter__wrap-right .converter__text {
-    position: absolute;
-    top: -15px;
+    position: relative;
+    bottom: 210px;
   }
 }
 .converter__btn-revers {
@@ -615,11 +617,6 @@ textarea {
   background-color: #ffffff;
   box-shadow: 0px 12px 60px 0px rgba(0, 0, 0, 0.1490196078);
 }
-@media (max-width: 767px) {
-  .custom-select__list::after {
-    height: 100vh;
-  }
-}
 @media (max-width: 1023px) {
   .custom-select__list {
     grid-template-columns: 1fr;
@@ -653,6 +650,7 @@ textarea {
   justify-content: space-between;
   color: #777F85;
   cursor: pointer;
+  text-align: left;
 }
 .custom-select__sublink-bold {
   font-weight: 700;
@@ -696,7 +694,7 @@ textarea {
 @media (max-width: 1023px) {
   .custom-table {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 .custom-table__thead-trow {
@@ -774,14 +772,13 @@ textarea {
     line-height: 20px;
     padding: 24px 16px;
     border: 1px solid #C0CAD6;
-    border-left: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
   }
 }
 .custom-table__text--code {
-  text-transform: uppercase;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
   align-items: center;
   gap: 8px;
 }
@@ -790,6 +787,8 @@ textarea {
 }
 .custom-table__text--currency {
   color: #777F85;
+  word-break: break-all;
+  white-space: pre-wrap;
 }
 @media (max-width: 1023px) {
   .custom-table__text--basic-course {

@@ -51,16 +51,6 @@ export default class Table {
     createTableTr() {
         this.tRowEl = this.createTrow();
 
-        this.CharCodeEl = this.createLi(this.CharCode);
-        this.CharCodeEl.classList.add('custom-table__text--code');
-        this.NameEl = this.createLi(this.Name);
-        this.NameEl.classList.add('custom-table__text--currency');
-        this.NominalEl = this.createLi(this.Nominal);
-        this.NominalEl.classList.add('custom-table__text--unit');
-        this.ValueEl = this.createLi(this.Value);
-        this.ValueEl.classList.add('custom-table__text--basic-course');
-
-
         // const svgPath = `./images/sprite/flags/${this.CharCode}.svg`;
         // const checker = new Image();
 
@@ -80,6 +70,18 @@ export default class Table {
 
         // checker.src = svgPath;
 
+        this.CharCodeEl = this.createLi(this.CharCode);
+        this.CharCodeEl.classList.add('custom-table__text--code');
+        this.NameEl = this.createLi(this.Name);
+        this.NameEl.classList.add('custom-table__text--currency');
+        this.NominalEl = this.createLi(this.Nominal);
+        this.NominalEl.classList.add('custom-table__text--unit');
+        this.ValueEl = this.createLi(this.Value);
+        this.ValueEl.classList.add('custom-table__text--basic-course');
+
+
+
+
         this.tRowEl.append(
             this.CharCodeEl,
             this.NominalEl,
@@ -96,20 +98,82 @@ export default class Table {
             this.tRowEl.classList.add('custom-table__thead-trow--background')
         }
 
-        this.CharCodeEl = this.createLiHead('Код');
-        this.CharCodeEl.classList.add('custom-table__head--code');
-        this.NameEl = this.createLiHead('Единица');
-        this.NameEl.classList.add('custom-table__head--currency');
-        this.NominalEl = this.createLiHead('Валюта');
-        this.NominalEl.classList.add('custom-table__head--unit');
-        this.ValueEl = this.createLiHead('Курс базовой валюты');
-        this.ValueEl.classList.add('custom-table__head--basic-course');
+        this.headCodeEl = this.createLi('Код');
+        this.headCodeEl.classList.add('custom-table__head--code');
+
+        this.headNameEl = this.createLi('Единица');
+        this.headNameEl.classList.add('custom-table__head--currency');
+
+        this.headNominalEl = this.createLi('Валюта');
+        this.headNominalEl.classList.add('custom-table__head--unit');
+
+        this.headValueEl = this.createLi('Курс базовой валюты');
+        this.headValueEl.classList.add('custom-table__head--basic-course');
 
         this.tRowEl.append(
-            this.CharCodeEl,
-            this.NominalEl,
-            this.NameEl,
-            this.ValueEl
+            this.headCodeEl,
+            this.headNameEl,
+            this.headNominalEl,
+            this.headValueEl
+        );
+
+        return this.tRowEl;
+    }
+
+    createSmallTable() {
+        this.tRowEl = this.createTrow();
+
+        // const svgPath = `./images/sprite/flags/${this.CharCode}.svg`;
+        // const checker = new Image();
+
+        // checker.onload = () => {
+        //     const img = document.createElement('img');
+        //     img.src = svgPath;
+        //     img.alt = this.CharCode;
+        //     img.classList.add('custom-table__text-icon');
+        //     this.CharCodeEl.appendChild(img);
+        //     console.log(`SVG добавлен для ${this.CharCode}`);
+        // };
+
+        // checker.onerror = () => {
+        //     console.log(`SVG для ${this.CharCode} не найден, добавлен отступ`);
+        // };
+
+        // checker.src = svgPath;
+
+        this.headCodeEl = this.createLi('Код');
+
+        this.CharCodeEl = this.createSpan(this.CharCode);
+        this.CharCodeEl.classList.add('custom-table__text--code');
+
+        this.headCodeEl.append(this.CharCodeEl)
+
+        this.headNameEl = this.createLi('Единица');
+
+        this.NameEl = this.createSpan(this.Name);
+        this.NameEl.classList.add('custom-table__text--currency');
+
+        this.headNameEl.append(this.NameEl)
+
+        this.headNominalEl = this.createLi('Валюта');
+
+        this.NominalEl = this.createSpan(this.Nominal);
+        this.NominalEl.classList.add('custom-table__text--unit');
+
+        this.headNominalEl.append(this.NominalEl)
+
+        this.headValueEl = this.createLi('Курс базовой валюты');
+
+        this.ValueEl = this.createSpan(this.Value);
+        this.ValueEl.classList.add('custom-table__text--basic-course');
+
+        this.headValueEl.append(this.ValueEl)
+
+        this.tRowEl.append(
+            this.headCodeEl,
+            this.headNameEl,
+            this.headNominalEl,
+            this.headValueEl
         );
 
         return this.tRowEl;
@@ -136,9 +200,9 @@ export default class Table {
         return liEl;
     }
 
-    createLiHead(text) {
-        const liEl = document.createElement('li');
-        liEl.classList.add('custom-table__head');
+    createSpan(text) {
+        const liEl = document.createElement('span');
+        //liEl.classList.add('');
         liEl.textContent = text;
         return liEl;
     }
@@ -180,16 +244,17 @@ async function renderCurrencyTable() {
         });
     } else {
         valutes.forEach(valute => {
-            const tableHead = new Table();
-            const tableThead = tableHead.createTableHead();
-            customTableThead.append(tableThead);
-
             const table = new Table(valute);
-            const liEl = table.createTableTr();
-            if (liEl.id % 2 !== 0) {
-                liEl.classList.add('custom-table__trow--background')
+            const tableSmall = table.createSmallTable();
+            if (tableSmall.id % 2 !== 0) {
+                tableSmall.classList.add('custom-table__trow--background')
             }
-            customTableTbody.append(liEl);
+            //customTableThead.append(tableThead);
+
+            // const table = new Table(valute);
+            // const liEl = table.createTableTr();
+
+            customTableTbody.append(tableSmall);
         });
     }
 }

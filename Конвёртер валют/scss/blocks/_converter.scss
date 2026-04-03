@@ -17,25 +17,30 @@
     }
 
     &__wrap-right {
+        position: relative;
 
         @include vp-1023 {
-            position: relative;
             display: flex;
             flex-direction: column-reverse;
         }
 
-        .custom-select__list {
-            right: 32px;
+        @include vp-767 {
+            position: static;
+        }
 
-            @include vp-1023 {
-                right: 0;
-            }
+        .custom-select__list {
+            right: 0;
+
+            // @include vp-1023 {
+            //     position: absolute;
+            //     right: 0;
+            // }
         }
 
         .converter__text {
             @include vp-1023 {
-                position: absolute;
-                top: -15px;
+                position: relative;
+                bottom: 210px;
             }
         }
     }
