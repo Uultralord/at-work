@@ -12,7 +12,6 @@
     <header class="header">
         <div class="container">
             <h1 class="header__title">Конвертер валют</h1>
-
         </div>
     </header>
     <main class="main">
@@ -20,11 +19,11 @@
             <div class="container">
                 <h2 class="visually-hidden">Калькулятор валют</h2>
                 <div class="converter__wrap">
-                    <div class="converter__wrap-left converter__wrap-left--active"><!--converter__wrap-left--active-->
+                    <div class="converter__wrap-left"><!--converter__wrap-left--active-->
                         <span class="converter__text">У меня имеется</span>
-                        <div class="custom-select">
+                        <div class="custom-select" id="select-input">
                             <button type="button" class="custom-select__btn">
-                                <span class="custom-select__label"  id="select-input">Российский рубль RUR</span>
+                                <span class="custom-select__label"  >Российский рубль RUR</span>
                                 <svg class="custom-select__btn-icon" width="12" height="6" aria-hidden="true">
                                     <use xlink:href="images/sprite.svg#down-arrow"></use>
                                 </svg>
@@ -68,13 +67,13 @@
                                     <use xlink:href="images/sprite.svg#cross"></use>
                                 </svg>
                                 <li class="custom-select__item">
-                                    <button class="custom-select__sublink" type="button">Российский рубль <span
+                                    <button class="custom-select__sublink" type="button" data-type="RUR">Российский рубль <span
                                             class="custom-select__sublink-bold">RUR</span>
                                     </button>
                                 </li>
                             </ul>
                         </div>
-                        <input class="custom-input" type="number" id="result">
+                        <input class="custom-input" type="number" id="result"  readonly>
                     </div>
                 </div>
             </div>

@@ -458,6 +458,9 @@ textarea {
     gap: 1px;
   }
 }
+.converter__wrap-left {
+  position: relative;
+}
 .converter__wrap-right {
   position: relative;
 }
@@ -584,18 +587,17 @@ textarea {
   border: 1px solid #C0CAD6;
   padding: 16px 24px;
   width: 60px;
-  height: 40px;
+  height: auto;
 }
 @media (max-width: 1023px) {
   .custom-select__btn-icon {
     width: 164px;
-    height: 56px;
+    max-height: 56px;
   }
 }
 @media (max-width: 767px) {
   .custom-select__btn-icon {
     width: 60px;
-    height: 40px;
   }
 }
 .custom-select__list {

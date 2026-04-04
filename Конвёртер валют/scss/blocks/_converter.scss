@@ -16,6 +16,10 @@
         }
     }
 
+    &__wrap-left {
+        position: relative;
+    }
+
     &__wrap-right {
         position: relative;
 
@@ -30,11 +34,6 @@
 
         .custom-select__list {
             right: 0;
-
-            // @include vp-1023 {
-            //     position: absolute;
-            //     right: 0;
-            // }
         }
 
         .converter__text {

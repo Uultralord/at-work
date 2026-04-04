@@ -49,16 +49,15 @@
         border: 1px solid $color-grayish-blue;
         padding: 16px 24px;
         width: 60px;
-        height: 40px;
+        height: auto;
 
         @include vp-1023 {
             width: 164px;
-            height: 56px;
+            max-height: 56px;
         }
 
         @include vp-767 {
             width: 60px;
-            height: 40px;
         }
     }
 
@@ -69,7 +68,6 @@
         display: none;
         grid-template-columns: repeat(3, 1fr);
         gap: 18px 75px;
-        //box-shadow: 0px 12px 60px 0px #00000026;
         position: absolute;
         z-index: 1000;
 

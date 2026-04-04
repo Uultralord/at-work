@@ -51,24 +51,24 @@ export default class Table {
     createTableTr() {
         this.tRowEl = this.createTrow();
 
-        // const svgPath = `./images/sprite/flags/${this.CharCode}.svg`;
-        // const checker = new Image();
+        const svgPath = `./images/sprite/flags/${this.CharCode}.svg`;
+        const checker = new Image();
 
-        // checker.onload = () => {
-        //     const img = document.createElement('img');
-        //     img.src = svgPath;
-        //     img.alt = this.CharCode;
-        //     img.classList.add('custom-table__text-icon');
-        //     this.CharCodeEl.appendChild(img);
-        //     console.log(`SVG добавлен для ${this.CharCode}`);
-        // };
+        checker.onload = () => {
+            const img = document.createElement('img');
+            img.src = svgPath;
+            img.alt = this.CharCode;
+            img.classList.add('custom-table__text-icon');
+            this.CharCodeEl.appendChild(img);
+            console.log(`SVG добавлен для ${this.CharCode}`);
+        };
 
-        // checker.onerror = () => {
-        //     this.CharCodeEl.style.paddingLeft = '35px';
-        //     console.log(`SVG для ${this.CharCode} не найден, добавлен отступ`);
-        // };
+        checker.onerror = () => {
+            this.CharCodeEl.style.paddingLeft = '35px';
+            console.log(`SVG для ${this.CharCode} не найден, добавлен отступ`);
+        };
 
-        // checker.src = svgPath;
+        checker.src = svgPath;
 
         this.CharCodeEl = this.createLi(this.CharCode);
         this.CharCodeEl.classList.add('custom-table__text--code');
@@ -78,9 +78,6 @@ export default class Table {
         this.NominalEl.classList.add('custom-table__text--unit');
         this.ValueEl = this.createLi(this.Value);
         this.ValueEl.classList.add('custom-table__text--basic-course');
-
-
-
 
         this.tRowEl.append(
             this.CharCodeEl,
@@ -123,23 +120,23 @@ export default class Table {
     createSmallTable() {
         this.tRowEl = this.createTrow();
 
-        // const svgPath = `./images/sprite/flags/${this.CharCode}.svg`;
-        // const checker = new Image();
+        const svgPath = `./images/sprite/flags/${this.CharCode}.svg`;
+        const checker = new Image();
 
-        // checker.onload = () => {
-        //     const img = document.createElement('img');
-        //     img.src = svgPath;
-        //     img.alt = this.CharCode;
-        //     img.classList.add('custom-table__text-icon');
-        //     this.CharCodeEl.appendChild(img);
-        //     console.log(`SVG добавлен для ${this.CharCode}`);
-        // };
+        checker.onload = () => {
+            const img = document.createElement('img');
+            img.src = svgPath;
+            img.alt = this.CharCode;
+            img.classList.add('custom-table__text-icon');
+            this.CharCodeEl.appendChild(img);
+            console.log(`SVG добавлен для ${this.CharCode}`);
+        };
 
-        // checker.onerror = () => {
-        //     console.log(`SVG для ${this.CharCode} не найден, добавлен отступ`);
-        // };
+        checker.onerror = () => {
+            console.log(`SVG для ${this.CharCode} не найден, добавлен отступ`);
+        };
 
-        // checker.src = svgPath;
+        checker.src = svgPath;
 
         this.headCodeEl = this.createLi('Код');
 
@@ -202,7 +199,6 @@ export default class Table {
 
     createSpan(text) {
         const liEl = document.createElement('span');
-        //liEl.classList.add('');
         liEl.textContent = text;
         return liEl;
     }
@@ -249,11 +245,6 @@ async function renderCurrencyTable() {
             if (tableSmall.id % 2 !== 0) {
                 tableSmall.classList.add('custom-table__trow--background')
             }
-            //customTableThead.append(tableThead);
-
-            // const table = new Table(valute);
-            // const liEl = table.createTableTr();
-
             customTableTbody.append(tableSmall);
         });
     }

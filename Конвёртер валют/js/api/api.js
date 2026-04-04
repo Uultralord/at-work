@@ -1,7 +1,5 @@
-// Базовый URL API
 const BASE_URL = 'https://www.cbr-xml-daily.ru';
 
-// Общая функция для выполнения запросов
 async function apiRequest(endpoint) {
     try {
         const response = await fetch(`${BASE_URL}${endpoint}`);
@@ -25,7 +23,6 @@ const currencyApi = {
 
     async _fetchData() {
         if (this._isLoading) {
-            // Если уже идёт запрос, ждём его завершения
             return new Promise((resolve) => {
                 this._pendingRequests.push(resolve);
             });
@@ -37,12 +34,10 @@ const currencyApi = {
             const data = await apiRequest('/daily_json.js');
             this._cachedData = data;
 
-            // Разблокируем все ожидающие запросы
             this._pendingRequests.forEach(resolve => resolve(data));
             this._pendingRequests = [];
             return data;
         } catch (error) {
-            // При ошибке разблокируем ожидающие запросы с ошибкой
             this._pendingRequests.forEach(resolve => {
                 resolve(Promise.reject(error));
             });

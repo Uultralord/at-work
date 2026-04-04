@@ -1,7 +1,7 @@
 import currencyApi from './api/api.js'
 import CustomSelect, { initFormSelect } from './components/custom-select.js'
 import Table from './components/custom-table.js'
-import { setupCurrencySelectors } from './components/converter.js'
+import { setupCurrencySelectors, swapValues } from './components/converter.js'
 
 const customSelectBtn = document.querySelectorAll('.custom-select__btn')
 const dateEl = document.getElementById('date')
@@ -29,17 +29,13 @@ async function showCurrencyInfo() {
     }
 }
 
-
-// customSelectBtn.forEach(item => {
-//     getButton()
-//     item.addEventListener('click', () => {
-//         item.classList.toggle('custom-select__btn--active')
-//         convert()
-//     })
-// })
+const reversBtn = document.querySelector('.converter__btn-revers')
+reversBtn.addEventListener('click', () => {
+    swapValues()
+})
 
 document.addEventListener('DOMContentLoaded', () => {
     showCurrencyInfo()
     initFormSelect()
-    setupCurrencySelectors('#select-input', '#select-result');
+    setupCurrencySelectors();
 });
