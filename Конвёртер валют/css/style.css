@@ -458,9 +458,6 @@ textarea {
     gap: 1px;
   }
 }
-.converter__wrap-left {
-  position: relative;
-}
 .converter__wrap-right {
   position: relative;
 }

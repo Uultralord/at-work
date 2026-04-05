@@ -60,12 +60,11 @@ export default class Table {
             img.alt = this.CharCode;
             img.classList.add('custom-table__text-icon');
             this.CharCodeEl.appendChild(img);
-            console.log(`SVG добавлен для ${this.CharCode}`);
         };
 
         checker.onerror = () => {
             this.CharCodeEl.style.paddingLeft = '35px';
-            console.log(`SVG для ${this.CharCode} не найден, добавлен отступ`);
+            //console.log(`SVG для ${this.CharCode} не найден, добавлен отступ`);
         };
 
         checker.src = svgPath;
@@ -129,11 +128,10 @@ export default class Table {
             img.alt = this.CharCode;
             img.classList.add('custom-table__text-icon');
             this.CharCodeEl.appendChild(img);
-            console.log(`SVG добавлен для ${this.CharCode}`);
         };
 
         checker.onerror = () => {
-            console.log(`SVG для ${this.CharCode} не найден, добавлен отступ`);
+            //console.log(`SVG для ${this.CharCode} не найден, добавлен отступ`);
         };
 
         checker.src = svgPath;
