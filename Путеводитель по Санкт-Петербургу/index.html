@@ -1,11 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Путеводитель по Санкт-Петербургу</title>
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <ul class="header__menu">
+                <li class="header__item"><a href="#" class="header__link">О городе</a></li>
+                <li class="header__item"><a href="#" class="header__link">История</a></li>
+                <li class="header__item"><a href="#" class="header__link">Достопримечательности</a></li>
+                <li class="header__item"><a href="#" class="header__link">Бюджет поездки</a></li>
+                <li class="header__item"><a href="#" class="header__link">Карта Петербурга</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__wrap">
+                    <h1 class="hero__title">Путеводитель по Санкт-Петербургу</h1>
+                    <span class="hero__text">Рассказываем самое интересное</span>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <h3 class="about__title">О городе</h3>
+                <div class="about__slider-wrap">
+                    <div class="about__slide about__slide--active">
+                        <img class="about__img" src="./images/about/Фото 1. Петергоф.png" alt="Петергоф">
+
+                        <p class="about__text">Санкт-Петербург — один из самых красивых городов России,
+                            который привлекает туристов со всего мира своей архитектурой, культурными
+                            достопримечательностями и богатой историей.
+                        </p>
+                    </div>
+                    <div class="about__slide about__slide--active">
+                        <img class="about__img" src="./images/about/Фото 2. Памятник Петру 1.png" alt="Петергоф">
+                        <div class="about__slide-text">
+                            <p class="about__text">Город был основан в 1703 году Петром I на берегах реки Невы и стал
+                                символом силы и могущества Российской империи.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about__slide about__slide--active">
+                        <img class="about__img" src="./images/about/Фото 3. Лайнер в порту.png" alt="Петергоф">
+                        <div class="about__slide-text">
+                            <p class="about__text">Сегодня Санкт-Петербург – это не только культурный центр, но и один
+                                из крупнейших портов мира, который является важным экономическим центром России.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__slide-arrows">
+                    <svg class="about__icon arrow-left" width="76" height="76" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#arrow-left"></use>
+                    </svg>
+                    <svg class="about__icon arrow-right" width="76" height="76" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#arrow-right"></use>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <section class="guide">
+            <div class="container">
+                <div class="guide__wrap">
+                    <p class="guide__text">В этом путеводителе мы расскажем о самых интересных местах
+                        Санкт-Петербурга, которые обязательно стоит посетить при поездке в этот прекрасный город.</p>
+                    <img class="guide__img guide__img--cup" src="./images/about/кубок.png" alt="Картинка заднего плана">
+                    <img class="guide__img guide__img--statue" src="./images/about/статуя.png"
+                        alt="Картинка заднего плана">
+                </div>
+            </div>
+        </section>
+        <section class="history">
+            <div class="container">
+                <h3 class="history__title">История</h3>
+                <ul class="history__list">
+                    <li class="history__item">
+                        <div class="history__item-wrap">
+                            <p class="history__item-title">16 (27 по новому стилю) мая 1703 года</p>
+                            <span class="history__item-text">Основание Санкт-Петербурга Петром I</span>
+                        </div>
+                        <img class="history__img" src="./images/history/фото 1 Петр 1.png" alt="Петр 1">
+                    </li>
+                    <li class="history__item history__item--right">
+                        <div class="history__item-wrap">
+                            <p class="history__item-title">16 (27 по новому стилю) мая 1703 года</p>
+                            <span class="history__item-text">Основание Санкт-Петербурга Петром I</span>
+                        </div>
+                        <img class="history__img" src="./images/history/фото 1 Петр 1.png" alt="Петр 1">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <script type="module" src="./js/main.js"></script>
+    </main>
 </body>
+
 </html>
