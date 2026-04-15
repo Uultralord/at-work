@@ -383,6 +383,14 @@ textarea {
   resize: none;
 }
 
+h3 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  font-family: "Prata", "Times New Roman", serif;
+  color: #AD2D11;
+}
+
 .container {
   max-width: 1366px;
   margin: 0 auto;
@@ -467,10 +475,6 @@ textarea {
   margin: 0 0 124px;
 }
 .about__title {
-  font-family: "Prata", "Times New Roman", serif;
-  color: #AD2D11;
-  font-weight: 400;
-  font-size: 32px;
   margin: 0 0 65px;
 }
 .about__slider-wrap {
@@ -554,12 +558,10 @@ textarea {
   bottom: 21%;
 }
 
+.history {
+  margin: 0 0 200px;
+}
 .history__title {
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 100%;
-  font-family: "Prata", "Times New Roman", serif;
-  color: #AD2D11;
   margin: 0 0 57px;
 }
 .history__list {
@@ -572,6 +574,18 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  gap: 22px;
+  position: relative;
+}
+.history__list::before {
+  content: "";
+  height: 92%;
+  width: 1px;
+  background-color: #FACA47;
+  position: absolute;
+  left: 50%;
+  top: 70px;
+  z-index: -1;
 }
 .history__item {
   counter-increment: count;
@@ -581,32 +595,31 @@ textarea {
   justify-content: flex-end;
   gap: 21px;
   position: relative;
-  max-width: 508px;
+  max-width: 450px;
+  margin: 0 0 0 auto;
+  z-index: 10;
+  min-width: 450px;
+  justify-content: space-between;
 }
-.history__item::before {
-  content: counter(count);
-  font-family: "Prata", "Times New Roman", serif;
-  color: #ffffff;
-  background-color: #FACA47;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.history__item--right {
+  margin: 0 auto 0 0;
+  flex-direction: row-reverse;
 }
-.history__item::after {
-  content: "";
-  width: 393px;
-  height: 1px;
-  background-color: #FACA47;
-  position: absolute;
-  left: 50%;
+.history__item--right .history__item-title::after {
+  left: -10%;
+}
+.history__item--right .history__item-title::before {
+  left: 106%;
 }
 .history__item-wrap {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  text-align: center;
+  margin: 52px 0 auto;
+}
+.history__item-wrap--small-margin {
+  margin: 28px 0 auto;
 }
 .history__item-title {
   font-family: "Prata", "Times New Roman", serif;
@@ -614,6 +627,32 @@ textarea {
   font-size: 18px;
   vertical-align: bottom;
   margin: 0;
+  position: relative;
+}
+.history__item-title::after {
+  content: "";
+  width: 325px;
+  height: 1px;
+  background-color: #FACA47;
+  position: absolute;
+  left: 2%;
+  z-index: -1;
+  bottom: -10px;
+}
+.history__item-title::before {
+  content: counter(count);
+  font-family: "Prata", "Times New Roman", serif;
+  color: #ffffff;
+  background-color: #FACA47;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 108%;
+  bottom: -30px;
 }
 .history__item-text {
   font-weight: 300;
@@ -624,4 +663,62 @@ textarea {
   padding: 13px;
   border: 1px solid #FACA47;
   border-radius: 100%;
+}
+
+.attractions {
+  margin: 0 0 176px;
+  padding: 124px 0 170px;
+  background-color: #ffffff;
+}
+.attractions__title {
+  margin: 0 0 157px;
+}
+.attractions__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  max-width: 676px;
+  margin: 0 0 180px auto;
+}
+.attractions__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.attractions__item {
+  border-top: 1px solid #FACA47;
+  padding: 76px 0 0;
+  display: grid;
+  grid-template-columns: 276px 376px 476px;
+  gap: 24px;
+}
+.attractions__item-title {
+  font-family: "Prata", "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+}
+.attractions__item-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.attractions__item-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.budget__title {
+  margin: 0 0 57px;
+}
+.budget__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  max-width: 676px;
+  margin: 0 0 200px auto;
 }/*# sourceMappingURL=style.css.map */

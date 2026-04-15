@@ -1,0 +1,54 @@
+.attractions {
+    margin: 0 0 176px;
+    padding: 124px 0 170px;
+    background-color: $color-white;
+
+    &__title {
+        margin: 0 0 157px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        max-width: 676px;
+        margin: 0 0 180px auto;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    &__item {
+        border-top: 1px solid $color-bright-orange;
+        padding: 76px 0 0;
+        display: grid;
+        grid-template-columns: 276px 376px 476px;
+        gap: 24px;
+    }
+
+    &__item-title {
+        font-family: $ff-title;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    &__item-text-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__item-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+
+    }
+}

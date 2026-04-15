@@ -1,0 +1,23 @@
+.budget {
+    &__title {
+        margin: 0 0 57px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        max-width: 676px;
+        margin: 0 0 200px auto;
+    }
+
+    &__list {}
+
+    &__item {}
+
+    &__item-img {}
+
+    &__item-text {}
+
+    &__item-text-price {}
+}
