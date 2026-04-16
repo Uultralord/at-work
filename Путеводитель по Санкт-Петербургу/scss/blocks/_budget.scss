@@ -1,4 +1,6 @@
 .budget {
+    margin: 0 0 265px;
+
     &__title {
         margin: 0 0 57px;
     }
@@ -8,16 +10,40 @@
         font-size: 18px;
         line-height: 30px;
         max-width: 676px;
-        margin: 0 0 200px auto;
+        margin: 0 0 245px auto;
     }
 
-    &__list {}
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        margin: 0;
+        padding: 0;
+    }
 
-    &__item {}
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        min-width: 276px;
+        align-items: center;
+    }
 
-    &__item-img {}
+    &__item-img {
+        margin: 0 0 20px;
+    }
 
-    &__item-text {}
+    &__item-text {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 26px;
+    }
 
-    &__item-text-price {}
+    &__item-text-price {
+        font-family: $ff-title;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+    }
 }

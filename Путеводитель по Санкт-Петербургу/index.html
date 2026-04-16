@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <title>Путеводитель по Санкт-Петербургу</title>
 </head>
 
@@ -199,7 +200,7 @@
         <section class="budget">
             <div class="container">
                 <h3 class="budget__title">Бюджет поездки</h3>
-                <span class="budget__text">Перед поездкой необходимо рассчитать приблизительный бюджет, который понадобится вам для путешествия.</span>
+                <p class="budget__text">Перед поездкой необходимо рассчитать приблизительный бюджет, который понадобится вам для путешествия.</p>
                 <ul class="budget__list">
                     <li class="budget__item">
                         <svg class="budget__item-img" width="66" height="56" aria-hidden="true">
@@ -232,8 +233,42 @@
                 </ul>
             </div>
         </section>
+        <section class="map">
+            <div class="container">
+                <h3 class="map__title">Карта Петербурга</h3>
+                <img class="map__img" src="./images/map/map.png" alt="Карта Петербурга">
+            </div>
+        </section>
         <script type="module" src="./js/main.js"></script>
+        <script src=”js/wow.min.js” defer></script> 
+        <script> new WOW().init();
+</script>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer__menu">
+                <li class="footer__item">
+                    <span class="footer__item-text">О городе</span>
+                </li>
+                <li class="footer__item">
+                    <span class="footer__item-text">Бюджет поездки</span>
+                </li>
+                <li class="footer__item">
+                    <span class="footer__item-text">История</span>
+                </li>
+                <li class="footer__item">
+                    <span class="footer__item-text">Карта Петербурга</span>
+                </li>
+                <li class="footer__item">
+                    <span class="footer__item-text">Достопримечательности</span>
+                </li>
+            </ul>
+            <div class="footer__bottom">
+                <span class="footer__year">© 2023</span>
+                <span class="footer__politics">Политика конфиденциальности</span>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

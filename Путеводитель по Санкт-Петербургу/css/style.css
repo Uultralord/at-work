@@ -666,7 +666,7 @@ h3 {
 }
 
 .attractions {
-  margin: 0 0 176px;
+  margin: 0 0 140px;
   padding: 124px 0 170px;
   background-color: #ffffff;
 }
@@ -712,6 +712,9 @@ h3 {
   line-height: 26px;
 }
 
+.budget {
+  margin: 0 0 265px;
+}
 .budget__title {
   margin: 0 0 57px;
 }
@@ -720,5 +723,80 @@ h3 {
   font-size: 18px;
   line-height: 30px;
   max-width: 676px;
-  margin: 0 0 200px auto;
+  margin: 0 0 245px auto;
+}
+.budget__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+.budget__item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 276px;
+  align-items: center;
+}
+.budget__item-img {
+  margin: 0 0 20px;
+}
+.budget__item-text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+}
+.budget__item-text-price {
+  font-family: "Prata", "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.map {
+  position: relative;
+}
+.map__title {
+  margin: 0 0 55px;
+}
+.map__img {
+  position: relative;
+  min-width: 1370px;
+  min-height: 488px;
+  left: -95px;
+}
+
+.footer {
+  background-color: #181515;
+  padding: 30px 0 25px;
+  color: #FDFAF4;
+  position: relative;
+}
+.footer__menu {
+  list-style: none;
+  margin: 0 0 15px;
+  padding: 0 75px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 16px 105px;
+  justify-content: end;
+}
+.footer__item-text {
+  font-weight: 500;
+  font-size: 16px;
+}
+.footer__bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 57px;
+}
+.footer__year {
+  font-weight: 400;
+  font-size: 12px;
+}
+.footer__politics {
+  font-weight: 400;
+  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */

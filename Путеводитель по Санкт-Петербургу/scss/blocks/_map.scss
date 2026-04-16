@@ -1,0 +1,14 @@
+.map {
+    position: relative;
+
+    &__title {
+        margin: 0 0 55px;
+    }
+
+    &__img {
+        position: relative;
+        min-width: 1370px;
+        min-height: 488px;
+        left: -95px;
+    }
+}
