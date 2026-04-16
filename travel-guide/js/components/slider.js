@@ -32,18 +32,10 @@ export function goToSlide(index) {
     if (arrows[currentIndex]) {
         arrows[currentIndex].classList.add('active');
     }
-
-    // Сдвигаем контейнер со слайдами (для горизонтального слайдера)
-    // if (slider) {
-    //     slider.style.transform = `translateX(${-currentIndex * 100}%)`;
-    // }
-
-    console.log('Slide changed to index:', currentIndex);
 }
 
 // Инициализация слайдера
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Slider initialization started');
 
     if (slides.length === 0) {
         console.warn('No slides found in the slider');

@@ -17,17 +17,6 @@
         justify-content: flex-end;
         gap: 22px;
         position: relative;
-
-        &::before {
-            content: "";
-            height: 92%;
-            width: 1px;
-            background-color: $color-bright-orange;
-            position: absolute;
-            left: 50%;
-            top: 70px;
-            z-index: -1;
-        }
     }
 
     &__item {
@@ -44,41 +33,51 @@
         min-width: 450px;
         justify-content: space-between;
 
-        // &::before {
-        //     content: counter(count);
-        //     font-family: $ff-title;
-        //     color: $color-white;
-        //     background-color: $color-bright-orange;
-        //     min-width: 40px;
-        //     height: 40px;
-        //     border-radius: 100%;
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-        // }
+        &::before {
+            content: "";
+            height: 126%;
+            width: 1px;
+            background-color: $color-bright-orange;
+            position: absolute;
+            left: -40px;
+            top: -30px;
+            z-index: -1;
+        }
 
-        // &::after {
-        //     content: "";
-        //     width: 325px;
-        //     height: 1px;
-        //     background-color: #FACA47;
-        //     position: absolute;
-        //     left: 2%;
-        //     z-index: -1;
-        // }
-
-        &--right {
+        &--left {
             margin: 0 auto 0 0;
             flex-direction: row-reverse;
 
+            &::before {
+                content: "";
+                height: 100%;
+                width: 1px;
+                left: unset;
+                right: -37px;
+                top: -6px;
+            }
+
             .history__item-title {
                 &::after {
-                    left: -10%;
+                    left: -9%;
                 }
 
                 &::before {
                     left: 106%;
                 }
+            }
+        }
+
+        &--line-down {
+            &::before {
+                height: 70%;
+                top: 70px;
+            }
+        }
+
+        &--line-up {
+            &::before {
+                height: 75%;
             }
         }
     }
@@ -109,7 +108,7 @@
             height: 1px;
             background-color: $color-bright-orange;
             position: absolute;
-            left: 2%;
+            left: -21%;
             z-index: -1;
             bottom: -10px;
         }

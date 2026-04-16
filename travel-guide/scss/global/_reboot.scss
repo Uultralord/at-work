@@ -40,10 +40,11 @@ textarea {
   resize: none;
 }
 
-h3 {
+h2 {
   font-weight: 400;
   font-size: 32px;
   line-height: 100%;
   font-family: $ff-title;
   color: $color-rust;
+  width: fit-content;
 }

@@ -383,12 +383,14 @@ textarea {
   resize: none;
 }
 
-h3 {
+h2 {
   font-weight: 400;
   font-size: 32px;
   line-height: 100%;
   font-family: "Prata", "Times New Roman", serif;
   color: #AD2D11;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .container {
@@ -577,16 +579,6 @@ h3 {
   gap: 22px;
   position: relative;
 }
-.history__list::before {
-  content: "";
-  height: 92%;
-  width: 1px;
-  background-color: #FACA47;
-  position: absolute;
-  left: 50%;
-  top: 70px;
-  z-index: -1;
-}
 .history__item {
   counter-increment: count;
   display: flex;
@@ -601,15 +593,40 @@ h3 {
   min-width: 450px;
   justify-content: space-between;
 }
-.history__item--right {
+.history__item::before {
+  content: "";
+  height: 126%;
+  width: 1px;
+  background-color: #FACA47;
+  position: absolute;
+  left: -40px;
+  top: -30px;
+  z-index: -1;
+}
+.history__item--left {
   margin: 0 auto 0 0;
   flex-direction: row-reverse;
 }
-.history__item--right .history__item-title::after {
-  left: -10%;
+.history__item--left::before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  left: unset;
+  right: -37px;
+  top: -6px;
 }
-.history__item--right .history__item-title::before {
+.history__item--left .history__item-title::after {
+  left: -9%;
+}
+.history__item--left .history__item-title::before {
   left: 106%;
+}
+.history__item--line-down::before {
+  height: 70%;
+  top: 70px;
+}
+.history__item--line-up::before {
+  height: 75%;
 }
 .history__item-wrap {
   display: flex;
@@ -635,7 +652,7 @@ h3 {
   height: 1px;
   background-color: #FACA47;
   position: absolute;
-  left: 2%;
+  left: -21%;
   z-index: -1;
   bottom: -10px;
 }
